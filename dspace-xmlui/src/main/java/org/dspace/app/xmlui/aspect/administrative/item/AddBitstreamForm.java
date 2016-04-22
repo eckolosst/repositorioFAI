@@ -124,6 +124,7 @@ public class AddBitstreamForm extends AbstractDSpaceTransformer
             }
 
             Text description = upload.addItem().addText("description");
+//            description.setSize(0, 250);
             description.setLabel(T_description_label);
             description.setHelp(T_description_help);
 

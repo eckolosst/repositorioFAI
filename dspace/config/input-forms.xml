@@ -15,6 +15,7 @@
 
  <form-map>
    <name-map collection-handle="default" form-name="traditional" />
+   <name-map collection-handle="123456789/4" form-name="Tesis" />
  </form-map>
 
 
@@ -36,6 +37,159 @@
 
  <form-definitions>
 
+        <form name = "Tesis">
+	<page number="1">
+		<field>
+                 <dc-schema>dc</dc-schema>
+                 <dc-element>title</dc-element>
+                 <dc-qualifier></dc-qualifier>
+                 <repeatable>false</repeatable>
+                 <label>Titulo</label>
+                 <input-type>onebox</input-type>
+                 <hint>Nombre dado a la tesis, el mismo será la forma de reconocerla formalmente</hint>
+                 <required>Campo obligatorio</required>
+               </field>
+		<field>
+	         <dc-schema>dc</dc-schema>
+        	 <dc-element>contributor</dc-element>
+	         <dc-qualifier>author</dc-qualifier>
+        	 <repeatable>false</repeatable>
+	         <label>Creador</label>
+	         <input-type>name</input-type>
+	         <hint>Apellido y nombre del responsable principal del contenido intelectual</hint>
+	         <required>Campo obligatorio</required>
+	       </field>	
+		<field>
+                 <dc-schema>dc</dc-schema>
+                 <dc-element>description</dc-element>
+                 <dc-qualifier>provenance</dc-qualifier>
+                 <repeatable>true</repeatable>
+                 <label>Tema</label>
+                 <input-type>onebox</input-type>
+                 <hint>Normalmente será expresados con palabras claves o frases que describan la tesis</hint>
+                 <required>Campo obligatorio</required>
+               </field>
+		<field>
+         	<dc-schema>dc</dc-schema>
+         	<dc-element>description</dc-element>
+         	<dc-qualifier>abstract</dc-qualifier>
+         	<repeatable>false</repeatable>
+         	<label>Descripción</label>
+         	<input-type>textarea</input-type>
+         	<hint>Representación abreviada que de cuenta del contenido de la tesis. La misma debe tener como máximo 250 caracteres.</hint>
+         	<required>Campo obligatorio</required>
+       		</field>
+		<field>
+                 <dc-schema>dc</dc-schema>
+                 <dc-element>contributor</dc-element>
+                 <dc-qualifier>other</dc-qualifier>
+                 <repeatable>true</repeatable>
+                 <label>Colaborador</label>
+                 <input-type>twobox</input-type>
+                 <hint>Persona u organismo no especificada como "Creador", que ha hecho contribuciones intelectuales al contenido de la tesis.</hint>
+                 <required>Campo obligatorio</required>
+               </field>
+		<field>
+                 <dc-schema>dc</dc-schema>
+                 <dc-element>date</dc-element>
+                 <dc-qualifier>issued</dc-qualifier>
+                 <repeatable>false</repeatable>
+                 <label>Fecha</label>
+                 <input-type>date</input-type>
+	 <hint>Asociada con el ciclo de vida de la tesis. Normalmente, la fecha estará asociada con la creación o disponibilidad de la tesis </hint> 
+                 <required>Campo obligatorio</required>
+                </field>
+
+                <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>type</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Tipo</label>
+         <input-type>onebox</input-type>
+         <hint>Naturaleza o genero del contenido de la tesis</hint>
+         <required>Campo Obligatorio</required>
+       </field>
+
+		<field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>format</dc-element>
+         <dc-qualifier>extent</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Formato</label>
+         <input-type>onebox</input-type>
+         <hint>Indica el formato usado en la tesis, el cual permite determinar el software, hardwae o cualquier otro aditamento necesario para visualiza o manipular la tesis</hint>
+         <required>Campo Obligatorio</required>
+       </field>
+	<field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>identifier</dc-element>
+         <dc-qualifier>citation</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Identificador</label>
+         <input-type>onebox</input-type>
+         <hint>Cadena de caracteres o signos para identificar la tesis de manera univoca en un contexto dado.</hint>
+         <required>Campo Obligatorio</required>
+       </field>
+	<field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>rights</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Derechos</label>
+         <input-type>textarea</input-type>
+         <hint>Mención acerca de los derechos del objeto.</hint>
+         <required>Campo Obligatorio</required>
+       </field>
+	</page>
+<page number="2">
+<field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>source</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Fuente</label>
+         <input-type>onebox</input-type>
+         <hint>Referencia al recurso o fuente de donde se deriva el objeto actual.</hint>
+         <required></required>
+       </field>
+<field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>language</dc-element>
+         <dc-qualifier>iso</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Langua</label>
+         <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+         <hint>Indica el idioma del contenido intelectual de la tesis </hint>
+         <required></required>
+       </field>
+<field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>relation</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Relación</label>
+         <input-type>onebox</input-type>
+         <hint>Referencia a otro objeto o material relacionado.</hint>
+         <required></required>
+       </field>
+<field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>coverage</dc-element>
+         <dc-qualifier>spatial</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Cobertura</label>
+         <input-type>onebox</input-type>
+         <hint>Alcances especiales, temporales o jurisdiccionales del contenido intelectual de la tesis.</hint>
+         <required></required>
+       </field>
+
+
+
+</page>
+
+   </form>
+     
    <form name="traditional">
      <page number="1">
        <field>

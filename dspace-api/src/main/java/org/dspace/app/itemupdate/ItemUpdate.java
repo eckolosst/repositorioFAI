@@ -553,7 +553,8 @@ public class ItemUpdate {
 	
 	//private void write
 
-    private void setEPerson(Context context, String eperson)
+    private void setEPerson(Context context, String eperson) 
+//Detecta el usuario actual que esta logg in dspace
     throws Exception
     {
         if (eperson == null)

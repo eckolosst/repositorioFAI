@@ -99,6 +99,32 @@ public class AddEPersonForm extends AbstractDSpaceTransformer
     private static final Message T_telephone =
         message("xmlui.EPerson.EditProfile.telephone");
     
+    private static final Message T_dni =
+        message("Add Eperson form prueba dni");
+    
+    private static final Message T_titulo =
+        message("Add Eperson form prueba titulo");
+    
+    private static final Message T_dependencia =
+        message("Add Eperson form prueba dependencia");
+    private static final Message T_funcion =
+        message("Add Eperson form prueba funcion");
+    
+    private static final Message T_error_dni =
+		message("Add EPerson Form Prueba error dni");
+    
+    private static final Message T_error_titulo =
+		message("Add EPerson Form Prueba error titulo");
+    
+    private static final Message T_error_dependencia =
+		message("Add EPerson Form Prueba error dependencia");
+    
+    private static final Message T_error_funcion =
+		message("Add EPerson Form Prueba error funcin");
+    
+    private static final Message T_aceptoPoliticas =
+        message("Add EPerson form prueba acepto politicas");
+    
     	
 	public void addPageMeta(PageMeta pageMeta) throws WingException
     {
@@ -112,8 +138,10 @@ public class AddEPersonForm extends AbstractDSpaceTransformer
 	public void addBody(Body body) throws WingException, SQLException, AuthorizeException 
 	{
 		// Get all our parameters
+                //Obtiene parametros de apache cocoon, no se si estan todos o falta alguno
 		Request request = ObjectModelHelper.getRequest(objectModel);
 		
+                //Parameter clase desconocida
 		String errorString = parameters.getParameter("errors",null);
 		ArrayList<String> errors = new ArrayList<String>();
 		if (errorString != null)
@@ -128,6 +156,14 @@ public class AddEPersonForm extends AbstractDSpaceTransformer
 		String firstValue = request.getParameter("first_name");
 		String lastValue  = request.getParameter("last_name");
 		String phoneValue = request.getParameter("phone");
+                //hay que ver si esto funca -- funcionó :)
+                String dniValue = request.getParameter("dni");
+                String tituloValue = request.getParameter("titulo");
+                String dependenciaValue = request.getParameter("dependencia");
+                String funcionValue = request.getParameter("funcion");
+                
+                boolean aceptoPoliticasValue =  (request.getParameter("aceptoPoliticas") == null)  ? false : true;
+                
 		boolean canLogInValue    = (request.getParameter("can_log_in") == null)  ? false : true;
 		boolean certificateValue = (request.getParameter("certificate") == null) ? false : true;
 	    		 
@@ -173,6 +209,42 @@ public class AddEPersonForm extends AbstractDSpaceTransformer
         if (errors.contains("last_name")) {
         	lastName.addError(T_error_lname);
         }
+        
+        Text dni = identity.addItem().addText("dni");
+        dni.setRequired();
+        dni.setLabel(T_dni);
+        dni.setValue(dniValue);
+        if (errors.contains("dni")) {
+        	lastName.addError(T_error_dni);
+        }
+        
+        Text titulo = identity.addItem().addText("titulo");
+        titulo.setRequired();
+        titulo.setLabel(T_titulo);
+        titulo.setValue(tituloValue);
+        if (errors.contains("titulo")) {
+        	lastName.addError(T_error_titulo);
+        }
+        
+        Text dependencia = identity.addItem().addText("dependencia");
+        dependencia.setRequired();
+        dependencia.setLabel(T_dependencia);
+        dependencia.setValue(tituloValue);
+        if (errors.contains("dependencia")) {
+        	lastName.addError(T_error_dependencia);
+        }
+        
+        Text funcion = identity.addItem().addText("funcion");
+        funcion.setRequired();
+        funcion.setLabel(T_funcion);
+        funcion.setValue(tituloValue);
+        if (errors.contains("funcion")) {
+        	lastName.addError(T_error_funcion);
+        }
+        
+        CheckBox aceptoPoliticas = identity.addItem().addCheckBox("aceptoPoliticas");
+        aceptoPoliticas.setLabel(T_aceptoPoliticas);
+        aceptoPoliticas.addOption(false, "yes");
         
         Text phone = identity.addItem().addText("phone");
         phone.setLabel(T_telephone);

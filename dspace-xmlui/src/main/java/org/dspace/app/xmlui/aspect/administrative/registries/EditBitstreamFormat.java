@@ -206,6 +206,7 @@ public class EditBitstreamFormat extends AbstractDSpaceTransformer
 		description.setLabel(T_description);
 		description.setValue(descriptionValue);
 		description.setSize(3, 35);
+                description.setMaxLength(250);
 		
 		Select supportLevel = form.addItem().addSelect("support_level");
 		supportLevel.setLabel(T_support);

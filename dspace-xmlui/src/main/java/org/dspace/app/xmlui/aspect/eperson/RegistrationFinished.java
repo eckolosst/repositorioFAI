@@ -45,7 +45,7 @@ public class RegistrationFinished extends AbstractDSpaceTransformer
   public void addPageMeta(PageMeta pageMeta) throws WingException
   {
     // Set the page title
-    pageMeta.addMetadata("title").addContent(T_title);
+    pageMeta.addMetadata("title").addContent("IXIE PIXIE ANDEX EN VISIEX");
 
     pageMeta.addTrailLink(contextPath + "/", T_dspace_home);
     pageMeta.addTrail().addContent(T_trail_new_registration);

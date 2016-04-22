@@ -43,6 +43,17 @@
 
             Page 57 - 58
          -->
+         
+         <!-- modificacion realizada por cc el dia 20 de nov para agregar un contexto nuevo, snrd -->
+         
+         <Context baseurl="snrd" name="Sistema Nacional de Repositorios Digitales">
+             <Set refid="snrdSet"/>
+             <Filter refid=""/>
+             <Transformer refid=""/>
+             <Formats refid=""/>
+         </Context>
+         
+         
         <Context baseurl="driver" name="Driver Context">
             <!-- Date format, field prefixes, etc are ensured by the transformer -->
             <Transformer ref="driverTransformer"/>

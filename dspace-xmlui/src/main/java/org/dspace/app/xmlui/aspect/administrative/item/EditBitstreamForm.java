@@ -128,6 +128,7 @@ public class EditBitstreamForm extends AbstractDSpaceTransformer
 		primarySelect.addOption(!primaryBitstream,"no",T_primary_option_no);
 		
 		Text description = edit.addItem().addText("description");
+                description.setSize(0, 250);
 		description.setLabel(T_description_label);
 		description.setHelp(T_description_help);
 		description.setValue(bitstream.getDescription());

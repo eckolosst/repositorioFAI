@@ -104,6 +104,21 @@ public class EditProfile extends AbstractDSpaceTransformer
     private static final Message T_telephone =
         message("xmlui.EPerson.EditProfile.telephone");
     
+    private static final Message T_dni =
+        message("xmlui.EPerson.EditProfile.dni");
+    
+    private static final Message T_titulo =
+        message("xmlui.EPerson.EditProfile.titulo");
+    
+    private static final Message T_dependencia =
+        message("xmlui.EPerson.EditProfile.dependencia");
+
+    private static final Message T_funcion =
+        message("xmlui.EPerson.EditProfile.funcion");
+    
+    private static final Message T_aceptoPoliticas =
+        message("xmlui.EPerson.EditProfile.aceptoPoliticas");
+    
     private static final Message T_language =
         message("xmlui.EPerson.EditProfile.Language");
     
@@ -234,13 +249,21 @@ public class EditProfile extends AbstractDSpaceTransformer
        Request request = ObjectModelHelper.getRequest(objectModel);
        
        String defaultFirstName="",defaultLastName="",defaultPhone="";
+       String defaultDNI="";
+       String defaultTitulo="";
+       String defaultDependencia = "";
+       String defaultFuncion = "";
        String defaultLanguage=null;
        if (request.getParameter("submit") != null)
        {
            defaultFirstName = request.getParameter("first_name");
            defaultLastName = request.getParameter("last_name");
            defaultPhone = request.getParameter("phone");
-           defaultLanguage = request.getParameter("language");
+//           defaultLanguage = request.getParameter("language");
+           defaultDNI= request.getParameter("dni");
+           defaultTitulo= request.getParameter("titulo");
+           defaultDependencia= request.getParameter("dependencia");
+           defaultFuncion= request.getParameter("funcion");
        }
        else if (eperson != null)
        {
@@ -248,6 +271,7 @@ public class EditProfile extends AbstractDSpaceTransformer
             defaultLastName = eperson.getLastName();
             defaultPhone = eperson.getMetadata("phone");
             defaultLanguage = eperson.getLanguage();
+            defaultDNI = eperson.getDNI();
        }
        
        String action = contextPath;
@@ -323,6 +347,61 @@ public class EditProfile extends AbstractDSpaceTransformer
            lastName.setDisabled();
        }
        
+       //DNI 
+       Text dni = identity.addItem().addText("dni");
+//       dni.setAutofocus("autofocus");     //nose para que sirve
+       dni.setRequired();
+       dni.setLabel(T_dni);
+       dni.setValue(defaultDNI);
+       if (errors.contains("dni"))
+       {
+           dni.addError(T_error_required);
+       }
+       if (!registering && !ConfigurationManager.getBooleanProperty("xmlui.user.editmetadata", true))
+       {
+           dni.setDisabled();
+       }
+       // titulo
+       Text titulo = identity.addItem().addText("titulo");
+       titulo.setRequired();
+       titulo.setLabel(T_titulo);
+       titulo.setValue(defaultTitulo);
+       if (errors.contains("titulo"))
+       {
+           titulo.addError(T_error_required);
+       }
+       if (!registering && !ConfigurationManager.getBooleanProperty("xmlui.user.editmetadata", true))
+       {
+           titulo.setDisabled();
+       }
+       
+       //dependencia
+       Text dependencia = identity.addItem().addText("dependencia");
+       dependencia.setRequired();
+       dependencia.setLabel(T_dependencia);
+       dependencia.setValue(defaultDependencia);
+       if (errors.contains("dependencia"))
+       {
+           dependencia.addError(T_error_required);
+       }
+       if (!registering && !ConfigurationManager.getBooleanProperty("xmlui.user.editmetadata", true))
+       {
+           dependencia.setDisabled();
+       }
+       // funcoin
+       Text funcion = identity.addItem().addText("funcion");
+       funcion.setRequired();
+       funcion.setLabel(T_funcion);
+       funcion.setValue(defaultFuncion);
+       if (errors.contains("funcion"))
+       {
+           funcion.addError(T_error_required);
+       }
+       if (!registering && !ConfigurationManager.getBooleanProperty("xmlui.user.editmetadata", true))
+       {
+           funcion.setDisabled();
+       }
+       
        // Phone
        Text phone = identity.addItem().addText("phone");
        phone.setLabel(T_telephone);
@@ -337,25 +416,25 @@ public class EditProfile extends AbstractDSpaceTransformer
        }
         
        // Language
-       Select lang = identity.addItem().addSelect("language");
-       lang.setLabel(T_language);
-       if (supportedLocales.length > 0)
-       {
-           for (Locale lc : supportedLocales)
-           {
-               lang.addOption(lc.toString(), lc.getDisplayName());
-           }
-       }
-       else
-       {
-           lang.addOption(I18nUtil.DEFAULTLOCALE.toString(), I18nUtil.DEFAULTLOCALE.getDisplayName());
-       }
-       lang.setOptionSelected((defaultLanguage == null || defaultLanguage.equals("")) ?
-                              I18nUtil.DEFAULTLOCALE.toString() : defaultLanguage);
-       if (!registering && !ConfigurationManager.getBooleanProperty("xmlui.user.editmetadata", true))
-       {
-           lang.setDisabled();
-       }
+//       Select lang = identity.addItem().addSelect("language");
+//       lang.setLabel(T_language);
+//       if (supportedLocales.length > 0)
+//       {
+//           for (Locale lc : supportedLocales)
+//           {
+//               lang.addOption(lc.toString(), lc.getDisplayName());
+//           }
+//       }
+//       else
+//       {
+//           lang.addOption(I18nUtil.DEFAULTLOCALE.toString(), I18nUtil.DEFAULTLOCALE.getDisplayName());
+//       }
+//       lang.setOptionSelected((defaultLanguage == null || defaultLanguage.equals("")) ?
+//                              I18nUtil.DEFAULTLOCALE.toString() : defaultLanguage);
+//       if (!registering && !ConfigurationManager.getBooleanProperty("xmlui.user.editmetadata", true))
+//       {
+//           lang.setDisabled();
+//       }
 
        // Subscriptions
        if (!registering)

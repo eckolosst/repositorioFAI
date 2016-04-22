@@ -207,6 +207,10 @@ public class Navigation extends AbstractDSpaceTransformer implements CacheablePr
             userMeta.setAuthenticated(true);
             userMeta.addMetadata("identifier").addContent(eperson.getID());
             userMeta.addMetadata("identifier","email").addContent(eperson.getEmail());
+             userMeta.addMetadata("identifier","dni").addContent(eperson.getDNI());
+             userMeta.addMetadata("identifier","titulo").addContent(eperson.getTitulo());
+             userMeta.addMetadata("identifier","dependencia").addContent(eperson.getDependencia());
+             userMeta.addMetadata("identifier","funcion").addContent(eperson.getFuncion());
             userMeta.addMetadata("identifier","firstName").addContent(eperson.getFirstName());
             userMeta.addMetadata("identifier","lastName").addContent(eperson.getLastName());
             userMeta.addMetadata("identifier","logoutURL").addContent(contextPath+"/logout");

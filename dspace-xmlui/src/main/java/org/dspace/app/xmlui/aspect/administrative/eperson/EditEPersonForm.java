@@ -140,6 +140,20 @@ public class EditEPersonForm extends AbstractDSpaceTransformer
     private static final Message T_telephone =
     	message("xmlui.EPerson.EditProfile.telephone");
     
+     private static final Message T_dni = 
+    	message("dni prueba editEPersonForm");
+     
+     private static final Message T_titulo = 
+    	message("titulo prueba editEPersonForm");
+     
+     private static final Message T_dependencia = 
+    	message("dependencia prueba editEPersonForm");
+     
+     private static final Message T_funcion = 
+    	message("funcion prueba editEPersonForm");
+    
+    private static final Message T_aceptoPoliticas =
+    	message("acepto Politicas pruebas EditEpersonForm");
     
     
 
@@ -156,8 +170,10 @@ public class EditEPersonForm extends AbstractDSpaceTransformer
 	public void addBody(Body body) throws WingException, SQLException, AuthorizeException 
 	{
 		// Get all our parameters
+            //tenes que ser administrador o terner permisos de administrador
 		boolean admin = AuthorizeManager.isAdmin(context);
 		
+                //obtener los parametros (?)
 		Request request = ObjectModelHelper.getRequest(objectModel);
 		
 		// Get our parameters;
@@ -180,6 +196,12 @@ public class EditEPersonForm extends AbstractDSpaceTransformer
             throw new UIException("Unable to find eperson for id:" + epersonID);
         }
 		
+                String dniValue= eperson.getDNI();
+                String tituloValue = eperson.getTitulo();
+                String dependenciaValue = eperson.getDependencia();
+                String funcionValue = eperson.getFuncion();
+                boolean aceptoPoliticasValue = eperson.getAceptoPoliticas();
+                
 		String emailValue = eperson.getEmail();
 		String firstValue = eperson.getFirstName();
 		String lastValue  = eperson.getLastName();
@@ -188,7 +210,24 @@ public class EditEPersonForm extends AbstractDSpaceTransformer
 		boolean certificatValue = eperson.getRequireCertificate();
 		java.util.List<String> deleteConstraints = eperson.getDeleteConstraints();
 		
-		if (request.getParameter("email_address") != null)
+		if (request.getParameter("dni") != null)
+        {
+            dniValue = request.getParameter("dni");
+        }  
+                if (request.getParameter("titulo") != null)
+        {
+            tituloValue = request.getParameter("titulo");
+        }
+                if (request.getParameter("dependencia") != null)
+        {
+            dependenciaValue = request.getParameter("dependencia");
+        }
+                if (request.getParameter("funcion") != null)
+        {
+            funcionValue = request.getParameter("funcion");
+        }
+                
+                if (request.getParameter("email_address") != null)
         {
             emailValue = request.getParameter("email_address");
         }
@@ -289,6 +328,56 @@ public class EditEPersonForm extends AbstractDSpaceTransformer
         }
         
         if (admin)
+        {
+	        Text dni = identity.addItem().addText("dni");
+                dni.setRequired();
+	        dni.setLabel(T_dni);
+	        dni.setValue(dniValue);
+        }
+        else
+        {
+        	identity.addLabel(T_dni);
+        	identity.addItem(dniValue);
+        }
+        
+        if (admin)
+        {
+	        Text titulo = identity.addItem().addText("titulo");
+                titulo.setRequired();
+	        titulo.setLabel(T_titulo);
+	        titulo.setValue(tituloValue);
+        }
+        else
+        {
+        	identity.addLabel(T_titulo);
+        	identity.addItem(tituloValue);
+        }
+        if (admin)
+        {
+	        Text dependencia = identity.addItem().addText("dependencia");
+                dependencia.setRequired();
+	        dependencia.setLabel(T_dependencia);
+	        dependencia.setValue(dependenciaValue);
+        }
+        else
+        {
+        	identity.addLabel(T_dependencia);
+        	identity.addItem(dependenciaValue);
+        }
+        if (admin)
+        {
+	        Text funcion = identity.addItem().addText("funcion");
+                funcion.setRequired();
+	        funcion.setLabel(T_funcion);
+	        funcion.setValue(funcionValue);
+        }
+        else
+        {
+        	identity.addLabel(T_funcion);
+        	identity.addItem(funcionValue);
+        }
+        
+        if (admin)
         {	
         	// Administrative options:
 	        CheckBox canLogInField = identity.addItem().addCheckBox("can_log_in");
@@ -297,6 +386,10 @@ public class EditEPersonForm extends AbstractDSpaceTransformer
 	        
 	        CheckBox certificateField = identity.addItem().addCheckBox("certificate");
 	        certificateField.setLabel(T_req_certs);
+	        certificateField.addOption(certificatValue,"true");
+                
+                CheckBox aceptoPoliticasField = identity.addItem().addCheckBox("aceptoPoliticas");
+	        certificateField.setLabel(T_aceptoPoliticas);
 	        certificateField.addOption(certificatValue,"true");
 	        
 	        

@@ -461,6 +461,14 @@
 	<message key="xmlui.EPerson.CannotRegister.para1">The configuration of this DSpace repository does not allow registration in this context. Please contact the <a href="../contact">site administrator</a> with questions or comments.</message>
 
 	<!-- org.dspace.app.xmlui.eperson.EditProfile.java -->
+        <message key="xmlui.EPerson.EditProfile.dni">Número de DNI</message>
+        <message key="xmlui.EPerson.EditProfile.titulo">Título académico</message>
+        <message key="xmlui.EPerson.EditProfile.dependencia">Dependencia</message>
+        <message key="xmlui.EPerson.EditProfile.funcion">Función acedémica</message>
+        <message key="xmlui.EPerson.EditProfile.aceptoPoliticas">Aceptación de políticas</message>
+        
+        
+        
 	<message key="xmlui.EPerson.EditProfile.title_update">Update Profile</message>
 	<message key="xmlui.EPerson.EditProfile.title_create">Create Profile</message>
 	<message key="xmlui.EPerson.EditProfile.trail_update">Update Profile</message>

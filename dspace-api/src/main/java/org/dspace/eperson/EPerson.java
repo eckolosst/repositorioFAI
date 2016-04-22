@@ -655,6 +655,54 @@ public class EPerson extends DSpaceObject
         return myRow.getIntColumn("eperson_id");
     }
     
+    public String getTitulo(){
+        return myRow.getStringColumn("titulo");
+    }
+    
+    public String getDependencia(){
+        return myRow.getStringColumn("dependencia");
+    }
+    
+    
+    public String getFuncion(){
+        return myRow.getStringColumn("funcion");
+    }
+    
+    public String getDNI()
+    {
+        return myRow.getStringColumn("dni");
+    }
+    
+    public boolean getAceptoPoliticas()
+    {
+        return myRow.getBooleanColumn("aceptoPoliticas");
+    }
+  
+    
+    public void setFuncion(String funcion){
+        myRow.setColumn("funcion", funcion);
+        modified = true;
+    }
+    
+    public void setTitulo(String titulo){
+        myRow.setColumn("titulo", titulo);
+        modified = true;
+    }
+    
+    public void setDependencia(String dependencia){
+        myRow.setColumn("dependencia", dependencia);
+        modified = true;
+    }
+    
+    public void setDNI(String dni) {
+        myRow.setColumn("dni", dni);
+        modified = true;
+    }
+    
+    public void setAceptoPoliticas(boolean  acepto) {
+        myRow.setColumn("aceptoPoliticas", acepto);
+        modified = true;
+    }
     /**
      * Get the e-person's language
      * 
@@ -1258,6 +1306,8 @@ public class EPerson extends DSpaceObject
     private static final Option OPT_NEW_EMAIL = new Option("i", "newEmail", true, "new email address");
     private static final Option OPT_NEW_NETID = new Option("I", "newNetid", true, "new network ID");
     
+     private static final Option OPT_DNI = new Option("q", "dni", true, "El numero telefónico de la persona");
+     private static final Option OPT_ACEPTOPOLITICAS = new Option("j", "aceptapoliticas", true, "La persona acepta las politicas iniciales");
     /**
      * Tool for manipulating user accounts.
      */
@@ -1336,6 +1386,8 @@ public class EPerson extends DSpaceObject
         options.addOption(OPT_GIVENNAME);
         options.addOption(OPT_SURNAME);
         options.addOption(OPT_PHONE);
+        options.addOption(OPT_DNI);
+        options.addOption(OPT_ACEPTOPOLITICAS);
         options.addOption(OPT_LANGUAGE);
         options.addOption(OPT_REQUIRE_CERTIFICATE);
 
@@ -1391,6 +1443,8 @@ public class EPerson extends DSpaceObject
         eperson.setLanguage(command.getOptionValue(OPT_LANGUAGE.getOpt(),
                 Locale.getDefault().getLanguage()));
         eperson.setMetadata("phone", command.getOptionValue(OPT_PHONE.getOpt()));
+        eperson.setDNI(command.getOptionValue(OPT_DNI.getOpt()));
+        eperson.setAceptoPoliticas(command.hasOption(OPT_ACEPTOPOLITICAS.getOpt()));
         eperson.setNetid(command.getOptionValue(OPT_NETID.getOpt()));
         eperson.setPassword(command.getOptionValue('p'));
         if (command.hasOption(OPT_REQUIRE_CERTIFICATE.getOpt()))
@@ -1508,6 +1562,8 @@ public class EPerson extends DSpaceObject
         options.addOption(OPT_PHONE);
         options.addOption(OPT_LANGUAGE);
         options.addOption(OPT_REQUIRE_CERTIFICATE);
+        options.addOption(OPT_DNI);
+        options.addOption(OPT_ACEPTOPOLITICAS);
 
         options.addOption(OPT_CAN_LOGIN);
         options.addOption(OPT_NEW_EMAIL);
@@ -1600,6 +1656,18 @@ public class EPerson extends DSpaceObject
                 eperson.setCanLogIn(Boolean.valueOf(command.getOptionValue(OPT_CAN_LOGIN.getOpt())));
                 modified = true;
             }
+            
+            if (command.hasOption(OPT_DNI.getOpt()))
+            {
+               eperson.setDNI(command.getOptionValue(OPT_DNI.getOpt()));
+                modified = true;
+            }
+            if (command.hasOption(OPT_ACEPTOPOLITICAS.getOpt()))
+            {
+                eperson.setAceptoPoliticas(command.hasOption(OPT_ACEPTOPOLITICAS.getOpt()));
+                modified = true;
+            }
+            
             if (modified)
             {
                 try {

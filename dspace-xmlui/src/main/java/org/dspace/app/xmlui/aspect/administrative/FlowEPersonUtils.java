@@ -7,6 +7,9 @@
  */
 package org.dspace.app.xmlui.aspect.administrative;
 
+
+//CC Editar
+
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -71,7 +74,14 @@ public class FlowEPersonUtils {
 		String email = request.getParameter("email_address").trim();
 		String first = request.getParameter("first_name").trim();
 		String last  = request.getParameter("last_name").trim();
+                
+                String dni = request.getParameter("dni").trim();
+                String titulo = request.getParameter("titulo").trim();
+                String dependencia = request.getParameter("dependencia").trim();
+                String funcion = request.getParameter("funcion").trim();
+                
 		String phone = request.getParameter("phone").trim();
+                boolean aceptoPoliticas = (request.getParameter("aceptoPoliticas") != null) ? true : false;
 		boolean login = (request.getParameter("can_log_in") != null) ? true : false;
 		boolean certificate = (request.getParameter("certificate") != null) ? true : false;
 		
@@ -87,6 +97,23 @@ public class FlowEPersonUtils {
 		if (StringUtils.isEmpty(last))
         {
             result.addError("last_name");
+        }
+                if (StringUtils.isEmpty(request.getParameter("dni").trim()))
+        {
+            result.addError("dni");
+        }
+                
+        if (StringUtils.isEmpty(titulo))
+        {
+            result.addError("titulo");
+        }
+        if (StringUtils.isEmpty(dependencia))
+        {
+            result.addError("dependencia");
+        }
+        if (StringUtils.isEmpty(funcion))
+        {
+            result.addError("funcion");
         }
 	    
 	    
@@ -105,6 +132,11 @@ public class FlowEPersonUtils {
     		
     		newPerson.setFirstName(first);
             newPerson.setLastName(last);
+            newPerson.setDNI(dni);
+            newPerson.setTitulo(titulo);
+            newPerson.setDependencia(dependencia);
+            newPerson.setFuncion(funcion);
+            newPerson.setAceptoPoliticas(aceptoPoliticas);
             newPerson.setMetadata("phone", phone);
             newPerson.setCanLogIn(login);
             newPerson.setRequireCertificate(certificate);
@@ -133,6 +165,9 @@ public class FlowEPersonUtils {
 	 * @param ObjectModel Cocoon's object model
 	 * @param epersonID The unique id of the eperson being edited.
 	 * @return A process result's object.
+         * 
+         * 
+         * quede aca
 	 */
 	public static FlowResult processEditEPerson(Context context,
             Request request, Map ObjectModel, int epersonID)
@@ -146,7 +181,16 @@ public class FlowEPersonUtils {
 		String email = request.getParameter("email_address");
 		String first = request.getParameter("first_name");
 		String last  = request.getParameter("last_name");
+                
+                String dni = request.getParameter("dni").trim();
+                String titulo = request.getParameter("titulo").trim();
+                String dependencia = request.getParameter("dependencia").trim();
+                String funcion = request.getParameter("funcion").trim();
+                
 		String phone = request.getParameter("phone");
+                
+                
+                boolean aceptoPoliticas = (request.getParameter("aceptoPoliticas") != null) ? true : false;
 		boolean login = (request.getParameter("can_log_in") != null) ? true : false;
 		boolean certificate = (request.getParameter("certificate") != null) ? true : false;
 		
@@ -163,6 +207,22 @@ public class FlowEPersonUtils {
 		if (StringUtils.isEmpty(last))
         {
             result.addError("last_name");
+        }
+                if (StringUtils.isEmpty(request.getParameter("dni").trim()))
+        {
+            result.addError("dni");
+        }
+                if (StringUtils.isEmpty(titulo))
+        {
+            result.addError("titulo");
+        }
+        if (StringUtils.isEmpty(dependencia))
+        {
+            result.addError("dependencia");
+        }
+        if (StringUtils.isEmpty(funcion))
+        {
+            result.addError("funcion");
         }
 		
 		
@@ -201,6 +261,29 @@ public class FlowEPersonUtils {
             if (originalPhone == null || !originalPhone.equals(phone)) {
         		personModified.setMetadata("phone", phone);
         	}
+            
+            String originalDNI = personModified.getDNI();
+            if (originalDNI == null || originalDNI!=dni) {
+        		personModified.setDNI(dni);
+        	}
+            String originalTitulo = personModified.getTitulo();
+            if (originalTitulo == null || originalTitulo!=titulo) {
+        		personModified.setTitulo(titulo);
+        	}
+            String originalDependencia = personModified.getDependencia();
+            if (originalDependencia == null || originalDependencia!=dependencia) {
+        		personModified.setDependencia(dependencia);
+        	}
+            String originalFuncion = personModified.getFuncion();
+            if (originalFuncion == null || originalFuncion!=funcion) {
+        		personModified.setFuncion(funcion);
+        	}
+            
+            boolean originalAceptoPoliticas = personModified.getAceptoPoliticas();
+            if (originalAceptoPoliticas != aceptoPoliticas) {
+        		personModified.setAceptoPoliticas(aceptoPoliticas);
+        	}
+            
         	personModified.setCanLogIn(login);
         	personModified.setRequireCertificate(certificate);
         	

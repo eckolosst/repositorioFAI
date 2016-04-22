@@ -153,7 +153,7 @@ public class TableRow
             throw new IllegalArgumentException("Column " + column + " not present");
         }
 
-        if (value instanceof Integer)
+        if (value instanceof Integer) // cc: Estuve por aca 
         {
             return ((Integer) value);
         }
