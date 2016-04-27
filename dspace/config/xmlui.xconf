@@ -178,11 +178,12 @@
     <themes>
         <!-- Example configuration -->
 
-        <!-- <theme name="Test Theme 1" handle="123456789/1" path="theme1/"/>    -->
-        <!-- <theme name="Test Theme 2" regex="community-list" path="theme2/"/> -->
+        <!--  -->
+        <!-- Tema de la Universidad nacional del Comahue -->
+	<theme name="Tema-Unco" regex=".*" path="Tema-UNCo/" />
 
         <!-- Mirage theme, @mire contributed theme, default since DSpace 3.0 -->
-        <theme name="Atmire Mirage Theme" regex=".*" path="Mirage/" />
+        <!-- <theme name="Atmire Mirage Theme" regex=".*" path="Mirage/" /> -->
 
         <!-- Reference theme, the default Manakin XMLUI layout up to DSpace 1.8 -->
         <!-- <theme name="Default Reference Theme" regex=".*" path="Reference/" /> -->
