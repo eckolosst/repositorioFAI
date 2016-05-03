@@ -140,20 +140,21 @@ public class EditEPersonForm extends AbstractDSpaceTransformer
     private static final Message T_telephone =
     	message("xmlui.EPerson.EditProfile.telephone");
     
+    // Agregado
      private static final Message T_dni = 
-    	message("dni prueba editEPersonForm");
+    	message("xmlui.EPerson.EditProfile.dni");
      
      private static final Message T_titulo = 
-    	message("titulo prueba editEPersonForm");
+    	message("xmlui.EPerson.EditProfile.titulo");
      
      private static final Message T_dependencia = 
-    	message("dependencia prueba editEPersonForm");
+    	message("xmlui.EPerson.EditProfile.dependencia");
      
      private static final Message T_funcion = 
-    	message("funcion prueba editEPersonForm");
+    	message("xmlui.EPerson.EditProfile.funcion");
     
     private static final Message T_aceptoPoliticas =
-    	message("acepto Politicas pruebas EditEpersonForm");
+    	message("xmlui.EPerson.EditProfile.aceptoPoliticas");
     
     
 
