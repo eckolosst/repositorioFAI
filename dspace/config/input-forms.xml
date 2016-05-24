@@ -44,7 +44,7 @@
                     <dc-element>title</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>*Titulo</label>
+                    <label>Titulo</label>
                     <input-type>onebox</input-type>
                     <hint>Nombre dado al item por el cual es formalmente conocido</hint>
                     <required>Campo obligatorio</required>
@@ -55,7 +55,7 @@
                     <dc-element>contributor</dc-element>
                     <dc-qualifier>author</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>*Creador</label>
+                    <label>Creador</label>
                     <input-type>name</input-type>
                     <hint>Responsable del contenido intelectual</hint>
                     <required>Campo obligatorio</required>
@@ -66,8 +66,8 @@
                     <dc-element>subject</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>*Tema</label>
-                    <input-type value-pairs-name="temas">dropdown</input-type>
+                    <label>Tema</label>
+                    <input-type value-pairs-name="temas">list</input-type>
                     <hint>Palabras claves o frases que describen el tema de la tesis</hint>
                     <required>Campo obligatorio</required>
                 </field>
@@ -77,7 +77,7 @@
                     <dc-element>description</dc-element>
                     <dc-qualifier>abstract</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>*Descripción</label>
+                    <label>Descripción</label>
                     <input-type>textarea</input-type>
                     <hint>Descripcion textual sobre el contenido de la tesis abstract. Y 5 palabras claves o descriptores</hint>
                     <required>Campo obligatorio</required>
@@ -88,7 +88,7 @@
                     <dc-element>publisher</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>*Editor</label>
+                    <label>Editor</label>
                     <input-type>onebox</input-type>
                     <hint>Entidad responsable de publicar o distribuir la tesis en su formato actual</hint>
                     <required>Campo obligatorio</required>
@@ -99,7 +99,7 @@
                     <dc-element>contributor</dc-element>
                     <dc-qualifier>other</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>*Colaborador</label>
+                    <label>Colaborador</label>
                     <input-type>twobox</input-type>
                     <hint>Indique en este campo el nombre del director y o codirector</hint>
                     <required>Campo obligatorio</required>
@@ -110,7 +110,7 @@
                     <dc-element>date</dc-element>
                     <dc-qualifier>issued</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>*Fecha</label>
+                    <label>Fecha</label>
                     <input-type>date</input-type>
                     <hint>Fecha de defensa (dictamen)</hint> 
                     <required>Campo obligatorio</required>
@@ -121,7 +121,7 @@
                     <dc-element>type</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>*Tipo</label>
+                    <label>Tipo</label>
                     <input-type value-pairs-name="tipos">dropdown</input-type>
                     <hint>Naturaleza o genero del contenido de la tesis</hint>
                     <required>Campo Obligatorio</required>
@@ -132,7 +132,7 @@
                     <dc-element>format</dc-element>
                     <dc-qualifier>extent</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>*Formato</label>
+                    <label>Formato</label>
                     <input-type>onebox</input-type>
                     <hint>Manifestacion fisica o digital del item (icluye el medio y las dimensiones del objeto digital)</hint>
                     <required>Campo Obligatorio</required>
