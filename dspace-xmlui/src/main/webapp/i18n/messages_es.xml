@@ -256,7 +256,7 @@
 <message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Comunidades &amp; Colecciones</message>
 <message key="xmlui.ArtifactBrowser.Navigation.browse_title">Títulos</message>
 <message key="xmlui.ArtifactBrowser.Navigation.browse_author">Autores</message>
-<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Materias</message>
+<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Temas</message>
 <message key="xmlui.ArtifactBrowser.Navigation.browse_dateissued">Por fecha de publicación</message>
 <message key="xmlui.ArtifactBrowser.Navigation.browse_dateaccessioned">Por fecha de envío</message>
 <message key="xmlui.ArtifactBrowser.Navigation.head_this_collection">Esta colección</message>

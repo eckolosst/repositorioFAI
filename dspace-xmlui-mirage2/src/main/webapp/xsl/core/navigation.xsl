@@ -123,7 +123,7 @@
                 </div>
             </xsl:if>
             <xsl:apply-templates/>
-            <!-- DS-984 Add RSS Links to Options Box -->
+            <!-- DS-984 Add RSS Links to Options Box 
             <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']) != 0">
                 <div>
                     <h2 class="ds-option-set-head h6">
@@ -134,7 +134,7 @@
                     </div>
                 </div>
 
-            </xsl:if>
+            </xsl:if> -->
         </div>
     </xsl:template>
 

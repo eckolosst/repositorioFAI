@@ -4,13 +4,13 @@
 #
 # See org.dspace.core.Email for information on the format of this file.
 #
-Subject: DSpace Account Registration
-To complete registration for a DSpace account, please click the link
-below:
+Subject: Repositorio UNCo: Registro de Cuenta
+Para completar el registro de la cuenta en Repositorio UNCo, por favor, ingrese al siguiente link:
 
   {0}
 
-If you need assistance with your account, please email
-dspace-help@myu.edu or call us at xxx-555-xxxx.
+Si necesita asistencia con su cuenta, por favor mande un mail a la siguiente dirección
+repositorio.fai@gmail.com
+#dspace-help@myu.edu or call us at xxx-555-xxxx.
 
-The DSpace Team
+DSpace Team

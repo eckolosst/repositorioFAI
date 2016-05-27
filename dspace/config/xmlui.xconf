@@ -179,8 +179,11 @@
         <!-- Example configuration -->
 
         <!--  -->
-        <!-- Tema de la Universidad nacional del Comahue -->
-	<theme name="Tema-Unco" regex=".*" path="Tema-UNCo/" />
+        <!-- Tema de la Universidad Nacional del Comahue -->
+	<!--<theme name="Tema-Unco" regex=".*" path="Tema-UNCo/" />-->
+        
+        <!-- Tema Mirage 2 -->
+	<theme name="Mirage 2" regex=".*" path="Mirage2/" />
 
         <!-- Mirage theme, @mire contributed theme, default since DSpace 3.0 -->
         <!-- <theme name="Atmire Mirage Theme" regex=".*" path="Mirage/" /> -->

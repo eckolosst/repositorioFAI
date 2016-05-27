@@ -337,9 +337,15 @@
                         </button>
 
                         <a href="{$context-path}/" class="navbar-brand">
-                            <img src="{$theme-path}/images/DSpace-logo-line.svg" />
+			    
+                            <!--<img src="{$theme-path}/images/DSpace-logo-line.svg" />-->
+			   
+			    <img src="{$theme-path}/images/apple-touch-icon.png" style="height: 135%;"/> 
+			    
                         </a>
-
+	
+			<h1 class="navbar-text" style="color: #FFFFFF">Repositorio UNCO</h1>	
+				
 
                         <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
                         <ul class="nav nav-pills pull-left ">
@@ -720,10 +726,10 @@
                     </div>
                     <div class="col-xs-5 col-sm-4 hidden-print">
                         <div class="pull-right">
-                            <span class="theme-by">Theme by&#160;</span>
+                            <span class="theme-by">Ubicación&#160;</span>
                             <br/>
-                            <a title="@mire NV" target="_blank" href="http://atmire.com">
-                                <img alt="@mire NV" src="{concat($theme-path, '/images/@mirelogo-small.png')}"/>
+                            <a title="Ubicación Gmaps" target="_blank" href="https://www.google.com.ar/maps/place/UNIVERSIDAD+NACIONAL+COMAHUE/@-38.9401499,-68.0573579,15z/data=!4m2!3m1!1s0x0:0x9e60fc4430f72077">
+                                <img alt="Ubicación Gmaps" src="{concat($theme-path, '/images/@mirelogo-small.png')}"/>
                             </a>
                         </div>
 

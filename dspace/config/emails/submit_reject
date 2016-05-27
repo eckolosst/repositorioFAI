@@ -6,18 +6,20 @@
 # {3}  Reason for the rejection
 # {4}  Link to 'My DSpace' page
 #
-Subject: DSpace: Submission Rejected
+Subject: Repositorio UNCo: Envío Rechazado
 
-You submitted: {0}
+Su envío: {0}
 
-To collection: {1}
+A la colección: {1}
 
-Your submission has been rejected by {2}
-with the following explanation:
+a sido rechazado por {2}
+por el siguiente motivo:
 
 {3}
 
-Your submission has not been deleted.  You can access it from your
-"My DSpace" page: {4}
+Su envío no a sido eliminado. Usted puede acceder a este en la
+siguiente página: {4}
+#Your submission has not been deleted.  You can access it from your
+#"My DSpace" page: {4}
 
-DSpace
+Repositorio UNCo
