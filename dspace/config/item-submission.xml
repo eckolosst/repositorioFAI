@@ -216,7 +216,10 @@
            <workflow-editable>true</workflow-editable>
        </step>
        
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/dspace-5_x
       <!--Step 4 will be to Upload the item 
       <step>
         <heading>submit.progressbar.upload</heading>
@@ -224,11 +227,20 @@
         <jspui-binding>org.dspace.app.webui.submit.step.JSPUploadStep</jspui-binding>
 		<xmlui-binding>org.dspace.app.xmlui.aspect.submission.submit.UploadStep</xmlui-binding>
         <workflow-editable>true</workflow-editable>
+<<<<<<< HEAD
       </step> -->
       
+=======
+      </step>
+      -->
+>>>>>>> origin/dspace-5_x
 
        <!-- Step 4 Upload Item with Embargo Features
+<<<<<<< HEAD
             to enable this step, please make sure to comment-out the previous step "UploadStep"   -->
+=======
+            to enable this step, please make sure to comment-out the previous step "UploadStep" -->
+>>>>>>> origin/dspace-5_x
        <step>
            <heading>submit.progressbar.upload</heading>
            <processing-class>org.dspace.submit.step.UploadWithEmbargoStep</processing-class>
@@ -236,7 +248,10 @@
            <xmlui-binding>org.dspace.app.xmlui.aspect.submission.submit.UploadWithEmbargoStep</xmlui-binding>
            <workflow-editable>true</workflow-editable>
        </step>
+<<<<<<< HEAD
       
+=======
+>>>>>>> origin/dspace-5_x
 
  	  <!--Step 5 will be to Verify/Review everything -->
  	  <step>
