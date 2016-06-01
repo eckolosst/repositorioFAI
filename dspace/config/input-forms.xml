@@ -16,7 +16,24 @@
     <form-map>
         <name-map collection-handle="default" form-name="traditional" />
         <name-map collection-handle="123456789/4" form-name="Tesis" />
-<!--        <name-map collection-handle="123456789/23" form-name="Tesis" /> -->
+<!--    <name-map collection-handle="123456789/52" form-name="Tesis" />
+        <name-map collection-handle="123456789/53" form-name="Tesis" />
+        <name-map collection-handle="123456789/54" form-name="Tesis" />
+        <name-map collection-handle="123456789/38" form-name="Tesis" />
+        <name-map collection-handle="123456789/39" form-name="Tesis" />
+        <name-map collection-handle="123456789/40" form-name="Tesis" />
+        <name-map collection-handle="123456789/41" form-name="Tesis" />
+        <name-map collection-handle="123456789/42" form-name="Tesis" />
+        <name-map collection-handle="123456789/43" form-name="Tesis" />
+        <name-map collection-handle="123456789/44" form-name="Tesis" />
+        <name-map collection-handle="123456789/45" form-name="Tesis" />
+        <name-map collection-handle="123456789/46" form-name="Tesis" />
+        <name-map collection-handle="123456789/47" form-name="Tesis" />
+        <name-map collection-handle="123456789/48" form-name="Tesis" />
+        <name-map collection-handle="123456789/49" form-name="Tesis" />
+        <name-map collection-handle="123456789/50" form-name="Tesis" />
+        <name-map collection-handle="123456789/51" form-name="Tesis" />
+ -->
     </form-map>
 
 
@@ -156,7 +173,7 @@
                     <dc-element>language</dc-element>
                     <dc-qualifier>iso</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Langua</label>
+                    <label>Idioma</label>
                     <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
                     <hint>Indica el idioma del contenido intelectual de la tesis </hint>
                     <required></required>
@@ -472,6 +489,17 @@
                 <stored-value>isbn</stored-value>
             </pair>
         </value-pairs>
+        
+        <value-pairs value-pairs-name="rango_colaborador" dc-term="contributor">
+	    <pair>
+                <displayed-value>Director</displayed-value>
+                <stored-value>- Director</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Codirector</displayed-value>
+                <stored-value>- Codirector</stored-value>
+            </pair>
+	</value-pairs>
 
         <value-pairs value-pairs-name="common_types" dc-term="type">
             <pair>
