@@ -82,7 +82,7 @@
 
                 <field>
                     <dc-schema>dc</dc-schema>
-                    <dc-element>subject</dc-element>
+                    <dc-element>type</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Tema</label>
@@ -107,7 +107,7 @@
                     <dc-element>subject</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Keys</label>
+                    <label>Palabras claves</label>
                     <input-type>onebox</input-type>
                     <hint>Palabras claves o descriptores del contenido de la tesis.</hint>
                     <required>Campo obligatorio</required>
@@ -129,9 +129,9 @@
                     <dc-element>contributor</dc-element>
                     <dc-qualifier>other</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Colaborador</label>
+                    <label>Director / Codirector</label>
                     <input-type>twobox</input-type>
-                    <hint>Indique en este campo el nombre del director y o codirector</hint>
+                    <hint>Indique en este campo el nombre del director y/o codirector</hint>
                     <required>Campo obligatorio</required>
                 </field>
 
@@ -148,7 +148,7 @@
 
                 <field>
                     <dc-schema>dc</dc-schema>
-                    <dc-element>type</dc-element>
+                    <dc-element>identifier</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Tipo</label>
@@ -433,7 +433,7 @@
     <!-- stores the associated stored-values in the database.                  -->
 
     <form-value-pairs>
-        <value-pairs value-pairs-name="temas" dc-terms="subject">
+        <value-pairs value-pairs-name="temas" dc-terms="types">
             <pair>
                 <displayed-value>Prueba</displayed-value>
                 <stored-value>prueba</stored-value>
@@ -452,7 +452,7 @@
             </pair>
         </value-pairs>
         
-        <value-pairs value-pairs-name="tipos" dc-terms="type">
+        <value-pairs value-pairs-name="tipos" dc-terms="identifier">
             <pair>
                 <displayed-value>Grado</displayed-value>
                 <stored-value>grado</stored-value>
