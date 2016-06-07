@@ -129,7 +129,7 @@
                     <dc-element>contributor</dc-element>
                     <dc-qualifier>other</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Director / Codirector</label>
+                    <label>Director/Codirector</label>
                     <input-type>twobox</input-type>
                     <hint>Indique en este campo el nombre del director y/o codirector</hint>
                     <required>Campo obligatorio</required>
