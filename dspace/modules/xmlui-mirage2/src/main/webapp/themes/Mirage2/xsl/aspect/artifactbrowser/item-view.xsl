@@ -109,10 +109,12 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="row">
-                        <div class="col-xs-6 col-sm-12">
+                        <!--
+			<div class="col-xs-6 col-sm-12">
                             <xsl:call-template name="itemSummaryView-DIM-thumbnail"/>
                         </div>
-                        <div class="col-xs-6 col-sm-12">
+			-->                        
+			<div class="col-xs-6 col-sm-12">
                             <xsl:call-template name="itemSummaryView-DIM-file-section"/>
                         </div>
                     </div>
@@ -165,6 +167,7 @@
         </xsl:choose>
     </xsl:template>
 
+<!--
     <xsl:template name="itemSummaryView-DIM-thumbnail">
         <div class="thumbnail">
             <xsl:choose>
@@ -199,6 +202,8 @@
             </xsl:choose>
         </div>
     </xsl:template>
+-->
+
 
     <xsl:template name="itemSummaryView-DIM-abstract">
         <xsl:if test="dim:field[@element='description' and @qualifier='abstract']">
@@ -527,6 +532,7 @@
     <xsl:template match="mets:file">
         <xsl:param name="context" select="."/>
         <div class="file-wrapper row">
+	    <!--
             <div class="col-xs-6 col-sm-3">
                 <div class="thumbnail">
                     <a class="image-link">
@@ -556,6 +562,7 @@
                     </a>
                 </div>
             </div>
+	   -->
 
             <div class="col-xs-6 col-sm-7">
                 <dl class="file-metadata dl-horizontal">
@@ -632,6 +639,7 @@
                             <xsl:value-of select="util:shortenString(mets:FLocat[@LOCTYPE='URL']/@xlink:label, 30, 5)"/>
                         </dd>
                 </xsl:if>
+		<br/>
                 </dl>
             </div>
 
