@@ -98,7 +98,7 @@
                     <repeatable>false</repeatable>
                     <label>Descripción</label>
                     <input-type>textarea</input-type>
-                    <hint>Descripcion textual sobre el contenido de la tesis abstract. Y 5 palabras claves o descriptores</hint>
+                    <hint>Descripcion textual sobre el contenido de la tesis (abstract).</hint>
                     <required>Campo obligatorio</required>
                 </field>
 
