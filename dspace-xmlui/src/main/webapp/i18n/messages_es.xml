@@ -626,7 +626,7 @@
 <message key="xmlui.Submission.general.default.trail">Envío</message>
 
 	<!-- org.dspace.app.xmlui.submission.CollectiovViewer -->
-<message key="xmlui.Submission.CollectionViewer.link1">Enviar un ítem a esta colección</message>
+<message key="xmlui.Submission.CollectionViewer.link1"><button>Enviar un ítem a esta colección</button></message>
 
 	<!-- org.dspace.app.xmlui.submission.Navigation -->
 <message key="xmlui.Submission.Navigation.submissions">Envíos</message>
