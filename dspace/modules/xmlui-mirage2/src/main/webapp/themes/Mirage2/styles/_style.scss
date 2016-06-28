@@ -19,5 +19,43 @@
 
 @include selection {
     color: white;
-    background: hotpink;
+    background: #D85451;
+}
+
+/* Estilo encabezado */
+img#logo-header{
+   height: 135%;
+}
+h1#titulo-header{
+   color: #FFFFFF; 
+   font-size:260%;
+}
+/*Para que el logo en la barra de navegación se vea grande anulamos el padding*/
+.sin-padding{
+    padding: 0px 0px;
+}
+/* Para el pie de página, links e imagenes*/
+img.logo{
+    width: 30px; 
+    height: 30px;
+}
+img#logo-ubic{
+    padding: 0px 10px;
+}
+div#letra-pie{
+    font-size:12px;
+}
+ul#menu li {
+    display:inline;
+    padding: 5px 0px;
+}
+
+/* Note: Try to remove the following lines to see the effect of CSS positioning */
+.affix {
+top: 0;
+width: 100%;
+}
+
+.affix + .container-fluid {
+padding-top: 70px;
 }

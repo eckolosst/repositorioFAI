@@ -320,7 +320,7 @@
 <message key="xmlui.ArtifactBrowser.ItemRequestForm.trail">Solicitar una copia del documento</message>
 <message key="xmlui.ArtifactBrowser.ItemRequestForm.head">Solicitar una copia del documento</message>
 <message key="xmlui.ArtifactBrowser.ItemRequestForm.login_para">Los usuarios de este sistema, pueden hacer login para ver este documento.</message>
-<message key="xmlui.ArtifactBrowser.ItemRequestForm.login">Login</message>
+<message key="xmlui.ArtifactBrowser.ItemRequestForm.login"> Login</message>
 <message key="xmlui.ArtifactBrowser.ItemRequestForm.para1">Introducir la siguiente información para solicitar una copia del documento a la persona responsable.</message>
 <message key="xmlui.ArtifactBrowser.ItemRequestForm.requesterEmail">Su dirección de correo electrónico</message>
 <message key="xmlui.ArtifactBrowser.ItemRequestForm.requesterEmail_help">Esta dirección de correo electrónico es usada para enviar el documento.</message>

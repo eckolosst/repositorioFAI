@@ -336,15 +336,15 @@
                             <span class="icon-bar"></span>
                         </button>
 
-                        <a href="{$context-path}/" class="navbar-brand">
+                        <a href="{$context-path}/" class="navbar-brand sin-padding">
 			    
                             <!--<img src="{$theme-path}/images/DSpace-logo-line.svg" />-->
 			   
-			    <img src="{$theme-path}/images/apple-touch-icon.png" style="height: 135%;"/> 
+			    <img id="logo-header" src="{$theme-path}/images/apple-touch-icon.png"/> 
 			    
                         </a>
 	
-			<h1 class="navbar-text" style="color: #FFFFFF; font-size:260%">Repositorio UNCO</h1>	
+			<h1 id="titulo-header" class="navbar-text">Repositorio UNCO</h1>	
 				
 
                         <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
@@ -460,9 +460,10 @@
                                     <li>
                                         <a href="{/dri:document/dri:meta/dri:userMeta/
                             dri:metadata[@element='identifier' and @qualifier='loginURL']}">
-                                            <span class="hidden-xs">
+                                            <p class="glyphicon glyphicon-user hidden-xs">
+						<span>  </span>
                                                 <i18n:text>xmlui.dri2xhtml.structural.login</i18n:text>
-                                            </span>
+                                            </p>
                                         </a>
                                     </li>
                                 </xsl:otherwise>
@@ -479,14 +480,27 @@
                 </div>
             </div>
 
+	    <!-- Intento de sticky bar-->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>	
+	    <nav class="col-sm-3">
+		<ul class="nav nav-pills nav-stacked collapse" data-spy="affix" data-offset-top="205">
+		    <li class="active"><a href="#section1">Section 1</a></li>
+		    <li><a href="#section2">Section 2</a></li>
+		    <li><a href="#section3">Section 3</a></li>
+		</ul>
+	    </nav>
+
         </header>
 
     </xsl:template>
 
 
+
     <!-- The header (distinct from the HTML head element) contains the title, subtitle, login box and various
         placeholders for header images -->
     <xsl:template name="buildTrail">
+
         <div class="trail-wrapper hidden-print">
             <div class="container">
                 <div class="row">
@@ -700,6 +714,7 @@
         <footer>
                 <div class="row">
                     <hr/>
+		    <!--
                     <div class="col-xs-7 col-sm-8">
                         <div>
                             <a href="http://www.dspace.org/" target="_blank">DSpace software</a> copyright&#160;&#169;&#160;2002-2015&#160; <a href="http://www.duraspace.org/" target="_blank">DuraSpace</a>
@@ -724,15 +739,39 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-xs-5 col-sm-4 hidden-print">
-                        <div class="pull-right">
-                            <span class="theme-by">Ubicación&#160;</span>
-                            <br/>
+		    -->
+		    <div class="col-xs-7 col-sm-8 pull-right">
+			<div align="center">
+			<br/>
+			    <ul id="menu" class="pull-right">			
+				<li><a href="http://bibliocentral.uncoma.edu.ar/" target="_blank"> <img class="logo" src="{$theme-path}/images/web.png"/> </a> </li>
+				<li><a href="https://www.facebook.com/biblioteca.central.uncomahue" target="_blank"> <img class="logo" src="{$theme-path}/images/facebook.png"/> </a> </li>
+				<li><a href="https://twitter.com/Biblioteca_UNCo" target="_blank"> <img class="logo" src="{$theme-path}/images/twitter.ico"/> </a> </li>	
+				<li><a href="https://plus.google.com/+bibliotecacentralUnco/posts" target="_blank"> <img class="logo" src="{$theme-path}/images/google.png"/> </a></li>
+			    </ul>
+			</div>
+			<br/><br/>
+			<div id="letra-pie" align="right" class="pull-right">Soportado por <a href="http://www.dspace.org/" target="_blank">DSpace</a></div>
+		    </div>
+                    <div class="col-xs-3 col-sm-4 hidden-print">	
+			<div  class="pull-left" align="left" >
+			    
+                            <!--<span class="theme-by">Ubicación</span> -->                            
+			    <br/>
                             <a title="Ubicación gmaps" target="_blank" href="https://www.google.com.ar/maps/place/UNIVERSIDAD+NACIONAL+COMAHUE/@-38.9401499,-68.0573579,15z/data=!4m2!3m1!1s0x0:0x9e60fc4430f72077
 ">
-                                <img alt="Logo-Ubicación" src="{concat($theme-path, '/images/logo-ubicacion.png')}"/>
+                                <img id="logo-ubic" alt="Logo-Ubicación" src="{concat($theme-path, '/images/logo-ubicacion.png')}"/>
                             </a>
-                        </div>
+			    <br/><br/>
+                        </div>			
+			<div id="letra-pie" class="pull-left">
+				Buenos Aires 1400<br/>
+				Neuquén Capital<br/>
+				Patagonia Argentina <br/>
+				Tel: 54-299-4490300
+			</div>		
+                        
+			
                     </div>
                 </div>
                 <!--Invisible link to HTML sitemap (for search engines) -->
