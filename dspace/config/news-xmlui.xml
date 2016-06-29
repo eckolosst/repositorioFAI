@@ -5,6 +5,14 @@
 <head>Repositorio UNCo</head>
 <p>Plataforma de prueba e investigación orientado al desarrollo de un repositorio institucional, basado en el software DSpace.</p>
 </div>
+<!-- Etiquetas ul e img agregadas con el fin de crear un visor de imagenes en el 
+inicio de la web, estas etiquetas son manipuladas en el elements.xsl-->
+<ul>
+<img>img1.jpg</img>
+<img>img2.jpg</img>
+<img>img3.jpg</img>
+<img>img4.jpg</img>
+</ul>
 </body>
 <options/>
 <meta>
