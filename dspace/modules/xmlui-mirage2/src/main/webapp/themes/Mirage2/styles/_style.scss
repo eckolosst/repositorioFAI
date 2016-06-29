@@ -49,6 +49,15 @@ ul#menu li {
     display:inline;
     padding: 5px 0px;
 }
+.padding-footer{
+	padding-right:30px;
+}
+
+/* Hace que la barra de navegación mantenga el fondo hasta el final de la página, como hace el main-container*/
+.sidebar-blanco{
+    padding-bottom: 99999px;
+    margin-bottom: -99979px;
+}
 
 /* Note: Try to remove the following lines to see the effect of CSS positioning */
 .affix {
