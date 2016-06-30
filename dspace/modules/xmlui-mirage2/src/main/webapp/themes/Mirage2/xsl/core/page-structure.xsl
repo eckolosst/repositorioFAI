@@ -76,7 +76,7 @@
                 <xsl:call-template name="buildHead"/>
 
                 <!-- Then proceed to the body -->
-                <body>
+                <body style="background-image:url({$theme-path}/images/book2.jpg)" >
                     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
                    chromium.org/developers/how-tos/chrome-frame-getting-started -->
                     <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -86,8 +86,9 @@
                             <xsl:apply-templates select="dri:body/*"/>
                         </xsl:when>
                         <xsl:otherwise>
-                            <xsl:call-template name="buildHeader"/>
+                            <xsl:call-template name="buildHeader"/>  			    
                             <xsl:call-template name="buildTrail"/>
+			   <!--<xsl:call-template name="prueba"/>-->
                             <!--javascript-disabled warning, will be invisible if javascript is enabled-->
                             <div id="no-js-warning-wrapper" class="hidden">
                                 <div id="no-js-warning">
@@ -101,15 +102,19 @@
 
                                 <div class="row row-offcanvas row-offcanvas-right">
                                     <div class="horizontal-slider clearfix">
+					
                                         <div class="col-xs-12 col-sm-12 col-md-9 main-content">
+					  
                                             <xsl:apply-templates select="*[not(self::dri:options)]"/>
 
                                             <div class="visible-xs visible-sm">
                                                 <xsl:call-template name="buildFooter"/>
                                             </div>
                                         </div>
-                                        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-                                            <xsl:apply-templates select="dri:options"/>
+                                        <div class="col-xs-6 col-sm-3 sidebar-offcanvas sidebar-blanco" id="sidebar" role="navigation"  >
+						<div align="center">						
+							<h3><a href="http://wikifai.fi.uncoma.edu.ar/mediawiki/index.php/P%C3%A1gina_principal" target="_blank"> <img src="{$theme-path}/images/ayuda.png" style="height: 40px"/>  Ayuda</a></h3>          </div>                                  
+						<xsl:apply-templates select="dri:options"/>
                                         </div>
 
                                     </div>
@@ -325,7 +330,7 @@
         <header>
             <div class="navbar navbar-default navbar-static-top" role="navigation">
                 <div class="container">
-                    <div class="navbar-header">
+                    <div class="navbar-header">		    
 
                         <button type="button" class="navbar-toggle" data-toggle="offcanvas">
                             <span class="sr-only">
@@ -344,6 +349,7 @@
 			    
                         </a>
 	
+
 			<h1 id="titulo-header" class="navbar-text">Repositorio UNCO</h1>	
 				
 
@@ -478,18 +484,7 @@
                         </button>
                     </div>
                 </div>
-            </div>
-
-	    <!-- Intento de sticky bar-->
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>	
-	    <nav class="col-sm-3">
-		<ul class="nav nav-pills nav-stacked collapse" data-spy="affix" data-offset-top="205">
-		    <li class="active"><a href="#section1">Section 1</a></li>
-		    <li><a href="#section2">Section 2</a></li>
-		    <li><a href="#section3">Section 3</a></li>
-		</ul>
-	    </nav>
+            </div> 
 
         </header>
 
@@ -500,7 +495,7 @@
     <!-- The header (distinct from the HTML head element) contains the title, subtitle, login box and various
         placeholders for header images -->
     <xsl:template name="buildTrail">
-
+	
         <div class="trail-wrapper hidden-print">
             <div class="container">
                 <div class="row">
@@ -954,4 +949,12 @@
         </xsl:if>
     </xsl:template>
 
+
+    <!--Template de prueba-->
+    <xsl:template name="prueba">
+        <!-- -->
+	<div style="background: blue">
+        	template prueba
+	</div>
+    </xsl:template>
 </xsl:stylesheet>
