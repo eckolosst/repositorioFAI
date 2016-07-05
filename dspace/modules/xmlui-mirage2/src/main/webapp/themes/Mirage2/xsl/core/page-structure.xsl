@@ -76,7 +76,7 @@
                 <xsl:call-template name="buildHead"/>
 
                 <!-- Then proceed to the body -->
-                <body style="background-image:url({$theme-path}/images/book2.jpg)" >
+                <body style="background-image:url({$theme-path}/images/fondo2.jpg)" >
                     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
                    chromium.org/developers/how-tos/chrome-frame-getting-started -->
                     <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -318,6 +318,10 @@
                 <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">&#160;</script>
             </xsl:if>
 
+	<!-- Fuentes 
+	<link href='https://fonts.googleapis.com/css?family=Courgette|Merienda+One' rel='stylesheet' type='text/css'></link>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine"></link>-->
+	<link href='https://fonts.googleapis.com/css?family=Cinzel:700' rel='stylesheet' type='text/css'></link>
         </head>
     </xsl:template>
 
@@ -350,7 +354,7 @@
                         </a>
 	
 
-			<h1 id="titulo-header" class="navbar-text">Repositorio UNCO</h1>	
+			<h1 id="titulo-header" class="navbar-text" style=" font-family: 'Cinzel';">Repositorio UNCo</h1>	
 				
 
                         <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
@@ -466,10 +470,8 @@
                                     <li>
                                         <a href="{/dri:document/dri:meta/dri:userMeta/
                             dri:metadata[@element='identifier' and @qualifier='loginURL']}">
-                                            <p class="glyphicon glyphicon-user hidden-xs">
-						<span>  </span>
-                                                <i18n:text>xmlui.dri2xhtml.structural.login</i18n:text>
-                                            </p>
+                                            <p class="glyphicon glyphicon-user hidden-xs" style=""></p>
+					    <span> &#160; </span><i18n:text>xmlui.dri2xhtml.structural.login</i18n:text>
                                         </a>
                                     </li>
                                 </xsl:otherwise>
@@ -736,17 +738,19 @@
                     </div>
 		    -->
 		    <div class="col-xs-7 col-sm-8 pull-right">
-			<div align="center">
-			<br/>
-			    <ul id="menu" class="pull-right">			
-				<li><a href="http://bibliocentral.uncoma.edu.ar/" target="_blank"> <img class="logo" src="{$theme-path}/images/web.png"/> </a> </li>
-				<li><a href="https://www.facebook.com/biblioteca.central.uncomahue" target="_blank"> <img class="logo" src="{$theme-path}/images/facebook.png"/> </a> </li>
-				<li><a href="https://twitter.com/Biblioteca_UNCo" target="_blank"> <img class="logo" src="{$theme-path}/images/twitter.ico"/> </a> </li>	
-				<li><a href="https://plus.google.com/+bibliotecacentralUnco/posts" target="_blank"> <img class="logo" src="{$theme-path}/images/google.png"/> </a></li>
-			    </ul>
+			<div class="padding-footer" style="padding-right:30px">
+				<div align="center">
+				<br/>
+				    <ul id="menu" class="pull-right">			
+					<li><a href="http://bibliocentral.uncoma.edu.ar/" target="_blank"> <img class="logo" src="{$theme-path}/images/web.png"/> </a> </li>
+					<li><a href="https://www.facebook.com/biblioteca.central.uncomahue" target="_blank"> <img class="logo" src="{$theme-path}/images/facebook.png"/> </a> </li>
+					<li><a href="https://twitter.com/Biblioteca_UNCo" target="_blank"> <img class="logo" src="{$theme-path}/images/twitter.ico"/> </a> </li>	
+					<li><a href="https://plus.google.com/+bibliotecacentralUnco/posts" target="_blank"> <img class="logo" src="{$theme-path}/images/google.png"/> </a></li>
+				    </ul>
+				</div>
+				<br/><br/>
+				<div id="letra-pie" align="right" class="pull-right">Soportado por <a href="http://www.dspace.org/" target="_blank">DSpace</a></div>
 			</div>
-			<br/><br/>
-			<div id="letra-pie" align="right" class="pull-right">Soportado por <a href="http://www.dspace.org/" target="_blank">DSpace</a></div>
 		    </div>
                     <div class="col-xs-3 col-sm-4 hidden-print">	
 			<div  class="pull-left" align="left" >

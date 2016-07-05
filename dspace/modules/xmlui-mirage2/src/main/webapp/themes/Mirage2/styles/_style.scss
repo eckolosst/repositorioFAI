@@ -91,12 +91,5 @@ la clase slider es utilizada por un div que se crea mediante el elements.xsl*/
     95% { margin-left: -300%;}
     100% { margin-left: -400%;}
 }
-/* Note: Try to remove the following lines to see the effect of CSS positioning */
-.affix {
-top: 0;
-width: 100%;
-}
 
-.affix + .container-fluid {
-padding-top: 70px;
-}
+
