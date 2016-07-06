@@ -196,7 +196,7 @@
     <!--Template agregado con el fin de manipular las etiquetas ul e img agregadas en 
     el archivo news-xmlui.xml-->
     <xsl:template match="dri:ul">
-        <div class="slider">
+        <div class="slider hidden-xs hidden-sm">
             <ul>
                 <xsl:for-each select="dri:img">
                     <li>

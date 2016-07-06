@@ -76,7 +76,7 @@
                 <xsl:call-template name="buildHead"/>
 
                 <!-- Then proceed to the body -->
-                <body style="background-image:url({$theme-path}/images/fondo2.jpg)" >
+                <body style="background-image:url({$theme-path}/images/fondoV.jpg)" >
                     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
                    chromium.org/developers/how-tos/chrome-frame-getting-started -->
                     <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -709,39 +709,13 @@
     <!-- Like the header, the footer contains various miscellaneous text, links, and image placeholders -->
     <xsl:template name="buildFooter">
         <footer>
-                <div class="row">
+                <div class="row" >
                     <hr/>
-		    <!--
-                    <div class="col-xs-7 col-sm-8">
-                        <div>
-                            <a href="http://www.dspace.org/" target="_blank">DSpace software</a> copyright&#160;&#169;&#160;2002-2015&#160; <a href="http://www.duraspace.org/" target="_blank">DuraSpace</a>
-                        </div>
-                        <div class="hidden-print">
-                            <a>
-                                <xsl:attribute name="href">
-                                    <xsl:value-of
-                                            select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
-                                    <xsl:text>/contact</xsl:text>
-                                </xsl:attribute>
-                                <i18n:text>xmlui.dri2xhtml.structural.contact-link</i18n:text>
-                            </a>
-                            <xsl:text> | </xsl:text>
-                            <a>
-                                <xsl:attribute name="href">
-                                    <xsl:value-of
-                                            select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
-                                    <xsl:text>/feedback</xsl:text>
-                                </xsl:attribute>
-                                <i18n:text>xmlui.dri2xhtml.structural.feedback-link</i18n:text>
-                            </a>
-                        </div>
-                    </div>
-		    -->
-		    <div class="col-xs-7 col-sm-8 pull-right">
-			<div class="padding-footer" style="padding-right:30px">
-				<div align="center">
+		    <div class="col-xs-12 col-sm-12" style="background-color: #B5BBC2">
+			<div class="padding-footer  pull-right" style="padding-right:30px">
+				<div align="center" >
 				<br/>
-				    <ul id="menu" class="pull-right">			
+				    <ul id="menu" class="pull-right" >			
 					<li><a href="http://bibliocentral.uncoma.edu.ar/" target="_blank"> <img class="logo" src="{$theme-path}/images/web.png"/> </a> </li>
 					<li><a href="https://www.facebook.com/biblioteca.central.uncomahue" target="_blank"> <img class="logo" src="{$theme-path}/images/facebook.png"/> </a> </li>
 					<li><a href="https://twitter.com/Biblioteca_UNCo" target="_blank"> <img class="logo" src="{$theme-path}/images/twitter.ico"/> </a> </li>	
@@ -749,28 +723,21 @@
 				    </ul>
 				</div>
 				<br/><br/>
-				<div id="letra-pie" align="right" class="pull-right">Soportado por <a href="http://www.dspace.org/" target="_blank">DSpace</a></div>
+				<div id="letra-pie" align="right" class="pull-right">Soportado por &#160;<a href="http://www.dspace.org/" style="color: #1D1D1D" target="_blank">DSpace</a></div>
 			</div>
-		    </div>
-                    <div class="col-xs-3 col-sm-4 hidden-print">	
-			<div  class="pull-left" align="left" >
-			    
-                            <!--<span class="theme-by">Ubicación</span> -->                            
+			<div  class="pull-left" align="left" >                      
 			    <br/>
-                            <a title="Ubicación gmaps" target="_blank" href="https://www.google.com.ar/maps/place/UNIVERSIDAD+NACIONAL+COMAHUE/@-38.9401499,-68.0573579,15z/data=!4m2!3m1!1s0x0:0x9e60fc4430f72077
-">
+			    <a title="Ubicación gmaps" target="_blank" href="https://www.google.com.ar/maps/place/Biblioteca+Central+Francisco+P.+Moreno/@-38.9408112,-68.0540159,18z/data=!4m12!1m6!3m5!1s0x0:0x9e60fc4430f72077!2sUNIVERSIDAD+NACIONAL+COMAHUE!8m2!3d-38.9401499!4d-68.0573579!3m4!1s0x0:0xa28966aefad487f9!8m2!3d-38.9407537!4d-68.0541323">
                                 <img id="logo-ubic" alt="Logo-Ubicación" src="{concat($theme-path, '/images/logo-ubicacion.png')}"/>
                             </a>
 			    <br/><br/>
                         </div>			
-			<div id="letra-pie" class="pull-left">
+			<div id="letra-pie" class="pull-left hidden-xs">
 				Buenos Aires 1400<br/>
 				Neuquén Capital<br/>
 				Patagonia Argentina <br/>
 				Tel: 54-299-4490300
-			</div>		
-                        
-			
+			</div>				
                     </div>
                 </div>
                 <!--Invisible link to HTML sitemap (for search engines) -->
@@ -782,7 +749,7 @@
                     </xsl:attribute>
                     <xsl:text>&#160;</xsl:text>
                 </a>
-            <p>&#160;</p>
+            <!--<p>&#160;</p>-->
         </footer>
     </xsl:template>
 
