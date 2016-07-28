@@ -76,7 +76,7 @@
                 <xsl:call-template name="buildHead"/>
 
                 <!-- Then proceed to the body -->
-                <body style="background-image:url({$theme-path}/images/fondoV.jpg)" >
+                <body style="background-image:url({$theme-path}/images/fondo2.jpg)" >
                     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
                    chromium.org/developers/how-tos/chrome-frame-getting-started -->
                     <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -88,7 +88,7 @@
                         <xsl:otherwise>
                             <xsl:call-template name="buildHeader"/>  			    
                             <xsl:call-template name="buildTrail"/>
-			   <!--<xsl:call-template name="prueba"/>-->
+			   
                             <!--javascript-disabled warning, will be invisible if javascript is enabled-->
                             <div id="no-js-warning-wrapper" class="hidden">
                                 <div id="no-js-warning">
@@ -112,8 +112,7 @@
                                             </div>
                                         </div>
                                         <div class="col-xs-6 col-sm-3 sidebar-offcanvas sidebar-blanco" id="sidebar" role="navigation"  >
-						<div align="center">						
-							<h3><a href="http://wikifai.fi.uncoma.edu.ar/mediawiki/index.php/P%C3%A1gina_principal" target="_blank"> <img src="{$theme-path}/images/ayuda.png" style="height: 40px"/>  Ayuda</a></h3>          </div>                                  
+						                                 
 						<xsl:apply-templates select="dri:options"/>
                                         </div>
 
@@ -319,9 +318,10 @@
             </xsl:if>
 
 	<!-- Fuentes 
-	<link href='https://fonts.googleapis.com/css?family=Courgette|Merienda+One' rel='stylesheet' type='text/css'></link>
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine"></link>-->
-	<link href='https://fonts.googleapis.com/css?family=Cinzel:700' rel='stylesheet' type='text/css'></link>
+	<link href='https://fonts.googleapis.com/css?family=Cinzel:700' rel='stylesheet' type='text/css'></link> font-family: 'Cinzel';	
+	<link href="https://fonts.googleapis.com/css?family=Suez+One" rel="stylesheet"></link> font-family: 'Suez One', serif;-->
+	<link href="https://fonts.googleapis.com/css?family=Droid+Serif:700i" rel="stylesheet">  </link>
+	
         </head>
     </xsl:template>
 
@@ -347,14 +347,12 @@
 
                         <a href="{$context-path}/" class="navbar-brand sin-padding">
 			    
-                            <!--<img src="{$theme-path}/images/DSpace-logo-line.svg" />-->
-			   
-			    <img id="logo-header" src="{$theme-path}/images/apple-touch-icon.png"/> 
-			    
+			    <img id="logo-header" src="{$theme-path}/images/apple-touch-icon.png"/>	
+			    			    
                         </a>
 	
 
-			<h1 id="titulo-header" class="navbar-text" style=" font-family: 'Cinzel';">Repositorio UNCo</h1>	
+			<h1 id="titulo-header" class="navbar-text" style=" font-family: 'Droid Serif', serif ">Repositorio UNCo</h1>	
 				
 
                         <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
@@ -726,13 +724,13 @@
 				<div id="letra-pie" align="right" class="pull-right">Soportado por &#160;<a href="http://www.dspace.org/" style="color: #1D1D1D" target="_blank">DSpace</a></div>
 			</div>
 			<div  class="pull-left" align="left" >                      
-			    <br/>
+			    
 			    <a title="Ubicación gmaps" target="_blank" href="https://www.google.com.ar/maps/place/Biblioteca+Central+Francisco+P.+Moreno/@-38.9408112,-68.0540159,18z/data=!4m12!1m6!3m5!1s0x0:0x9e60fc4430f72077!2sUNIVERSIDAD+NACIONAL+COMAHUE!8m2!3d-38.9401499!4d-68.0573579!3m4!1s0x0:0xa28966aefad487f9!8m2!3d-38.9407537!4d-68.0541323">
-                                <img id="logo-ubic" alt="Logo-Ubicación" src="{concat($theme-path, '/images/logo-ubicacion.png')}"/>
+                                <img id="logo-ubic" alt="Logo-Ubicación" src="{concat($theme-path, '/images/logo-ubicacion2.png')}"/>
                             </a>
 			    <br/><br/>
                         </div>			
-			<div id="letra-pie" class="pull-left hidden-xs">
+			<div id="letra-pie" class="pull-left hidden-xs">			
 				Buenos Aires 1400<br/>
 				Neuquén Capital<br/>
 				Patagonia Argentina <br/>
@@ -920,12 +918,4 @@
         </xsl:if>
     </xsl:template>
 
-
-    <!--Template de prueba-->
-    <xsl:template name="prueba">
-        <!-- -->
-	<div style="background: blue">
-        	template prueba
-	</div>
-    </xsl:template>
 </xsl:stylesheet>
