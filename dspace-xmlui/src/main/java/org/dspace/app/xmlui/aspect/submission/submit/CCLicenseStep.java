@@ -137,8 +137,8 @@ public class CCLicenseStep extends AbstractSubmissionStep
             	selectList.setOptionSelected(cclicense.getLicenseId());
         	}
 	    }
-            // Comentado para que no aparezca sin licencia
-	    // selectList.addOption(T_no_license.getKey(), T_no_license);
+            
+	    selectList.addOption(T_no_license.getKey(), T_no_license);
 	    if (selectedLicense  !=  null) {
 	    	// output the license fields chooser for the license class type
 	    	if (cclookup.getLicenseFields(selectedLicense, ccLocale) == null ) {
