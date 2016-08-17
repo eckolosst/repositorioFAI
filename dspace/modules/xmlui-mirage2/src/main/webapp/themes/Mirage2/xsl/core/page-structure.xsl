@@ -112,7 +112,11 @@
                                             </div>
                                         </div>
                                         <div class="col-xs-6 col-sm-3 sidebar-offcanvas sidebar-blanco" id="sidebar" role="navigation"  >
-						                                 
+						<div align="center">	
+							<br/>						   
+							<a href="http://wikifai.fi.uncoma.edu.ar/mediawiki/index.php/P%C3%A1gina_principal" target="_blank"> 
+							<img src="{$theme-path}/images/wiki.png" style=" width: 50%; height: 50%;"/></a>						   
+					       </div>                          
 						<xsl:apply-templates select="dri:options"/>
                                         </div>
 
@@ -399,8 +403,8 @@
                                             aria-labelledby="user-dropdown-toggle-xs" data-no-collapse="true">
                                             <li>
                                                 <a href="{/dri:document/dri:meta/dri:userMeta/
-                            dri:metadata[@element='identifier' and @qualifier='url']}">
-                                                    <i18n:text>xmlui.EPerson.Navigation.profile</i18n:text>
+                            dri:metadata[@element='identifier' and @qualifier='url']}"> 
+                                                     <i18n:text>xmlui.EPerson.Navigation.profile</i18n:text>
                                                 </a>
                                             </li>
                                             <li>
@@ -437,7 +441,7 @@
                                     <li class="dropdown">
                                         <a id="user-dropdown-toggle" href="#" role="button" class="dropdown-toggle"
                                            data-toggle="dropdown">
-                                            <span class="hidden-xs">
+                                            <span class="hidden-xs"> Hola!&#160;
                                                 <xsl:value-of select="/dri:document/dri:meta/dri:userMeta/
                             dri:metadata[@element='identifier' and @qualifier='firstName']"/>
                                                 <xsl:text> </xsl:text>

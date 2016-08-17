@@ -740,7 +740,7 @@
 <message key="xmlui.Submission.submit.InitialQuestionsStep.publisher">Editor</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.DescribeStep -->
-<message key="xmlui.Submission.submit.DescribeStep.head">Describir el ítem</message>
+<message key="xmlui.Submission.submit.DescribeStep.head">Los campos marcados con "*" son obligatorios.</message>
 <message key="xmlui.Submission.submit.DescribeStep.unknown_field">Error: Tipo de campo desconocido</message>
 <message key="xmlui.Submission.submit.DescribeStep.required_field">Este campo es obligatorio</message>
 <message key="xmlui.Submission.submit.DescribeStep.last_name_help">Apellido, <i>p.ej. Pérez</i></message>

@@ -16,7 +16,7 @@
     <form-map>
         <name-map collection-handle="default" form-name="traditional" />
         <name-map collection-handle="123456789/4" form-name="Tesis" />
-<!--    <name-map collection-handle="123456789/52" form-name="Tesis" />
+    	<name-map collection-handle="123456789/52" form-name="Tesis" />
         <name-map collection-handle="123456789/53" form-name="Tesis" />
         <name-map collection-handle="123456789/54" form-name="Tesis" />
         <name-map collection-handle="123456789/38" form-name="Tesis" />
@@ -33,7 +33,7 @@
         <name-map collection-handle="123456789/49" form-name="Tesis" />
         <name-map collection-handle="123456789/50" form-name="Tesis" />
         <name-map collection-handle="123456789/51" form-name="Tesis" />
- -->
+ 
     </form-map>
 
 
@@ -64,7 +64,7 @@
                     <repeatable>false</repeatable>
                     <label>Titulo</label>
                     <input-type>onebox</input-type>
-                    <hint>Nombre dado al item por el cual es formalmente conocido</hint>
+                    <hint>Nombre dado al item por el cual es formalmente conocido.</hint>
                     <required>Campo obligatorio</required>
                 </field>
 
@@ -75,19 +75,7 @@
                     <repeatable>false</repeatable>
                     <label>Creador</label>
                     <input-type>name</input-type>
-                    <hint>Responsable del contenido intelectual</hint>
-                    <required>Campo obligatorio</required>
-                </field>
-
-
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>type</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Tema</label>
-                    <input-type value-pairs-name="temas">list</input-type>
-                    <hint>Palabras claves o frases que describen el tema de la tesis</hint>
+                    <hint>Responsable del contenido intelectual.</hint>
                     <required>Campo obligatorio</required>
                 </field>
 
@@ -96,9 +84,9 @@
                     <dc-element>description</dc-element>
                     <dc-qualifier>abstract</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Descripción</label>
+                    <label>Abstract</label>
                     <input-type>textarea</input-type>
-                    <hint>Descripcion textual sobre el contenido de la tesis (abstract).</hint>
+                    <hint>Descripcion textual sobre el contenido de la tesis.</hint>
                     <required>Campo obligatorio</required>
                 </field>
 
@@ -106,10 +94,32 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>subject</dc-element>
                     <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Materia</label>
+                    <input-type value-pairs-name="temas">dropdown</input-type>
+                    <hint>Palabras claves o frases que describen el tema de la tesis.</hint>
+                    <required>Campo obligatorio</required>
+                </field>
+
+		<field>
+                    <dc-schema>unco</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier>desc</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Descriptores</label>
+                    <input-type>onebox</input-type>
+                    <hint>Descriptores del contenido de la tesis.</hint>
+                    <required>Campo obligatorio</required>
+                </field>
+
+		<field>
+                    <dc-schema>unco</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier>keyword</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Palabras claves</label>
                     <input-type>onebox</input-type>
-                    <hint>Palabras claves o descriptores del contenido de la tesis.</hint>
+                    <hint>Palabras claves del contenido de la tesis.</hint>
                     <required>Campo obligatorio</required>
                 </field>
 
@@ -120,7 +130,7 @@
                     <repeatable>false</repeatable>
                     <label>Editor</label>
                     <input-type>onebox</input-type>
-                    <hint>Entidad responsable de publicar o distribuir la tesis en su formato actual</hint>
+                    <hint>Entidad responsable de publicar o distribuir la tesis en su formato actual.</hint>
                     <required>Campo obligatorio</required>
                 </field>
 
@@ -131,7 +141,8 @@
                     <repeatable>true</repeatable>
                     <label>Director/Codirector</label>
                     <input-type>twobox</input-type>
-                    <hint>Indique en este campo el nombre del director y/o codirector</hint>
+                    <hint>Indique en este campo el nombre del director y/o codirector con su función correspondiente. 
+			  Ej: Suárez, Luis CoDir</hint>
                     <required>Campo obligatorio</required>
                 </field>
 
@@ -140,12 +151,24 @@
                     <dc-element>date</dc-element>
                     <dc-qualifier>issued</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Fecha</label>
+                    <label>Fecha de Defensa</label>
                     <input-type>date</input-type>
-                    <hint>Fecha de defensa (dictamen)</hint> 
+                    <hint>Fecha de defensa de la tesis (dictamen).</hint> 
+                    <required>Campo obligatorio</required>
+                </field>
+		
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>submitted</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Fecha de Presentación</label>
+                    <input-type>date</input-type>
+                    <hint>Fecha de presentación de la tesis.</hint> 
                     <required>Campo obligatorio</required>
                 </field>
 
+		<!--
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>identifier</dc-element>
@@ -153,10 +176,22 @@
                     <repeatable>false</repeatable>
                     <label>Tipo</label>
                     <input-type value-pairs-name="tipos">dropdown</input-type>
-                    <hint>Naturaleza o genero del contenido de la tesis</hint>
+                    <hint>Naturaleza o genero del contenido de la tesis.</hint>
                     <required>Campo Obligatorio</required>
                 </field>
+		-->
 
+		<field>
+                    <dc-schema>unco</dc-schema>
+                    <dc-element>tesis</dc-element>
+                    <dc-qualifier>jurado</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Jurado</label>
+                    <input-type>name</input-type>
+                    <hint>Jurado presente en la defensa de la tesis.</hint>
+                    <required>Campo obligatorio</required>
+                </field>
+		
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>format</dc-element>
@@ -164,10 +199,21 @@
                     <repeatable>false</repeatable>
                     <label>Formato</label>
                     <input-type>onebox</input-type>
-                    <hint>Manifestacion fisica o digital del item (icluye el medio y las dimensiones del objeto digital)</hint>
+                    <hint>Manifestacion fisica o digital del item (icluye el medio y las dimensiones del objeto digital).</hint>
                     <required>Campo Obligatorio</required>
                 </field>
                 
+		<field>
+                    <dc-schema>unco</dc-schema>
+                    <dc-element>tesis</dc-element>
+                    <dc-qualifier>grado</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Grado Alcanzado</label>
+                    <input-type>onebox</input-type>
+                    <hint>Grado alcanzado por la tesis.</hint>
+                    <required></required>
+                </field>
+
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>language</dc-element>
@@ -175,21 +221,9 @@
                     <repeatable>false</repeatable>
                     <label>Idioma</label>
                     <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-                    <hint>Indica el idioma del contenido intelectual de la tesis </hint>
+                    <hint>Indica el idioma del contenido intelectual de la tesis.</hint>
                     <required></required>
                 </field>
-<!--
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>relation</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Relación</label>
-                    <input-type>onebox</input-type>
-                    <hint>Referencia a otro objeto o material relacionado.</hint>
-                    <required></required>
-                </field>
--->
 
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -198,42 +232,12 @@
                     <repeatable>false</repeatable>
                     <label>Cobertura</label>
                     <input-type>textarea</input-type>
-                    <hint>Alcances especiales, temporales o jurisdiccionales del contenido intelectual de la tesis.</hint>
+                    <hint>Alcances espaciales, temporales o jurisdiccionales del contenido intelectual de la tesis.</hint>
                     <required></required>
-                </field>
+                </field>		
+
             </page>
 
-<!--                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>identifier</dc-element>
-                    <dc-qualifier>citation</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>*Identificador</label>
-                    <input-type>onebox</input-type>
-                    <hint>Cadena de caracteres o signos para identificar la tesis de manera univoca en un contexto dado.</hint>
-                    <required>Campo Obligatorio</required>
-                </field>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>rights</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>*Derechos</label>
-                    <input-type>textarea</input-type>
-                    <hint>Mención acerca de los derechos del objeto.</hint>
-                    <required>Campo Obligatorio</required>
-                </field>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>source</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Fuente</label>
-                    <input-type>onebox</input-type>
-                    <hint>Referencia al recurso o fuente de donde se deriva el objeto actual.</hint>
-                    <required></required>
-                </field>
--->
         </form>
                
         <form name="traditional">
@@ -452,16 +456,16 @@
             </pair>
         </value-pairs>
         
-        <value-pairs value-pairs-name="tipos" dc-terms="identifier">
+        <!--<value-pairs value-pairs-name="tipos" dc-terms="identifier">
             <pair>
                 <displayed-value>Grado</displayed-value>
-                <stored-value>grado</stored-value>
+                <stored-value>Grado</stored-value>
             </pair>
             <pair>
                 <displayed-value>Postgrado</displayed-value>
-                <stored-value>postgrado</stored-value>
+                <stored-value>Postgrado</stored-value>
             </pair>
-        </value-pairs>
+        </value-pairs>-->
         
         <value-pairs value-pairs-name="common_identifiers" dc-term="identifier">
             <pair>

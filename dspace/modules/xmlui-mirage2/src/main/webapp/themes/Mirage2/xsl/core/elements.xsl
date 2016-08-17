@@ -194,7 +194,7 @@
     </xsl:template>
 
     <!--Template agregado con el fin de manipular las etiquetas ul e img agregadas en 
-    el archivo news-xmlui.xml-->
+    el archivo news-xmlui.xml
     <xsl:template match="dri:ul">
         <div class="slider hidden-xs hidden-sm">
             <ul>
@@ -209,7 +209,7 @@
                 </xsl:for-each>
             </ul>
         </div>
-    </xsl:template>
+    </xsl:template>-->
 
     <!-- Finally, we have the list element, which is used to display set of data. There are several different
         types of lists, as signified by the type attribute, and several different templates to handle them. -->
