@@ -126,7 +126,9 @@ public class CCLicenseStep extends AbstractSubmissionStep
 	    selectList.setEvtBehavior("submitOnChange");
 	    Iterator<CCLicense> iterator = cclookup.getLicenses(ccLocale).iterator();
 	    // build select List - first choice always 'choose a license', last always 'No license'
-	    selectList.addOption(T_select_change.getKey(), T_select_change);
+	    
+            
+            selectList.addOption(T_select_change.getKey(), T_select_change);
 	    while (iterator.hasNext()) {
 	        CCLicense cclicense = iterator.next();
 	        selectList.addOption(cclicense.getLicenseId(), cclicense.getLicenseName());
@@ -135,7 +137,8 @@ public class CCLicenseStep extends AbstractSubmissionStep
             	selectList.setOptionSelected(cclicense.getLicenseId());
         	}
 	    }
-	    selectList.addOption(T_no_license.getKey(), T_no_license);
+            // Comentado para que no aparezca sin licencia
+	    // selectList.addOption(T_no_license.getKey(), T_no_license);
 	    if (selectedLicense  !=  null) {
 	    	// output the license fields chooser for the license class type
 	    	if (cclookup.getLicenseFields(selectedLicense, ccLocale) == null ) {
