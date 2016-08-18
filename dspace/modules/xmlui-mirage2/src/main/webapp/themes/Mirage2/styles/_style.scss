@@ -36,7 +36,7 @@ h1#titulo-header{
     padding: 0px 0px;
 }
 /* Para el pie de página, links e imagenes*/
-img.logo{
+img.logo-contacto{
     width: 30px; 
     height: 30px;
 }
@@ -107,3 +107,8 @@ la clase slider es utilizada por un div que se crea mediante el elements.xsl*/
 #link-dspace{
     color: #1D1D1D;
 }
+/* Clase que actúa sobre los logos de las comunidades, colecciones etc...
+img.logo{
+    width: 30px; 
+    height: 30px;
+}*/

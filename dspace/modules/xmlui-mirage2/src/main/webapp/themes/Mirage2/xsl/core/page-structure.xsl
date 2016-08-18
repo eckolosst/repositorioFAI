@@ -719,10 +719,10 @@
 				<br/>
 				    <ul id="menu" class="pull-right" >		
 					<li><a href="https://creativecommons.org/" target="_blank"> <img class="logo-cc" src="{$theme-path}/images/cc.png"/> &#160;</a></li>	
-					<li><a href="http://bibliocentral.uncoma.edu.ar/" target="_blank"> <img class="logo" src="{$theme-path}/images/web.png"/> </a> </li>
-					<li><a href="https://www.facebook.com/biblioteca.central.uncomahue" target="_blank"> <img class="logo" src="{$theme-path}/images/facebook.png"/> </a> </li>
-					<li><a href="https://twitter.com/Biblioteca_UNCo" target="_blank"> <img class="logo" src="{$theme-path}/images/twitter.ico"/> </a> </li>	
-					<li><a href="https://plus.google.com/+bibliotecacentralUnco/posts" target="_blank"> <img class="logo" src="{$theme-path}/images/google.png"/> </a></li>
+					<li><a href="http://bibliocentral.uncoma.edu.ar/" target="_blank"> <img class="logo-contacto" src="{$theme-path}/images/web.png"/> </a> </li>
+					<li><a href="https://www.facebook.com/biblioteca.central.uncomahue" target="_blank"> <img class="logo-contacto" src="{$theme-path}/images/facebook.png"/> </a> </li>
+					<li><a href="https://twitter.com/Biblioteca_UNCo" target="_blank"> <img class="logo-contacto" src="{$theme-path}/images/twitter.ico"/> </a> </li>	
+					<li><a href="https://plus.google.com/+bibliotecacentralUnco/posts" target="_blank"> <img class="logo-contacto" src="{$theme-path}/images/google.png"/> </a></li>
 				    </ul>
 				</div>
 				
