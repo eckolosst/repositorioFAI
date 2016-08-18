@@ -115,7 +115,7 @@
 						<div align="center">	
 							<br/>						   
 							<a href="http://wikifai.fi.uncoma.edu.ar/mediawiki/index.php/P%C3%A1gina_principal" target="_blank"> 
-							<img src="{$theme-path}/images/wiki.png" style=" width: 50%; height: 50%;"/></a>						   
+							<img id="ayuda" src="{$theme-path}/images/wiki.png"/></a>						   
 					       </div>                          
 						<xsl:apply-templates select="dri:options"/>
                                         </div>
@@ -356,7 +356,7 @@
                         </a>
 	
 
-			<h1 id="titulo-header" class="navbar-text" style=" font-family: 'Droid Serif', serif ">Repositorio UNCo</h1>	
+			<h1 id="titulo-header" class="navbar-text">Repositorio UNCo</h1>	
 				
 
                         <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
@@ -472,7 +472,7 @@
                                     <li>
                                         <a href="{/dri:document/dri:meta/dri:userMeta/
                             dri:metadata[@element='identifier' and @qualifier='loginURL']}">
-                                            <p class="glyphicon glyphicon-user hidden-xs" style=""></p>
+                                            <p class="glyphicon glyphicon-user hidden-xs"></p>
 					    <span> &#160; </span><i18n:text>xmlui.dri2xhtml.structural.login</i18n:text>
                                         </a>
                                     </li>
@@ -713,19 +713,20 @@
         <footer>
                 <div class="row" >
                     <hr/>
-		    <div class="col-xs-12 col-sm-12" style="background-color: #B5BBC2">
-			<div class="padding-footer  pull-right" style="padding-right:30px">
-				<div align="center" >
+		    <div id="footer-color" class="col-xs-12 col-sm-12">
+			<div class="padding-footer  pull-right">
+				<div align="right" >
 				<br/>
-				    <ul id="menu" class="pull-right" >			
+				    <ul id="menu" class="pull-right" >		
+					<li><a href="https://creativecommons.org/" target="_blank"> <img class="logo-cc" src="{$theme-path}/images/cc.png"/> &#160;</a></li>	
 					<li><a href="http://bibliocentral.uncoma.edu.ar/" target="_blank"> <img class="logo" src="{$theme-path}/images/web.png"/> </a> </li>
 					<li><a href="https://www.facebook.com/biblioteca.central.uncomahue" target="_blank"> <img class="logo" src="{$theme-path}/images/facebook.png"/> </a> </li>
 					<li><a href="https://twitter.com/Biblioteca_UNCo" target="_blank"> <img class="logo" src="{$theme-path}/images/twitter.ico"/> </a> </li>	
 					<li><a href="https://plus.google.com/+bibliotecacentralUnco/posts" target="_blank"> <img class="logo" src="{$theme-path}/images/google.png"/> </a></li>
 				    </ul>
 				</div>
-				<br/><br/>
-				<div id="letra-pie" align="right" class="pull-right">Soportado por &#160;<a href="http://www.dspace.org/" style="color: #1D1D1D" target="_blank">DSpace</a></div>
+				
+				<div id="letra-pie" align="right" class="pull-right">Soportado por &#160;<a id="link-dspace" href="http://www.dspace.org/" target="_blank">DSpace</a></div>
 			</div>
 			<div  class="pull-left" align="left" >                      
 			    

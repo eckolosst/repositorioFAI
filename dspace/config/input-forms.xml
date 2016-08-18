@@ -439,21 +439,49 @@
     <form-value-pairs>
         <value-pairs value-pairs-name="temas" dc-terms="types">
             <pair>
-                <displayed-value>Prueba</displayed-value>
-                <stored-value>prueba</stored-value>
+                <displayed-value>Ciencia Política</displayed-value>
+                <stored-value>Ciencia Política</stored-value>
             </pair>
             <pair>
-                <displayed-value>Prueba1</displayed-value>
-                <stored-value>prueba1</stored-value>
+                <displayed-value>Ciencias de la Administración y Economía</displayed-value>
+                <stored-value>Ciencias de la Administración y Economía</stored-value>
             </pair>
             <pair>
-                <displayed-value>Prueba2</displayed-value>
-                <stored-value>prueba2</stored-value>
+                <displayed-value>Ciencias de la Computación e Información</displayed-value>
+                <stored-value>Ciencias de la Computación e Información</stored-value>
             </pair>
             <pair>
-                <displayed-value>Prueba3</displayed-value>
-                <stored-value>prueba3</stored-value>
+                <displayed-value>Ciencias Sociales</displayed-value>
+                <stored-value>Ciencias Sociales</stored-value>
             </pair>
+            <pair>
+                <displayed-value>Ciencias de la Educación</displayed-value>
+                <stored-value>Ciencias de la Educación</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ciencias de la Tierra y Medio Ambiente</displayed-value>
+                <stored-value>Ciencias de la Tierra y Medio Ambiente</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ciencias Agrarias y Forestales</displayed-value>
+                <stored-value>Ciencias Agrarias y Forestales</stored-value>
+            </pair>  
+            <pair>
+                <displayed-value>Ciencias Biomédicas</displayed-value>
+                <stored-value>Ciencias Biomédicas</stored-value>
+            </pair>  
+            <pair>
+                <displayed-value>Ciencias Puras</displayed-value>
+                <stored-value>Ciencias Puras</stored-value>
+            </pair>  
+            <pair>
+                <displayed-value>Ciencias Aplicadas</displayed-value>
+                <stored-value>Ciencias Aplicadas</stored-value>
+            </pair>  
+            <pair>
+                <displayed-value>Humanidades y Arte</displayed-value>
+                <stored-value>Humanidades y Arte</stored-value>
+            </pair>                       
         </value-pairs>
         
         <!--<value-pairs value-pairs-name="tipos" dc-terms="identifier">

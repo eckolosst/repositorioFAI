@@ -29,6 +29,7 @@ img#logo-header{
 h1#titulo-header{
    color: #FFFFFF; 
    font-size:260%;
+   font-family: 'Droid Serif', serif;
 }
 /*Para que el logo en la barra de navegación se vea grande anulamos el padding*/
 .sin-padding{
@@ -38,6 +39,10 @@ h1#titulo-header{
 img.logo{
     width: 30px; 
     height: 30px;
+}
+img.logo-cc{
+    width: 110px; 
+    height: 27px;
 }
 img#logo-ubic{
     padding: 5px 10px;
@@ -51,6 +56,7 @@ ul#menu li {
 }
 .padding-footer{
 	padding-right:30px;
+        
 }
 
 /* Hace que la barra de navegación mantenga el fondo hasta el final de la página, como hace el main-container*/
@@ -91,5 +97,13 @@ la clase slider es utilizada por un div que se crea mediante el elements.xsl*/
     95% { margin-left: -300%;}
     100% { margin-left: -400%;}
 }
-
-
+#ayuda{
+    width: 50%; 
+    height: 50%;
+}
+#footer-color{
+    background-color: #B5BBC2;
+}
+#link-dspace{
+    color: #1D1D1D;
+}
