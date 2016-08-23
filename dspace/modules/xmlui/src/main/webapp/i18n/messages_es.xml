@@ -506,7 +506,7 @@
 <message key="xmlui.EPerson.PasswordLogin.submit">Acceder</message>
 <message key="xmlui.EPerson.PasswordLogin.head2">Registrar un nuevo usuario</message>
 <message key="xmlui.EPerson.PasswordLogin.para1">Registre una cuenta para suscribirse a las colecciones, para recibir notificación de modificaciones y de nuevas adquisiciones de ítems en DSpace.</message>
-<message key="xmlui.EPerson.PasswordLogin.register_link"><button>Pulse aquí para registrarse.</button></message>
+<message key="xmlui.EPerson.PasswordLogin.register_link">Pulse aquí para registrarse.</message>
 
 	<!-- org.dspace.app.xmlui.eperson.LDAPLogin.java -->
 <message key="xmlui.EPerson.LDAPLogin.title">Acceder</message>
