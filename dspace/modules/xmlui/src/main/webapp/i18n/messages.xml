@@ -185,6 +185,10 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.item.dateaccessioned">Browsing {0} by Submit Date {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.item.dateaccessioned">Browsing {0} by Submit Date</message>
 
+	<!--agregado unco (3 lineas)-->
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.keyword.column_heading">Keyword</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.keyword">Browsing {0} by Keyword {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.keyword">Browsing {0} by Keyword </message>
 
 	<!-- org.dspace.app.xmlui.administrative.WithdrawnItems.java -->
 	<message key="xmlui.Administrative.WithdrawnItems.title.item.title">Withdrawn Items by Title</message>
@@ -271,8 +275,8 @@
         <message key="xmlui.ArtifactBrowser.ItemViewer.withdrawn">This item has been withdrawn and is no longer available.</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.Navigation.java -->
-	<message key="xmlui.ArtifactBrowser.Navigation.head_browse">Browse</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">All of DSpace</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.head_browse"></message>
+	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">Browse by</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Communities &amp; Collections</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Titles</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Authors</message>
@@ -281,6 +285,9 @@
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateaccessioned">By Submit Date</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.head_this_collection">This Collection</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.head_this_community">This Community</message>
+
+	<!--agregado unco-->
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_keyword">Keywords</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.SimpleSearch.java -->
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.title">Search</message>
@@ -654,7 +661,7 @@
 	<message key="xmlui.Submission.general.default.trail">Submission</message>
 
 	<!-- org.dspace.app.xmlui.submission.CollectiovViewer -->
-	<message key="xmlui.Submission.CollectionViewer.link1"><button>Submit a new item to this collection</button></message>
+	<message key="xmlui.Submission.CollectionViewer.link1">Submit a new item to this collection</message>
 
 	<!-- org.dspace.app.xmlui.submission.Navigation -->
 	<message key="xmlui.Submission.Navigation.submissions">Submissions</message>

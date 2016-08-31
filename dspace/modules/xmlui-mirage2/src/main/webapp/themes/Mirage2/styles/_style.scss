@@ -41,7 +41,7 @@ img.logo-contacto{
     height: 30px;
 }
 img.logo-cc{
-    width: 110px; 
+    width: 95px; 
     height: 27px;
 }
 img#logo-ubic{
@@ -98,8 +98,8 @@ la clase slider es utilizada por un div que se crea mediante el elements.xsl*/
     100% { margin-left: -400%;}
 }
 #ayuda{
-    width: 50%; 
-    height: 50%;
+    width: 80%; 
+    height: 80%;
 }
 #footer-color{
     background-color: #B5BBC2;
@@ -107,8 +107,20 @@ la clase slider es utilizada por un div que se crea mediante el elements.xsl*/
 #link-dspace{
     color: #1D1D1D;
 }
-/* Clase que actúa sobre los logos de las comunidades, colecciones etc...
-img.logo{
-    width: 30px; 
-    height: 30px;
-}*/
+
+// Clase redefinida para manejar el tamaño del body
+.container-prueba{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}
+.container-prueba:before,.container-prueba:after{content:" ";display:table}
+.container-prueba:after{clear:both}
+@media (min-width: 768px){.container-prueba{width:750px}}
+@media (min-width: 992px){.container-prueba{width:970px}}
+@media (min-width: 1200px){.container-prueba{width:1170px}}
+@media (min-width: 1500px){.container-prueba{width:1470px}}
+
+// Da estilo a la lista ubicada a la derecha de la pantalla
+#ds-options2 .ds-option-set-head{
+    color:#777;
+    text-transform:uppercase;
+    text-shadow:0px 1px 0px rgba(255,255,255,0.5);
+    margin-bottom:5px
+}
