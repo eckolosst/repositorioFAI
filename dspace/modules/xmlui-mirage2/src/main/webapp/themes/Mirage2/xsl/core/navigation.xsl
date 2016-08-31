@@ -47,12 +47,12 @@
             <xsl:if test="not(contains(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='URI'], 'discover'))">
                 <div id="ds-search-option" class="ds-option-set">
                     <!-- The form, complete with a text box and a button, all built from attributes referenced
-                 from under pageMeta. -->
+                    from under pageMeta. -->
                     <form id="ds-search-form" class="" method="post">
                         <xsl:attribute name="action">
                             <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
                             <xsl:value-of
-                                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"/>
+                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"/>
                         </xsl:attribute>
                         <fieldset>
                             <div class="input-group">
@@ -60,30 +60,30 @@
                                        i18n:attr="placeholder">
                                     <xsl:attribute name="name">
                                         <xsl:value-of
-                                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='queryField']"/>
+                                            select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='queryField']"/>
                                     </xsl:attribute>
                                 </input>
                                 <span class="input-group-btn">
                                     <button class="ds-button-field btn btn-primary" title="xmlui.general.go" i18n:attr="title">
                                         <span class="glyphicon glyphicon-search" aria-hidden="true"/>
                                         <xsl:attribute name="onclick">
-                                                    <xsl:text>
-                                                        var radio = document.getElementById(&quot;ds-search-form-scope-container&quot;);
-                                                        if (radio != undefined &amp;&amp; radio.checked)
-                                                        {
-                                                        var form = document.getElementById(&quot;ds-search-form&quot;);
-                                                        form.action=
-                                                    </xsl:text>
+                                            <xsl:text>
+                                                var radio = document.getElementById(&quot;ds-search-form-scope-container&quot;);
+                                                if (radio != undefined &amp;&amp; radio.checked)
+                                                {
+                                                var form = document.getElementById(&quot;ds-search-form&quot;);
+                                                form.action=
+                                            </xsl:text>
                                             <xsl:text>&quot;</xsl:text>
                                             <xsl:value-of
-                                                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
+                                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
                                             <xsl:text>/handle/&quot; + radio.value + &quot;</xsl:text>
                                             <xsl:value-of
-                                                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"/>
+                                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"/>
                                             <xsl:text>&quot; ; </xsl:text>
-                                                    <xsl:text>
-                                                        }
-                                                    </xsl:text>
+                                            <xsl:text>
+                                                }
+                                            </xsl:text>
                                         </xsl:attribute>
                                     </button>
                                 </span>
@@ -102,12 +102,12 @@
                                         <input id="ds-search-form-scope-container" type="radio" name="scope">
                                             <xsl:attribute name="value">
                                                 <xsl:value-of
-                                                        select="substring-after(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='focus'][@qualifier='container'],':')"/>
+                                                    select="substring-after(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='focus'][@qualifier='container'],':')"/>
                                             </xsl:attribute>
                                         </input>
                                         <xsl:choose>
                                             <xsl:when
-                                                    test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='focus'][@qualifier='containerType']/text() = 'type:community'">
+                                                test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='focus'][@qualifier='containerType']/text() = 'type:community'">
                                                 <i18n:text>xmlui.dri2xhtml.structural.search-in-community</i18n:text>
                                             </xsl:when>
                                             <xsl:otherwise>
@@ -134,13 +134,12 @@
                         <xsl:call-template name="addRSSLinks"/>
                     </div>
                 </div>
-
             </xsl:if>
-	    -->
+            -->
         </div>
     </xsl:template>
 
-    <!-- Add each RSS feed from meta to a list
+    <!--Add each RSS feed from meta to a list-->
     <xsl:template name="addRSSLinks">
         <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']">
             <a class="list-group-item">
@@ -167,7 +166,7 @@
             </a>
         </xsl:for-each>
     </xsl:template>
-    -->
+
     <xsl:template match="dri:options//dri:list">
         <xsl:apply-templates select="dri:head"/>
         <xsl:apply-templates select="dri:item"/>
