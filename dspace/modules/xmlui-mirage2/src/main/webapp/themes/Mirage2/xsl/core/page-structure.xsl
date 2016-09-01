@@ -134,11 +134,41 @@
                                                 </xsl:if>
                                                 <div>
                                                     <h2 class="ds-option-set-head h6">
+                                                        <i18n:text>Servicios</i18n:text>   <!-- Ver título, incluir en messager -->
+                                                    </h2>
+                                                    <div id="ds-feed-option" class="ds-option-set list-group">
+                                                        <a class="list-group-item" href="/">Alertas</a>
+                                                        <a class="list-group-item" href="/">Solicitar autoarchivo</a>
+                                                        <a class="list-group-item" href="/">Guía de autoarchivo</a>
+                                                        <a class="list-group-item" href="/">Estadísticas</a>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2 class="ds-option-set-head h6">
                                                         <i18n:text>Información</i18n:text>   <!-- Ver título, incluir en messager -->
                                                     </h2>
                                                     <div id="ds-feed-option" class="ds-option-set list-group">
-                                                        <a class="list-group-item" href="/">Solicitud de Autoarchivo</a>
-                                                        <a class="list-group-item" href="/">Condiciones de Uso</a>
+                                                        <a class="list-group-item" href="/">Licencia de uso</a>
+                                                        <a class="list-group-item" href="/">Contacto</a>
+                                                    </div>
+                                                </div>
+                                                <br/>
+                                                <div>
+                                                    <h2 class="ds-option-set-head h6">
+                                                        <i18n:text>Enlaces</i18n:text>   <!-- Ver título, incluir en messager -->
+                                                    </h2>
+                                                    <div align="center">
+                                                        <a href="http://www.sherpa.ac.uk/romeo/index.php?" class="logo-enlaces" target="_blank">
+                                                            <img id="ayuda" src="{$theme-path}/images/sherpa.png"/>
+                                                        </a>
+                                                        <br/>   
+                                                        <a href="http://www.accesoabierto.net" class="logo-enlaces" target="_blank">
+                                                            <img id="ayuda" src="{$theme-path}/images/open-access.png"/>
+                                                        </a>
+                                                        <br/>                                                                                                             
+                                                        <a href="http://www.accesoabierto.net/dulcinea/default.php?contenido=acerca" class="logo-enlaces" target="_blank">
+                                                            <img id="ayuda" src="{$theme-path}/images/dulcinea.jpg"/>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
