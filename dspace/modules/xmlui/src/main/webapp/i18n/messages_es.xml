@@ -2761,4 +2761,14 @@ Cuando se usa QDC para los elementos de DSpace se recomienda el uso de crosswalk
     <message key="xmlui.swordclient.SwordResponse.trail">Respuesta Sword</message>
 
 
+    <message key="xmlui.panelderecho.servicios">Servicios</message>
+    <message key="xmlui.panelderecho.servicios.alertas">Alertas</message>
+    <message key="xmlui.panelderecho.servicios.sol_autoarchivo">Solicitud de autoarchivo</message>
+    <message key="xmlui.panelderecho.servicios.guia_autoarchivo">Guía de autoarchivo</message>
+
+    <message key="xmlui.panelderecho.informacion">Información</message>
+    <message key="xmlui.panelderecho.informacion.lic_uso">Licensia de uso</message>
+
+    <message key="xmlui.panelderecho.enlaces">Enlaces</message>
+
 </catalogue>

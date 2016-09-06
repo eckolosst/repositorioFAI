@@ -2519,4 +2519,16 @@
     <message key="xmlui.mirage2.choice-authority-control.loading">Loading...</message>
 
     <message key="xmlui.mirage2.item-list.thumbnail">Thumbnail</message>
+    
+    
+    <message key="xmlui.panelderecho.servicios">Services</message>
+    <message key="xmlui.panelderecho.servicios.alertas">Alerts</message>
+    <message key="xmlui.panelderecho.servicios.sol_autoarchivo">Autoarchivo request</message>
+    <message key="xmlui.panelderecho.servicios.guia_autoarchivo">Autoarchivo guide</message>
+
+    <message key="xmlui.panelderecho.informacion">Information</message>
+    <message key="xmlui.panelderecho.informacion.lic_uso">License</message>
+
+    <message key="xmlui.panelderecho.enlaces">Links</message>
+    
 </catalogue>
