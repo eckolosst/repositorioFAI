@@ -115,13 +115,33 @@
 
                                         <!--div derecho (nuevo)-->
                                         <div id="ds-options2" class="col-xs-6 col-sm-3 col-md-2 sidebar-offcanvas sidebar-blanco hidden-xs hidden-sm" role="navigation">
-                                            <div align="center">	
+                                            <div align="center"><!--div de logo de ayuda-->
                                                 <br/>						   
                                                 <a href="http://wikifai.fi.uncoma.edu.ar/mediawiki/index.php/P%C3%A1gina_principal" target="_blank"> 
                                                     <img id="ayuda" src="{$theme-path}/images/ayuda.png"/>
                                                 </a>
                                             </div>
                                             <div>
+                                                <div>
+                                                    <h2 class="ds-option-set-head h6">
+                                                        <i18n:text>xmlui.panelderecho.servicios</i18n:text>
+                                                    </h2>
+                                                    <div id="ds-feed-option" class="ds-option-set list-group">
+                                                        <a class="list-group-item" href="/"><i18n:text>xmlui.panelderecho.servicios.alertas</i18n:text></a>
+                                                        <a class="list-group-item" href="/"><i18n:text>xmlui.panelderecho.servicios.sol_autoarchivo</i18n:text></a>
+                                                        <a class="list-group-item" href="/"><i18n:text>xmlui.panelderecho.servicios.guia_autoarchivo</i18n:text></a>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2 class="ds-option-set-head h6">
+                                                        <i18n:text>xmlui.panelderecho.informacion</i18n:text>
+                                                    </h2>
+                                                    <div id="ds-feed-option" class="ds-option-set list-group">
+                                                        <a class="list-group-item" href="#" onclick="var popupwin = window.open('../{$theme-path}recursos/condiciones-de-uso.html','dspacepopup','height=600,width=550,resizable,scrollbars');popupwin.focus();return"><i18n:text>xmlui.panelderecho.informacion.lic_uso</i18n:text></a>
+                                                        <a class="list-group-item" href="/contact"><i18n:text>xmlui.ArtifactBrowser.Contact.head</i18n:text></a>
+                                                        <a class="list-group-item" href="/feedback"><i18n:text>xmlui.ArtifactBrowser.Contact.feedback_link</i18n:text></a>
+                                                    </div>
+                                                </div>
                                                 <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']) != 0">
                                                     <div>
                                                         <h2 class="ds-option-set-head h6">
@@ -132,30 +152,10 @@
                                                         </div>
                                                     </div>
                                                 </xsl:if>
-                                                <div>
-                                                    <h2 class="ds-option-set-head h6">
-                                                        <i18n:text>Servicios</i18n:text>   <!-- Ver título, incluir en messager -->
-                                                    </h2>
-                                                    <div id="ds-feed-option" class="ds-option-set list-group">
-                                                        <a class="list-group-item" href="/">Alertas</a>
-                                                        <a class="list-group-item" href="/">Solicitar autoarchivo</a>
-                                                        <a class="list-group-item" href="/">Guía de autoarchivo</a>
-                                                        <a class="list-group-item" href="/">Estadísticas</a>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <h2 class="ds-option-set-head h6">
-                                                        <i18n:text>Información</i18n:text>   <!-- Ver título, incluir en messager -->
-                                                    </h2>
-                                                    <div id="ds-feed-option" class="ds-option-set list-group">
-                                                        <a class="list-group-item" href="/">Licencia de uso</a>
-                                                        <a class="list-group-item" href="/">Contacto</a>
-                                                    </div>
-                                                </div>
                                                 <br/>
                                                 <div>
                                                     <h2 class="ds-option-set-head h6">
-                                                        <i18n:text>Enlaces</i18n:text>   <!-- Ver título, incluir en messager -->
+                                                        <i18n:text>xmlui.panelderecho.enlaces</i18n:text>
                                                     </h2>
                                                     <div align="center">
                                                         <a href="http://www.sherpa.ac.uk/romeo/index.php?" class="logo-enlaces" target="_blank">
