@@ -42,40 +42,71 @@
         templates in this stylesheet, is to call the template for the head element (creating the HTML h tag),
         handle the attributes, and then apply the templates for the all children except the head. The id
         attribute is -->
-    <xsl:template match="dri:div" priority="1">
-        <xsl:apply-templates select="dri:head"/>
-        <xsl:apply-templates select="@pagination">
-            <xsl:with-param name="position">top</xsl:with-param>
-        </xsl:apply-templates>
-        <div>
-            <xsl:call-template name="standardAttributes">
-                <xsl:with-param name="class">ds-static-div</xsl:with-param>
-            </xsl:call-template>
-            <xsl:choose>
-                <!--  does this element have any children -->
-                <xsl:when test="child::node()">
-                    <xsl:apply-templates select="*[not(name()='head')]"/>
-                </xsl:when>
-                <!-- if no children are found we add a space to eliminate self closing tags -->
-                <xsl:otherwise>
-                    &#160;
-                </xsl:otherwise>
-            </xsl:choose>
-        </div>
-        <xsl:variable name="itemDivision">
-            <xsl:value-of select="@n"/>
-        </xsl:variable>
-        <xsl:variable name="xrefTarget">
-            <xsl:value-of select="./dri:p/dri:xref/@target"/>
-        </xsl:variable>
-        <xsl:if test="$itemDivision='item-view'">
-            <xsl:call-template name="cc-license">
-                <xsl:with-param name="metadataURL" select="./dri:referenceSet/dri:reference/@url"/>
-            </xsl:call-template>
-        </xsl:if>
-        <xsl:apply-templates select="@pagination">
-            <xsl:with-param name="position">bottom</xsl:with-param>
-        </xsl:apply-templates>
+
+	<!-- Template agregado para ocultar las comunidades en el inicio. No es la mejor forma 
+	pero no encontré donde se agrega, al body de la página principal, la acción de listarlas.
+	Hace lo mismo que los div comunes pero no se ejecuta si se encuentra en la pagina inicial -->
+    <xsl:template match="dri:div[@id='aspect.artifactbrowser.CommunityBrowser.div.comunity-browser']">
+		<xsl:if test="$request-uri != ''">
+		    <xsl:apply-templates select="dri:head"/>		    
+		    <div>			
+		        <xsl:call-template name="standardAttributes">
+		            <xsl:with-param name="class">ds-static-div</xsl:with-param>
+		        </xsl:call-template>
+		        <xsl:choose>
+		            <!--  does this element have any children -->
+		            <xsl:when test="child::node()">
+		                <xsl:apply-templates select="*[not(name()='head')]"/>
+		            </xsl:when>
+		            <!-- if no children are found we add a space to eliminate self closing tags -->
+		            <xsl:otherwise>
+		                &#160;
+		            </xsl:otherwise>
+		        </xsl:choose>
+		    </div>		    
+		</xsl:if>
+    </xsl:template>
+
+	<xsl:template match="dri:div[@id='aspect.discovery.SiteRecentSubmissions.div.site-home']">
+		
+    </xsl:template>
+
+	<xsl:template match="dri:div">
+		
+		    <xsl:apply-templates select="dri:head"/>
+		    <xsl:apply-templates select="@pagination">
+		        <xsl:with-param name="position">top</xsl:with-param>
+		    </xsl:apply-templates>
+		    <div>
+			
+		        <xsl:call-template name="standardAttributes">
+		            <xsl:with-param name="class">ds-static-div</xsl:with-param>
+		        </xsl:call-template>
+		        <xsl:choose>
+		            <!--  does this element have any children -->
+		            <xsl:when test="child::node()">
+		                <xsl:apply-templates select="*[not(name()='head')]"/>
+		            </xsl:when>
+		            <!-- if no children are found we add a space to eliminate self closing tags -->
+		            <xsl:otherwise>
+		                &#160;
+		            </xsl:otherwise>
+		        </xsl:choose>
+		    </div>
+		    <xsl:variable name="itemDivision">
+		        <xsl:value-of select="@n"/>
+		    </xsl:variable>
+		    <xsl:variable name="xrefTarget">
+		        <xsl:value-of select="./dri:p/dri:xref/@target"/>
+		    </xsl:variable>
+		    <xsl:if test="$itemDivision='item-view'">
+		        <xsl:call-template name="cc-license">
+		            <xsl:with-param name="metadataURL" select="./dri:referenceSet/dri:reference/@url"/>
+		        </xsl:call-template>
+		    </xsl:if>
+		    <xsl:apply-templates select="@pagination">
+		        <xsl:with-param name="position">bottom</xsl:with-param>
+		    </xsl:apply-templates>
     </xsl:template>
 
     <!-- Special case for divs tagged as "notice" -->
@@ -193,6 +224,59 @@
         </p>
     </xsl:template>
 
+
+	<!-- A continuación se agregaron algunos templates que se utilizan para configurar la visualización de la presentación-->
+	<xsl:template match="dri:par">
+        <div id="pPresentacion" style="padding: 5px 25px 15px 25px;">
+			<p style="text-align:justify">
+				<br/>
+		        <xsl:call-template name="standardAttributes">
+		            <xsl:with-param name="class">ds-paragraph</xsl:with-param>
+		        </xsl:call-template>
+		        <xsl:choose>
+		            <!--  does this element have any children -->
+		            <xsl:when test="child::node()">
+		                <xsl:apply-templates />
+		            </xsl:when>
+		            <!-- if no children are found we add a space to eliminate self closing tags -->
+		            <xsl:otherwise>
+		                &#160;
+		            </xsl:otherwise>
+		        </xsl:choose>
+
+		    </p>
+		</div>
+    </xsl:template>
+
+	<xsl:template match="dri:refer">
+		<xsl:choose>	
+			<xsl:when test="./@tipo='archivo'">	
+				<a target="_blank">
+					<xsl:attribute name="href">
+				    	<xsl:value-of select="concat($theme-path,'/recursos/', ./@src)"/>
+				    </xsl:attribute>	
+					<xsl:value-of select="."/>
+				</a>
+			</xsl:when>
+			<xsl:otherwise>
+				<a target="_blank">
+					<xsl:attribute name="href">
+				    	<xsl:value-of select="./@src"/>
+				    </xsl:attribute>	
+					<xsl:value-of select="."/>
+				</a>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+
+	<xsl:template match="dri:subtitulo">
+		<div style="text-align:center">
+			<b>
+		        <xsl:value-of select="."/>
+			</b>
+        </div>
+	</xsl:template>
+	
     <!--Template agregado con el fin de manipular las etiquetas ul e img agregadas en 
     el archivo news-xmlui.xml-->
     <xsl:template match="dri:ul">
@@ -210,6 +294,9 @@
             </ul>
         </div>
     </xsl:template>
+
+	<!-- Fin templates para presentación -->
+
 
     <!-- Finally, we have the list element, which is used to display set of data. There are several different
         types of lists, as signified by the type attribute, and several different templates to handle them. -->
@@ -473,6 +560,7 @@
         change in the future. -->
     <xsl:template match="dri:referenceSet/dri:head" priority="2">
         <h3>
+			hola
             <xsl:call-template name="standardAttributes">
                 <xsl:with-param name="class">ds-list-head</xsl:with-param>
             </xsl:call-template>

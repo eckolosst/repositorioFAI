@@ -126,6 +126,7 @@
                                                     <h2 class="ds-option-set-head h6">
                                                         <i18n:text>xmlui.panelderecho.servicios</i18n:text>
                                                     </h2>
+
                                                     <div id="ds-feed-option" class="ds-option-set list-group">
                                                         <a class="list-group-item" href="/"><i18n:text>xmlui.panelderecho.servicios.alertas</i18n:text></a>
                                                         <a class="list-group-item" href="/"><i18n:text>xmlui.panelderecho.servicios.sol_autoarchivo</i18n:text></a>
@@ -413,7 +414,7 @@
                         </a>
 	
 
-                        <h1 id="titulo-header" class="navbar-text">Repositorio UNCo</h1>	
+                        <h1 id="titulo-header" class="navbar-text">RDI UNCo</h1>	
 				
 
                         <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
@@ -861,7 +862,7 @@
 
             <!-- Check for the custom pages -->
             <xsl:choose>
-                <xsl:when test="starts-with($request-uri, 'page/about')">
+				<xsl:when test="starts-with($request-uri, 'page/about')">
                     <div class="hero-unit">
                         <h1>
                             <i18n:text>xmlui.mirage2.page-structure.heroUnit.title</i18n:text>
@@ -871,6 +872,9 @@
                         </p>
                     </div>
                 </xsl:when>
+				<xsl:when test="$request-uri = ''">
+					<xsl:apply-templates />
+				</xsl:when>
                 <!-- Otherwise use default handling of body -->
                 <xsl:otherwise>
                     <xsl:apply-templates />

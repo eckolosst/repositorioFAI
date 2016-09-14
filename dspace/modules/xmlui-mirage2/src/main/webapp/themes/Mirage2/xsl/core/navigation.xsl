@@ -167,23 +167,27 @@
         </xsl:for-each>
     </xsl:template>
 
-    <xsl:template match="dri:options//dri:list">
+    <xsl:template match="dri:options//dri:list">		
         <xsl:apply-templates select="dri:head"/>
         <xsl:apply-templates select="dri:item"/>
         <xsl:apply-templates select="dri:list"/>
     </xsl:template>
 
     <xsl:template match="dri:options/dri:list" priority="3">
-        <xsl:apply-templates select="dri:head"/>
-        <div>
-            <xsl:call-template name="standardAttributes">
-                <xsl:with-param name="class">list-group</xsl:with-param>
-            </xsl:call-template>
-            <xsl:apply-templates select="dri:item"/>
-            <xsl:apply-templates select="dri:list"/>
-        </div>
+		    <xsl:apply-templates select="dri:head"/>
+		    <div>
+		        <xsl:call-template name="standardAttributes">
+		            <xsl:with-param name="class">list-group</xsl:with-param>
+		        </xsl:call-template>
+		        <xsl:apply-templates select="dri:item"/>
+		        <xsl:apply-templates select="dri:list"/>
+		    </div>
+		
     </xsl:template>
 
+	<xsl:template match="dri:list[@id='aspect.discovery.Navigation.list.discovery']" priority="3">
+		    
+    </xsl:template>
 
     <xsl:template match="dri:options//dri:item">
         <div>
