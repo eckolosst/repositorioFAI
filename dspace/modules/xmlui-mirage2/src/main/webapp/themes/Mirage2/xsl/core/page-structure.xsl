@@ -138,7 +138,7 @@
                                                         <i18n:text>xmlui.panelderecho.informacion</i18n:text>
                                                     </h2>
                                                     <div id="ds-feed-option" class="ds-option-set list-group">
-                                                        <a class="list-group-item" href="#" onclick="var popupwin = window.open('../{$theme-path}recursos/condiciones-de-uso.html','dspacepopup','height=600,width=550,resizable,scrollbars');popupwin.focus();return"><i18n:text>xmlui.panelderecho.informacion.lic_uso</i18n:text></a>
+                                                        <a class="list-group-item" href="#" onclick="var popupwin = window.open('../{$theme-path}recursos/cond-uso.html','dspacepopup','height=600,width=550,resizable,scrollbars');popupwin.focus();return"><i18n:text>xmlui.panelderecho.informacion.lic_uso</i18n:text></a>
                                                         <a class="list-group-item" href="/contact"><i18n:text>xmlui.ArtifactBrowser.Contact.head</i18n:text></a>
                                                         <a class="list-group-item" href="/feedback"><i18n:text>xmlui.ArtifactBrowser.Contact.feedback_link</i18n:text></a>
                                                     </div>
@@ -414,7 +414,7 @@
                         </a>
 	
 
-                        <h1 id="titulo-header" class="navbar-text">RDI UNCo</h1>	
+                        <h1 id="titulo-header" class="navbar-text">RDI - UNCo</h1>	
 				
 
                         <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">

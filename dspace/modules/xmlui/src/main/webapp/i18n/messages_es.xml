@@ -2765,7 +2765,7 @@ Cuando se usa QDC para los elementos de RDI UNCo se recomienda el uso de crosswa
     <message key="xmlui.panelderecho.servicios.guia_autoarchivo">Guía de autoarchivo</message>
 
     <message key="xmlui.panelderecho.informacion">Información</message>
-    <message key="xmlui.panelderecho.informacion.lic_uso">Licencia de uso</message>
+    <message key="xmlui.panelderecho.informacion.lic_uso">Condiciones de uso</message>
 
     <message key="xmlui.panelderecho.enlaces">Enlaces</message>
 
