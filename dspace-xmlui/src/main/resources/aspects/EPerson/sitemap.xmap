@@ -24,6 +24,7 @@ registration, forgotten passwords, editing profiles, and changing passwords.
 			<map:transformer name="StartRegistration" src="org.dspace.app.xmlui.aspect.eperson.StartRegistration"/>
 			<map:transformer name="VerifyEmail" src="org.dspace.app.xmlui.aspect.eperson.VerifyEmail"/>
 			<map:transformer name="EditProfile" src="org.dspace.app.xmlui.aspect.eperson.EditProfile"/>
+                        <map:transformer name="Alerta" src="org.dspace.app.xmlui.aspect.eperson.Suscripcion"/>
 			<map:transformer name="RegistrationFinished" src="org.dspace.app.xmlui.aspect.eperson.RegistrationFinished"/>
 			<map:transformer name="CannotRegister" src="org.dspace.app.xmlui.aspect.eperson.CannotRegister"/>
 			<map:transformer name="InvalidToken" src="org.dspace.app.xmlui.aspect.eperson.InvalidToken"/>
@@ -227,6 +228,15 @@ registration, forgotten passwords, editing profiles, and changing passwords.
 			  			<map:parameter name="errors" value="{flow-attribute:errors}"/>
 			  		</map:transform>
 			  	</map:match>
+                                
+                                <!--map:match pattern="register/suscripcion">
+			  		<map:transform type="Suscripcion">
+			  			<map:parameter name="registering" value="true"/>
+			  			<map:parameter name="email" value="{flow-attribute:email}"/>
+			  			<map:parameter name="allowSetPassword" value="{flow-attribute:allowSetPassword}"/>
+			  			<map:parameter name="errors" value="{flow-attribute:errors}"/>
+			  		</map:transform>
+			  	</map:match -->
 		  	
 				<map:match pattern="register/finished">
 					<map:transform type="RegistrationFinished"/>
@@ -297,8 +307,18 @@ registration, forgotten passwords, editing profiles, and changing passwords.
 				</map:match>
 
 			</map:match>
+                        
 			
-			
+                        <!-- Suscripción -->
+			<map:match pattern="alerta">
+                                <map:transform type="Alerta">
+                                        <map:parameter name="registering" value="false"/>
+                                        <map:parameter name="email" value="{flow-attribute:email}"/>
+                                        <map:parameter name="allowSetPassword" value="{flow-attribute:allowSetPassword}"/>
+                                        <map:parameter name="errors" value="{flow-attribute:errors}"/>
+                                </map:transform>
+                        </map:match>
+                        
 			<map:serialize type="xml"/>
 		</map:pipeline>
 	</map:pipelines>
