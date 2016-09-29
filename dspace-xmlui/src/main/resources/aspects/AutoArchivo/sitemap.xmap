@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<map:sitemap xmlns:map="http://apache.org/cocoon/sitemap/1.0">
+    <map:components>
+        <map:transformers>
+            <map:transformer name="AutoArchivo" src="org.dspace.app.xmlui.aspect.autoarchivo.AutoArchivo"/>
+            <map:transformer name="AutoArchivoSent" src="org.dspace.app.xmlui.aspect.autoarchivo.AutoArchivoSent"/>
+        </map:transformers>
+        
+        <!--map:matchers default="wildcard"/-->
+        
+        <map:matchers default="wildcard">
+            <map:matcher name="HandleTypeMatcher" src="org.dspace.app.xmlui.aspect.general.HandleTypeMatcher"/>
+            <map:matcher name="HandleAuthorizedMatcher" src="org.dspace.app.xmlui.aspect.general.HandleAuthorizedMatcher"/>
+            <map:matcher name="regexp" src="org.apache.cocoon.matching.RegexpURIMatcher"/>
+        </map:matchers>
+        
+        <map:actions>
+            <map:action name="SendAutoArchivoAction" src="org.dspace.app.xmlui.aspect.autoarchivo.SendAutoArchivoAction"/>
+        </map:actions>
+        
+        <map:selectors/>
+    </map:components>
+
+    <map:pipelines>
+        <map:pipeline>
+            <map:generate/>
+            
+            <map:match pattern="autoarchivo">
+                <map:act type="SendAutoArchivoAction">
+                    <map:transform type="AutoArchivo">
+                        <map:parameter name="nombre" value="{nombre}"/>
+                        <map:parameter name="email" value="{email}"/>
+                        <map:parameter name="comunidad" value="{comunidad}"/>
+                        <map:parameter name="observaciones" value="{observaciones}"/>
+                        <map:parameter name="page" value="{page}"/>
+                    </map:transform>
+                    <map:serialize type="xml"/>
+                </map:act>
+                <map:transform type="AutoArchivoSent"/>
+                <map:serialize type="xml"/>
+            </map:match>
+            
+            <map:serialize type="xml"/>
+            
+        </map:pipeline>
+    </map:pipelines>
+</map:sitemap>
