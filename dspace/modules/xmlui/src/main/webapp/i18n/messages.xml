@@ -2531,4 +2531,12 @@
 
     <message key="xmlui.panelderecho.enlaces">Links</message>
     
+    <message key="xmlui.solicitud-autoarchivo.intro">Mensaje de solicitud de auto archivo eqisde</message>
+    <message key="xmlui.solicitud-autoarchivo.nombre">Your name and surname</message>
+    <message key="xmlui.solicitud-autoarchivo.comunidad">Community</message>
+    <message key="xmlui.solicitud-autoarchivo.comunidad_ayuda">You must enter the community which requires access</message>
+    <message key="xmlui.solicitud-autoarchivo.obs">Observations</message>
+    <message key="xmlui.AutoArchivoSent.para1">Request autoarchivo sent successfully</message>
+    <message key="xmlui.solicitud-autoarchivo.boton_msj">Send</message>
+    
 </catalogue>
