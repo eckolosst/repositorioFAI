@@ -128,7 +128,7 @@
                                                     </h2>
 
                                                     <div id="ds-feed-option" class="ds-option-set list-group">
-                                                        <a class="list-group-item" href="/"><i18n:text>xmlui.panelderecho.servicios.alertas</i18n:text></a>
+                                                        <a class="list-group-item" href="alerta"><i18n:text>xmlui.panelderecho.servicios.alertas</i18n:text></a>
                                                         <a class="list-group-item" href="/"><i18n:text>xmlui.panelderecho.servicios.sol_autoarchivo</i18n:text></a>
                                                         <a class="list-group-item" href="/"><i18n:text>xmlui.panelderecho.servicios.guia_autoarchivo</i18n:text></a>
                                                     </div>

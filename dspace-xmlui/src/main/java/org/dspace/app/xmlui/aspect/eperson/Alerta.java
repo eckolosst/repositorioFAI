@@ -70,97 +70,25 @@ public class Alerta extends AbstractDSpaceTransformer
     /** Language string used: */
         
     private static final Message T_dspace_home =
-        message("xmlui.general.dspace_home");
-    
-    private static final Message T_trail_new_registration =
-        message("xmlui.EPerson.trail_new_registration");
+        message("xmlui.general.dspace_home");    
     
     private static final Message T_trail_update =
-        message("xmlui.EPerson.EditProfile.trail_update");
-    
-    private static final Message T_head_create =
-        message("xmlui.EPerson.EditProfile.head_create");
+        message("xmlui.EPerson.Alerta.trail_update");
     
     private static final Message T_head_update =
-        message("xmlui.EPerson.EditProfile.head_update");
-    
-    private static final Message T_email_address =
-        message("xmlui.EPerson.EditProfile.email_address");
-    
-    private static final Message T_first_name =
-        message("xmlui.EPerson.EditProfile.first_name");
-    
-    private static final Message T_error_required =
-        message("xmlui.EPerson.EditProfile.error_required");
-    
-    private static final Message T_last_name =
-        message("xmlui.EPerson.EditProfile.last_name");
-    
-    private static final Message T_telephone =
-        message("xmlui.EPerson.EditProfile.telephone");
-    
-    private static final Message T_dni =
-        message("xmlui.EPerson.EditProfile.dni");
-    
-    private static final Message T_titulo =
-        message("xmlui.EPerson.EditProfile.titulo");
-    
-    private static final Message T_dependencia =
-        message("xmlui.EPerson.EditProfile.dependencia");
-
-    private static final Message T_funcion =
-        message("xmlui.EPerson.EditProfile.funcion");
-    
-    private static final Message T_aceptoPoliticas =
-        message("xmlui.EPerson.EditProfile.aceptoPoliticas");
-    
-    private static final Message T_language =
-        message("xmlui.EPerson.EditProfile.Language");
-    
-    private static final Message T_create_password_instructions =
-        message("xmlui.EPerson.EditProfile.create_password_instructions");
-    
-    private static final Message T_update_password_instructions =
-        message("xmlui.EPerson.EditProfile.update_password_instructions");
-    
-    private static final Message T_password =
-        message("xmlui.EPerson.EditProfile.password");
-    
-    private static final Message T_error_invalid_password =
-        message("xmlui.EPerson.EditProfile.error_invalid_password");
-    
-    private static final Message T_confirm_password =
-        message("xmlui.EPerson.EditProfile.confirm_password");
-    
-    private static final Message T_error_unconfirmed_password =
-        message("xmlui.EPerson.EditProfile.error_unconfirmed_password");
-    
-    private static final Message T_submit_update =
-        message("xmlui.EPerson.EditProfile.submit_update");
-    
-    private static final Message T_submit_create =
-        message("xmlui.EPerson.EditProfile.submit_create");
+        message("xmlui.EPerson.Alerta.head_update");
     
     private static final Message T_subscriptions =
-        message("xmlui.EPerson.EditProfile.subscriptions");
+        message("xmlui.EPerson.Alerta.subscriptions");
 
     private static final Message T_subscriptions_help =
-        message("xmlui.EPerson.EditProfile.subscriptions_help");
+        message("xmlui.EPerson.Alerta.subscriptions_help");
 
     private static final Message T_email_subscriptions =
-        message("xmlui.EPerson.EditProfile.email_subscriptions");
+        message("xmlui.EPerson.Alerta.email_subscriptions");
 
     private static final Message T_select_collection =
-        message("xmlui.EPerson.EditProfile.select_collection");
- 
-    private static final Message T_head_auth =
-        message("xmlui.EPerson.EditProfile.head_auth");
-    
-    private static final Message T_head_identify =
-        message("xmlui.EPerson.EditProfile.head_identify");
-    
-    private static final Message T_head_security =
-        message("xmlui.EPerson.EditProfile.head_security");
+        message("xmlui.EPerson.Alerta.select_collection");
     
     private static Locale[] supportedLocales = getSupportedLocales();
     static
@@ -238,38 +166,22 @@ public class Alerta extends AbstractDSpaceTransformer
        String defaultDependencia = "";
        String defaultFuncion = "";
        String defaultLanguage=null;
-       if (request.getParameter("submit") != null)
-       {
-           defaultFirstName = request.getParameter("first_name");
-           defaultLastName = request.getParameter("last_name");
-           defaultPhone = request.getParameter("phone");
-//           defaultLanguage = request.getParameter("language");
-           defaultDNI= request.getParameter("dni");
-           defaultTitulo= request.getParameter("titulo");
-           defaultDependencia= request.getParameter("dependencia");
-           defaultFuncion= request.getParameter("funcion");
-       }
-       else if (eperson != null)
-       {
+       
+        if (eperson != null)
+        {
             defaultFirstName = eperson.getFirstName();
             defaultLastName = eperson.getLastName();
             defaultPhone = eperson.getMetadata("phone");
             defaultLanguage = eperson.getLanguage();
             defaultDNI = eperson.getDNI();
-       }
+        }
+        else{
+            //Debería redirigir a login
+        }
        
        String action = contextPath;
-       if (registering)
-       {
-           action += "/register";
-       }
-       else
-       {
-           action += "/suscripcion";
-       }
-       
-       
-       
+       action += "/alerta";
+             
        
        Division profile = body.addInteractiveDivision("information",
                action,Division.METHOD_POST,"primary");
@@ -308,7 +220,6 @@ public class Alerta extends AbstractDSpaceTransformer
        {
            subscriptions.addInstance().setOptionSelected(collection.getID());
        }
-       
        
        
        
