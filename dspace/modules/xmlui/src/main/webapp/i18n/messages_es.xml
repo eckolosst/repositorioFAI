@@ -2776,5 +2776,13 @@ Cuando se usa QDC para los elementos de RDI UNCo se recomienda el uso de crosswa
     <message key="xmlui.panelderecho.informacion.lic_uso">Condiciones de uso</message>
 
     <message key="xmlui.panelderecho.enlaces">Enlaces</message>
-
+    
+    <message key="xmlui.solicitud-autoarchivo.intro">Mensaje de solicitud de auto archivo eqisde</message>
+    <message key="xmlui.solicitud-autoarchivo.nombre">Su nombre y apellido</message>
+    <message key="xmlui.solicitud-autoarchivo.comunidad">Comunidad</message>
+    <message key="xmlui.solicitud-autoarchivo.comunidad_ayuda">Debe ingresar la comundad a la que requiere tener acceso</message>
+    <message key="xmlui.solicitud-autoarchivo.obs">Observaciones</message>
+    <message key="xmlui.AutoArchivoSent.para1">Solicitud de AutoArchivo enviado correctamente</message>
+    <message key="xmlui.solicitud-autoarchivo.boton_msj">Enviar</message>
+    
 </catalogue>
