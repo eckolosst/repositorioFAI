@@ -11,13 +11,26 @@
 
 <!-- Etiquetas ul e img agregadas con el fin de crear un visor de imagenes en el 
 inicio de la web, estas etiquetas son manipuladas en el elements.xsl-->
+<slider>
 <ul>
-<img>img1.jpg</img>
-<img>img2.jpg</img>
-<img>img3.jpg</img>
-<img>img4.jpg</img>
+<img>tess.png</img>
+<img>desc.png</img>
 </ul>
-
+<ul>
+<img>acad.png</img>
+<img>desc.png</img>
+</ul>
+<!--/slider>
+<slider-->
+<ul>
+<img>imgss.png</img>
+<img>desc.png</img>
+</ul>
+<ul>
+<img>paper.png</img>
+<img>desc.png</img>
+</ul>	
+</slider>
 </body>
 <options/>
 <meta>

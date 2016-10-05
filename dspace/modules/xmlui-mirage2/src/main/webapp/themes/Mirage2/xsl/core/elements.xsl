@@ -279,7 +279,7 @@
 	
     <!--Template agregado con el fin de manipular las etiquetas ul e img agregadas en 
     el archivo news-xmlui.xml-->
-    <xsl:template match="dri:ul">
+    <!--xsl:template match="dri:ul">
         <div class="slider hidden-xs hidden-sm">
             <ul>
                 <xsl:for-each select="dri:img">
@@ -293,7 +293,27 @@
                 </xsl:for-each>
             </ul>
         </div>
-    </xsl:template>
+    </xsl:template-->
+
+	<xsl:template match="dri:slider">
+		<div >
+			<xsl:for-each select="dri:ul">
+				<div class="slider hidden-xs hidden-sm">
+            		<ul>
+                		<xsl:for-each select="dri:img">
+                    		<li>
+                        		<img>
+				                    <xsl:attribute name="src">
+				                        <xsl:value-of select="concat($theme-path,'/images/', .)"/>
+				                    </xsl:attribute>
+                        		</img>
+                			</li>
+                		</xsl:for-each>
+            		</ul>
+        		</div>
+			</xsl:for-each>
+		</div>
+	</xsl:template>
 
 	<!-- Fin templates para presentación -->
 

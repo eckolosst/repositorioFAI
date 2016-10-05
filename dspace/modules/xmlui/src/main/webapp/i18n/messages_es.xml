@@ -2068,9 +2068,9 @@
 <message key="xmlui.statistics.visits.cities">Ciudades con más visualizaciones</message>
 <message key="xmlui.statistics.visits.bitstreams">Visitas al fichero</message>
 <message key="xmlui.statistics.Navigation.title">Estadísticas</message>
-<message key="xmlui.statistics.Navigation.usage.view">Ver Estadísticas de uso</message>
-<message key="xmlui.statistics.Navigation.search.view">Ver Estadísticas de Búsquedas</message>
-<message key="xmlui.statistics.Navigation.workflow.view">Ver Estadísticas del flujo de trabajo</message>
+<message key="xmlui.statistics.Navigation.usage.view">De uso</message>
+<message key="xmlui.statistics.Navigation.search.view">De Búsquedas</message>
+<message key="xmlui.statistics.Navigation.workflow.view">Del flujo de trabajo</message>
 <message key="xmlui.statistics.trail">Estadísticas</message>
 <message key="xmlui.statistics.trail-search">Estadísticas de Búsquedas</message>
 <message key="xmlui.statistics.trail-workflow">Estadísticas del flujo de trabajo</message>

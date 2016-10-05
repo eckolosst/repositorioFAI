@@ -82,7 +82,7 @@ public class AutoArchivo extends AbstractDSpaceTransformer implements CacheableP
         //se crea la lista de formularios
         List form = solicitud.addList("form",List.TYPE_FORM);
         
-        //1er atributo del form
+        //1er campo del form
         Text nombre = form.addItem().addText("nombre");
         nombre.setLabel(nombre_msj);
         nombre.setValue(parameters.getParameter("nombre",""));
