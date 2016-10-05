@@ -475,6 +475,15 @@
 <message key="xmlui.EPerson.EditProfile.head_identify">Identificar</message>
 <message key="xmlui.EPerson.EditProfile.head_security">Seguridad</message>
 
+        <!-- org.dspace.app.xmlui.eperson.Alerta.java -->
+<message key="xmlui.EPerson.Alerta.trail_update">Suscribirse a Colección</message>
+<message key="xmlui.EPerson.Alerta.head_update">Suscribirse a Colección</message>
+<message key="xmlui.EPerson.Alerta.subscriptions">Suscripciones</message>
+<message key="xmlui.EPerson.Alerta.subscriptions_help">Puede suscribirse a colecciones para recibir diariamente un correo con los nuevos ítems añadidos. Puede suscribirse a tantas colecciones como desee. Otra opción es usar el servicio RSS disponible para todas las colecciones.</message>
+<message key="xmlui.EPerson.Alerta.email_subscriptions">Suscripción de Correo electrónico</message>
+<message key="xmlui.EPerson.Alerta.select_collection">(Elija una colección)</message>
+<message key="xmlui.EPerson.Alerta.fin">Finalizar</message>
+
 	<!-- org.dspace.app.xmlui.eperson.EPersonUtils.java -->
 <message key="xmlui.EPerson.EPersonUtils.register_verify_email">Verifique el correo electrónico</message>
 <message key="xmlui.EPerson.EPersonUtils.register_create_profile">Crear perfil</message>

@@ -388,7 +388,7 @@ public class EditProfile extends AbstractDSpaceTransformer
        {
            dependencia.setDisabled();
        }
-       // funcoin
+       // funcion
        Text funcion = identity.addItem().addText("funcion");
        funcion.setRequired();
        funcion.setLabel(T_funcion);

@@ -472,8 +472,7 @@
         <message key="xmlui.EPerson.EditProfile.titulo">Título académico</message>
         <message key="xmlui.EPerson.EditProfile.dependencia">Dependencia</message>
         <message key="xmlui.EPerson.EditProfile.funcion">Función acedémica</message>
-        <message key="xmlui.EPerson.EditProfile.aceptoPoliticas">Aceptación de políticas</message>
-        
+        <message key="xmlui.EPerson.EditProfile.aceptoPoliticas">Aceptación de políticas</message>        
         
         
 	<message key="xmlui.EPerson.EditProfile.title_update">Update Profile</message>
@@ -502,6 +501,15 @@
 	<message key="xmlui.EPerson.EditProfile.head_auth">Authorization groups you belong to</message>
 	<message key="xmlui.EPerson.EditProfile.head_identify">Identify</message>
 	<message key="xmlui.EPerson.EditProfile.head_security">Security</message>
+
+            <!-- org.dspace.app.xmlui.eperson.Alerta.java -->
+        <message key="xmlui.EPerson.Alerta.trail_update">Subscribe to Collection</message>
+        <message key="xmlui.EPerson.Alerta.head_update">Subscribe to Collection</message>
+        <message key="xmlui.EPerson.Alerta.subscriptions">Subscriptions</message>
+        <message key="xmlui.EPerson.Alerta.subscriptions_help">You may subscribe to collections to receive daily e-mail alerts of new items added. You can subscribe to as many or as few collections as you wish. Another alternative to daily e-mail alerts is to use the RSS feeds available for all collections.</message>
+        <message key="xmlui.EPerson.Alerta.email_subscriptions">Email Subscriptions</message>
+        <message key="xmlui.EPerson.Alerta.select_collection">( Select Collection )</message>
+        <message key="xmlui.EPerson.Alerta.fin">Complete</message>
 
 	<!-- org.dspace.app.xmlui.eperson.EPersonUtils.java -->
 	<message key="xmlui.EPerson.EPersonUtils.register_verify_email">Verify Email</message>
