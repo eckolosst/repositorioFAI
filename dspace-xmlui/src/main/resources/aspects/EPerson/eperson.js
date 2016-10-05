@@ -339,6 +339,57 @@ function doUpdateProfile()
   
     cocoon.sendPage("profile/updated");
 }
+
+function doUpdateAlerta()
+{
+    var retry = false;
+    
+    // check that the user is logged in.
+    if (getEPerson() == null)
+    {
+        var contextPath = cocoon.request.getContextPath();
+        cocoon.redirectTo(contextPath + "/login",true);
+        getDSContext().complete();
+        cocoon.exit();
+    }
+        
+    // List of errors encountered.
+    var errors = new Array();
+    do {
+        cocoon.sendPageAndWait("alerta/update", {"errors" : errors.join(',') } );
+        
+        
+        if (cocoon.request.get("submit_subscriptions_add"))
+        {
+            // Add the a new subscription
+            var collection = Collection.find(getDSContext(),cocoon.request.get("subscriptions"));
+            if (collection != null)
+            {
+                Subscribe.subscribe(getDSContext(),getEPerson(),collection);
+                getDSContext().commit();
+            }
+        }
+        else if (cocoon.request.get("submit_subscriptions_delete"))
+        {
+            // Remove any selected subscriptions
+            var names = cocoon.request.getParameterValues("subscriptions_selected");
+            if (names != null)
+            {
+	            for (var i = 0; i < names.length; i++)
+	            {
+	            	var collectionID = cocoon.request.get(names[i]);
+	                var collection = Collection.find(getDSContext(),collectionID);
+	                if (collection != null)
+	                    Subscribe.unsubscribe(getDSContext(),getEPerson(),collection);
+	            }
+            }
+            getDSContext().commit();
+        }
+            
+    } while (errors.length > 0 || !cocoon.request.get("submit")) 
+  
+    cocoon.sendPage("alerta/updated");
+}
   
   
 /**

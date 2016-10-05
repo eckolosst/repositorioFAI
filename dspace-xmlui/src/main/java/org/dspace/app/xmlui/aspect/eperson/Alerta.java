@@ -28,17 +28,13 @@ import org.dspace.app.xmlui.wing.WingException;
 import org.dspace.app.xmlui.wing.element.Body;
 import org.dspace.app.xmlui.wing.element.Button;
 import org.dspace.app.xmlui.wing.element.Division;
-import org.dspace.app.xmlui.wing.element.Field;
 import org.dspace.app.xmlui.wing.element.List;
 import org.dspace.app.xmlui.wing.element.PageMeta;
 import org.dspace.app.xmlui.wing.element.Select;
-import org.dspace.app.xmlui.wing.element.Text;
 import org.dspace.content.Collection;
-import org.dspace.content.Community;
 import org.dspace.core.ConfigurationManager;
 import org.dspace.core.I18nUtil;
 import org.dspace.core.LogManager;
-import org.dspace.eperson.Group;
 import org.dspace.eperson.Subscribe;
 import org.xml.sax.SAXException;
 
@@ -90,6 +86,9 @@ public class Alerta extends AbstractDSpaceTransformer
     private static final Message T_select_collection =
         message("xmlui.EPerson.Alerta.select_collection");
     
+    private static final Message T_fin =
+        message("xmlui.EPerson.Alerta.fin");
+    
     private static Locale[] supportedLocales = getSupportedLocales();
     static
     {
@@ -120,8 +119,8 @@ public class Alerta extends AbstractDSpaceTransformer
         super.setup(resolver,objectModel,src,parameters);
         
         this.email = parameters.getParameter("email","unknown");
-        this.registering = parameters.getParameterAsBoolean("registering",false);
-        this.allowSetPassword = parameters.getParameterAsBoolean("allowSetPassword",false);
+//        this.registering = parameters.getParameterAsBoolean("registering",false);
+//        this.allowSetPassword = parameters.getParameterAsBoolean("allowSetPassword",false);
         
         String errors = parameters.getParameter("errors","");
         if (errors.length() > 0)
@@ -134,17 +133,15 @@ public class Alerta extends AbstractDSpaceTransformer
         }
         
         // Ensure that the email variable is set.
-        if (eperson != null)
-        {
-            this.email = eperson.getEmail();
-        }
+        this.email = eperson.getEmail();
+        
     }
        
     public void addPageMeta(PageMeta pageMeta) throws WingException
     {
         // Set the page title
         
-        pageMeta.addMetadata("title").addContent("Suscribirse a Alerta");
+        pageMeta.addMetadata("title").addContent(T_trail_update);
                
         pageMeta.addTrailLink(contextPath + "/",T_dspace_home);
                
@@ -174,9 +171,6 @@ public class Alerta extends AbstractDSpaceTransformer
             defaultPhone = eperson.getMetadata("phone");
             defaultLanguage = eperson.getLanguage();
             defaultDNI = eperson.getDNI();
-        }
-        else{
-            //Debería redirigir a login
         }
        
        String action = contextPath;
@@ -222,7 +216,8 @@ public class Alerta extends AbstractDSpaceTransformer
        }
        
        
-       
+       Button submit = form.addItem().addButton("submit");
+       submit.setValue(T_fin);
        profile.addHidden("eperson-continue").setValue(knot.getId());
               
        
