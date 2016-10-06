@@ -86,7 +86,7 @@
         <aspect name="Administration" path="resource://aspects/Administrative/" />
         <aspect name="E-Person" path="resource://aspects/EPerson/" />
         <aspect name="Submission and Workflow" path="resource://aspects/Submission/" />
-
+        <aspect name="AutoArchivo" path="resource://aspects/AutoArchivo/" />
         <!-- ========================
              Usage Statistics Engines
              ======================== -->

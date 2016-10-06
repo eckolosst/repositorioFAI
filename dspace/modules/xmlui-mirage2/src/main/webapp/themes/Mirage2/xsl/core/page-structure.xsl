@@ -129,8 +129,8 @@
 
                                                     <div id="ds-feed-option" class="ds-option-set list-group">
 							<a class="list-group-item" href="alerta"><i18n:text>xmlui.panelderecho.servicios.alertas</i18n:text></a>
-							<a class="list-group-item" href="/"><i18n:text>xmlui.panelderecho.servicios.sol_autoarchivo</i18n:text></a>
-                                                        <a class="list-group-item" href="/"><i18n:text>xmlui.panelderecho.servicios.guia_autoarchivo</i18n:text></a>
+							<a class="list-group-item" href="/autoarchivo"><i18n:text>xmlui.panelderecho.servicios.sol_autoarchivo</i18n:text></a>
+                                                        <a class="list-group-item" href="#"onclick="var popupwin = window.open('../{$theme-path}recursos/guia_autoarchivo.html','dspacepopup','height=600,width=550,resizable,scrollbars');popupwin.focus();return"><i18n:text>xmlui.panelderecho.servicios.guia_autoarchivo</i18n:text></a>
                                                     </div>
                                                 </div>
                                                 <div>
@@ -138,7 +138,7 @@
                                                         <i18n:text>xmlui.panelderecho.informacion</i18n:text>
                                                     </h2>
                                                     <div id="ds-feed-option" class="ds-option-set list-group">
-                                                        <a class="list-group-item" href="#" onclick="var popupwin = window.open('../{$theme-path}recursos/cond-uso.html','dspacepopup','height=600,width=550,resizable,scrollbars');popupwin.focus();return"><i18n:text>xmlui.panelderecho.informacion.lic_uso</i18n:text></a>
+                                                        <a class="list-group-item" href="#" onclick="var popupwin = window.open('../{$theme-path}recursos/cond_uso.html','dspacepopup','height=600,width=550,resizable,scrollbars');popupwin.focus();return"><i18n:text>xmlui.panelderecho.informacion.lic_uso</i18n:text></a>
                                                         <a class="list-group-item" href="/contact"><i18n:text>xmlui.ArtifactBrowser.Contact.head</i18n:text></a>
                                                         <a class="list-group-item" href="/feedback"><i18n:text>xmlui.ArtifactBrowser.Contact.feedback_link</i18n:text></a>
                                                     </div>
