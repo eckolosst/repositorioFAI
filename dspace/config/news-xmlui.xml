@@ -2,31 +2,34 @@
 <document xmlns="http://di.tamu.edu/DRI/1.0/" xmlns:i18n="http://apache.org/cocoon/i18n/2.1" version="1.1">
 <body>
 <div id="file.news.div.news" n="news" rend="primary">
-<head>Repositorio Digital Institucional</head>
+<head>Sobre este Repositorio</head>
 <subtitulo>“Por la democratización de la información y el Conocimiento”</subtitulo>
 
 <!-- Etiquetas par y refer agregadas para dar formato (justificado) al parrafo y para linkear, respectivamente -->
 <par>El RDI UNCo, se constituye como un Portal  de difusión de  la información y el conocimiento,  en la Universidad Nacional del Comahue, creado por <refer tipo="archivo" src="ordenanza.pdf">Ord. N° 0173/2014</refer>, con el objetivo de reunir y brindar acceso libre y gratuito a la información científica y académica, producto de las actividades de investigación, docencia  y gestión institucional, a fin de garantizar la libre disponiblidad y <refer tipo="link" src="http://repositorios.mincyt.gob.ar/recursos.php">acceso abierto</refer> al conocimiento científico. </par>
 </div>
 
+<head2>¿Qué encontramos en RDI-UNCo?</head2>
 <!-- Etiquetas ul e img agregadas con el fin de crear un visor de imagenes en el 
 inicio de la web, estas etiquetas son manipuladas en el elements.xsl-->
 <slider>
 <ul>
+<tipo nombre="Tesis: ">Descripción de los tipos de tesis</tipo>
 <img>tess.png</img>
 <img>desc.png</img>
 </ul>
 <ul>
+<tipo nombre="Documentos Institucionales: ">Descripción de los tipos documentos institucionales. PROXIMAMENTE</tipo>
 <img>acad.png</img>
 <img>desc.png</img>
 </ul>
-<!--/slider>
-<slider-->
 <ul>
+<tipo nombre="Imágenes: ">Descripción de los tipos de imágenes. PROXIMAMENTE</tipo>
 <img>imgss.png</img>
 <img>desc.png</img>
 </ul>
 <ul>
+<tipo nombre="Papers: ">Descripción de los papers. PROXIMAMENTE</tipo>
 <img>paper.png</img>
 <img>desc.png</img>
 </ul>	

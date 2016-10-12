@@ -74,9 +74,8 @@
                 <!-- First of all, build the HTML head element -->
 
                 <xsl:call-template name="buildHead"/>
-
                 <!-- Then proceed to the body -->
-                <body style="background-image:url({$theme-path}/images/fondoV.jpg)" >
+                <body class="degrade-body" >
                     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
                     chromium.org/developers/how-tos/chrome-frame-getting-started -->
                     <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -86,8 +85,9 @@
                             <xsl:apply-templates select="dri:body/*"/>
                         </xsl:when>
                         <xsl:otherwise>
+<br/>
                             <xsl:call-template name="buildHeader"/>
-                            <xsl:call-template name="buildTrail"/>
+                            <br/>
 			   
                             <!--javascript-disabled warning, will be invisible if javascript is enabled-->
                             <div id="no-js-warning-wrapper" class="hidden">
@@ -98,7 +98,7 @@
                                 </div>
                             </div>
 
-                            <div id="main-container" class="container-prueba">
+                            <div id="main-container" class="container-prueba bordes">
 
                                 <div class="row row-offcanvas row-offcanvas-right"> 
                                     <div class="horizontal-slider clearfix">
@@ -109,12 +109,15 @@
                                         </div>
 
                                         <!--div medio-->
-                                        <div class="col-xs-10 col-sm-8 col-md-8 main-content">
+										
+                                        <div class="col-xs-12 col-sm-12 col-md-8 main-content">
+											<xsl:call-template name="buildTrail"/>
+											<br/>
                                             <xsl:apply-templates select="*[not(self::dri:options)]"/>
                                         </div>
 
                                         <!--div derecho (nuevo)-->
-                                        <div id="ds-options2" class="col-xs-6 col-sm-3 col-md-2 sidebar-offcanvas sidebar-blanco hidden-xs hidden-sm" role="navigation">
+                                        <div id="ds-options2" class="col-xs-6 col-sm-3 col-md-2 sidebar-offcanvas sidebar-blanco hidden-xs">
                                             <div align="center"><!--div de logo de ayuda-->
                                                 <br/>						   
                                                 <a href="http://wikifai.fi.uncoma.edu.ar/mediawiki/index.php/P%C3%A1gina_principal" target="_blank"> 
@@ -128,9 +131,9 @@
                                                     </h2>
 
                                                     <div id="ds-feed-option" class="ds-option-set list-group">
-							<a class="list-group-item" href="alerta"><i18n:text>xmlui.panelderecho.servicios.alertas</i18n:text></a>
-							<a class="list-group-item" href="/autoarchivo"><i18n:text>xmlui.panelderecho.servicios.sol_autoarchivo</i18n:text></a>
-                                                        <a class="list-group-item" href="#"onclick="var popupwin = window.open('../{$theme-path}recursos/guia_autoarchivo.html','dspacepopup','height=600,width=550,resizable,scrollbars');popupwin.focus();return"><i18n:text>xmlui.panelderecho.servicios.guia_autoarchivo</i18n:text></a>
+														<a class="list-group-item" href="alerta"><i18n:text>xmlui.panelderecho.servicios.alertas</i18n:text></a>
+														<a class="list-group-item" href="autoarchivo"><i18n:text>xmlui.panelderecho.servicios.sol_autoarchivo</i18n:text></a>
+                                                        <a class="list-group-item" href="/"><i18n:text>xmlui.panelderecho.servicios.guia_autoarchivo</i18n:text></a>
                                                     </div>
                                                 </div>
                                                 <div>
@@ -184,8 +187,7 @@
                                     <xsl:call-template name="buildFooter"/>
                                 </div>
                             </div>
-
-
+							<br/>
                         </xsl:otherwise>
                     </xsl:choose>
                     <!-- Javascript at the bottom for fast page loading -->
@@ -379,9 +381,7 @@
                 <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">&#160;</script>
             </xsl:if>
 
-            <!-- Fuentes 
-            <link href='https://fonts.googleapis.com/css?family=Cinzel:700' rel='stylesheet' type='text/css'></link> font-family: 'Cinzel';	
-            <link href="https://fonts.googleapis.com/css?family=Suez+One" rel="stylesheet"></link> font-family: 'Suez One', serif;-->
+            <!-- Fuentes -->
             <link href="https://fonts.googleapis.com/css?family=Droid+Serif:700i" rel="stylesheet">  </link>
 	
         </head>
@@ -392,10 +392,9 @@
     placeholders for header images -->
     <xsl:template name="buildHeader">
 
-
         <header>
-            <div class="navbar navbar-default navbar-static-top" role="navigation">
-                <div class="container-prueba">
+            <div class="navbar navbar-default navbar-static-top transparente" role="navigation">
+                <div class="container-prueba degrade-banner">
                     <div class="navbar-header">		    
 
                         <button type="button" class="navbar-toggle" data-toggle="offcanvas">
@@ -409,7 +408,7 @@
 
                         <a href="{$context-path}/" class="navbar-brand sin-padding">
 			    
-                            <img id="logo-header" src="{$theme-path}/images/apple-touch-icon.png"/>	
+                            <img id="logo-header" class="hidden-xs" src="{$theme-path}/images/apple-touch-icon.png"/>	
 			    			    
                         </a>
 	

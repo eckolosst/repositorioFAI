@@ -296,9 +296,9 @@
     </xsl:template-->
 
 	<xsl:template match="dri:slider">
-		<div >
+		<div>
 			<xsl:for-each select="dri:ul">
-				<div class="slider hidden-xs hidden-sm">
+				<div class="slider hidden-xs ">
             		<ul>
                 		<xsl:for-each select="dri:img">
                     		<li>
@@ -311,8 +311,23 @@
                 		</xsl:for-each>
             		</ul>
         		</div>
+				<div class="visible-xs ">
+            		<ul>                		
+                		<li>
+							<xsl:apply-templates select="dri:tipo"/>                  		                    
+            			</li>
+                		
+            		</ul>
+        		</div>
 			</xsl:for-each>
 		</div>
+	</xsl:template>
+
+	<xsl:template match="dri:tipo">
+		<b>
+			<xsl:value-of select="./@nombre"/>
+		</b>
+		<xsl:value-of select="."/>		
 	</xsl:template>
 
 	<!-- Fin templates para presentación -->
@@ -580,7 +595,6 @@
         change in the future. -->
     <xsl:template match="dri:referenceSet/dri:head" priority="2">
         <h3>
-			hola
             <xsl:call-template name="standardAttributes">
                 <xsl:with-param name="class">ds-list-head</xsl:with-param>
             </xsl:call-template>
@@ -801,6 +815,17 @@
         <xsl:call-template name="renderHead">
             <xsl:with-param name="class">ds-head</xsl:with-param>
         </xsl:call-template>
+    </xsl:template>
+
+	<xsl:template match="dri:head2" priority="1">
+		<div align="center">		
+			<hr></hr> 
+			<br></br>       
+			<h2>
+		        <xsl:apply-templates />
+		    </h2>	
+			<br></br>     
+		</div>
     </xsl:template>
 
     <!-- Progress list used primarily in forms that span several pages. There isn't a template for the nested

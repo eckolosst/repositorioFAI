@@ -24,12 +24,12 @@
 
 /* Estilo encabezado */
 img#logo-header{
-   height: 135%;
+    height: 135%;
 }
 h1#titulo-header{
-   color: #FFFFFF; 
-   font-size:260%;
-   font-family: 'Droid Serif', serif;
+    color: #FFFFFF; 
+    font-size:260%;
+    font-family: 'Droid Serif', serif;
 }
 /*Para que el logo en la barra de navegación se vea grande anulamos el padding*/
 .sin-padding{
@@ -55,8 +55,8 @@ ul#menu li {
     padding: 5px 0px;
 }
 .padding-footer{
-	padding-right:30px;
-        
+    padding-right:30px;
+
 }
 
 /* Hace que la barra de navegación mantenga el fondo hasta el final de la página, como hace el main-container*/
@@ -133,7 +133,11 @@ la clase slider es utilizada por un div que se crea mediante el elements.xsl
 }
 
 // Clase redefinida para manejar el tamaño del body
-.container-prueba{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}
+.container-prueba{
+    margin-right:auto;
+    margin-left:auto;
+    padding-left:15px;
+    padding-right:15px}
 .container-prueba:before,.container-prueba:after{content:" ";display:table}
 .container-prueba:after{clear:both}
 @media (min-width: 768px){.container-prueba{width:750px}}
@@ -147,4 +151,18 @@ la clase slider es utilizada por un div que se crea mediante el elements.xsl
     text-transform:uppercase;
     text-shadow:0px 1px 0px rgba(255,255,255,0.5);
     margin-bottom:5px
+}
+// Estilo para el div del titulo
+.degrade-body{
+    background-image: -moz-linear-gradient(center top , #000000 0%, #0c484c 20%, #0c484c 50%, #000000 100%);
+}
+.degrade-banner{    
+    background-image: -moz-linear-gradient(center top, #0C484C 0%, #307378 20%, #307378 60%, #0C484C 100%); 
+    border-radius: 35px;
+}
+.bordes{
+    border-radius: 20px;
+}
+.transparente{
+    background-color: transparent !important;
 }
