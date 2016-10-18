@@ -166,3 +166,7 @@ la clase slider es utilizada por un div que se crea mediante el elements.xsl
 .transparente{
     background-color: transparent !important;
 }
+// Agrega fondo a la presentación del repositorio
+#file_news_div_news{
+    background-color: rgba(43, 103, 108, 0.24);
+}

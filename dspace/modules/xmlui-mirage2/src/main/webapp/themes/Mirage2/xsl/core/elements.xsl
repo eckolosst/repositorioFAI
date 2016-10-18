@@ -307,7 +307,7 @@
 				                        <xsl:value-of select="concat($theme-path,'/images/', .)"/>
 				                    </xsl:attribute>
                         		</img>
-                			</li>
+                		</li>
                 		</xsl:for-each>
             		</ul>
         		</div>
