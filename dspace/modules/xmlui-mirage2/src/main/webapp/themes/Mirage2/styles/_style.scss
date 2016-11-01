@@ -156,9 +156,9 @@ la clase slider es utilizada por un div que se crea mediante el elements.xsl
 .degrade-body{
     background-image: -moz-linear-gradient(center top , #000000 0%, #0c484c 20%, #0c484c 50%, #000000 100%);
 }
-.degrade-banner{    
-    background-image: -moz-linear-gradient(center top, #0C484C 0%, #307378 20%, #307378 60%, #0C484C 100%); 
-    border-radius: 35px;
+.degrade-banner{
+    background-image:url(/xmlui/themes/Mirage2/images/banner.png);
+    height: 100px;
 }
 .bordes{
     border-radius: 20px;
