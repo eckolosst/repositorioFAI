@@ -933,7 +933,7 @@
 
 	<!-- org.dspace.app.xmlui.Submission.submit.CompletedStep -->
 <message key="xmlui.Submission.submit.CompletedStep.head">Envío completado</message>
-<message key="xmlui.Submission.submit.CompletedStep.info1">Su envío pasará por el flujo de trabajo designado para la colección a la que lo está enviando. Recibirá una notificación vía correo electrónico tan pronto como su envío forme parte de la colección, o si por alguna razón hubiera algún problema con el envío. También puede verificar el estado de su envío accediendo a la página 'Mi RDI UNCo'.</message>
+<message key="xmlui.Submission.submit.CompletedStep.info1">Su envío pasará por el flujo de trabajo designado para la colección a la que lo está enviando. Recibirá una notificación vía correo electrónico tan pronto como su envío forme parte de la colección, o si por alguna razón hubiera algún problema con el envío. También puede verificar el estado de su envío accediendo a la opción 'Envíos' de la barra de herramientas izquierda, en la sección 'Mi Cuenta'.</message>
 <message key="xmlui.Submission.submit.CompletedStep.go_submission">Ir a la página de envíos</message>
 <message key="xmlui.Submission.submit.CompletedStep.submit_again">Enviar otro ítem</message>
 

@@ -16,7 +16,7 @@ inicio de la web, estas etiquetas son manipuladas en el elements.xsl-->
 <ul>
 <tipo nombre="Tesis: ">Descripción de los tipos de tesis</tipo>
 <img>tess.png</img>
-<img>desc.png</img>
+<img>img-ap.png</img>
 </ul>
 <ul>
 <tipo nombre="Documentos Institucionales: ">Descripción de los tipos documentos institucionales. PROXIMAMENTE</tipo>

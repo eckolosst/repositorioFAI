@@ -540,7 +540,7 @@ public class Subscribe
         Options options = new Options();
         HelpFormatter formatter = new HelpFormatter();
         CommandLine line = null;
-
+        
         {
             Option opt = new Option("t", "test", false, "Run test session");
             opt.setRequired(false);
