@@ -786,22 +786,22 @@
                                 </li>	
                                 <li>
                                     <a href="http://bibliocentral.uncoma.edu.ar/" target="_blank"> 
-                                        <img class="logo-contacto" src="{$theme-path}/images/web.png"/> 
+                                        <img class="logo-contacto" src="{$theme-path}/images/web-mn.png"/> 
                                     </a> 
                                 </li>
                                 <li>
                                     <a href="https://www.facebook.com/biblioteca.central.uncomahue" target="_blank"> 
-                                        <img class="logo-contacto" src="{$theme-path}/images/facebook.png"/> 
+                                        <img class="logo-contacto" src="{$theme-path}/images/fb-mn.png"/> 
                                     </a> 
                                 </li>
                                 <li>
                                     <a href="https://twitter.com/Biblioteca_UNCo" target="_blank"> 
-                                        <img class="logo-contacto" src="{$theme-path}/images/twitter.ico"/> 
+                                        <img class="logo-contacto" src="{$theme-path}/images/twtt-mn.png"/> 
                                     </a> 
                                 </li>	
                                 <li>
                                     <a href="https://plus.google.com/+bibliotecacentralUnco/posts" target="_blank"> 
-                                        <img class="logo-contacto" src="{$theme-path}/images/google.png"/> 
+                                        <img class="logo-contacto" src="{$theme-path}/images/g+-mn.png"/> 
                                     </a>
                                 </li>
                             </ul>
