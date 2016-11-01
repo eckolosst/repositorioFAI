@@ -933,7 +933,7 @@
 
 	<!-- org.dspace.app.xmlui.Submission.submit.CompletedStep -->
 <message key="xmlui.Submission.submit.CompletedStep.head">Envío completado</message>
-<message key="xmlui.Submission.submit.CompletedStep.info1">Su envío pasará por el flujo de trabajo designado para la colección a la que lo está enviando. Recibirá una notificación vía correo electrónico tan pronto como su envío forme parte de la colección, o si por alguna razón hubiera algún problema con el envío. También puede verificar el estado de su envío accediendo a la página 'Mi RDI UNCo'.</message>
+<message key="xmlui.Submission.submit.CompletedStep.info1">Su envío pasará por el flujo de trabajo designado para la colección a la que lo está enviando. Recibirá una notificación vía correo electrónico tan pronto como su envío forme parte de la colección, o si por alguna razón hubiera algún problema con el envío. También puede verificar el estado de su envío accediendo a la opción 'Envíos' de la barra de herramientas izquierda, en la sección 'Mi Cuenta'.</message>
 <message key="xmlui.Submission.submit.CompletedStep.go_submission">Ir a la página de envíos</message>
 <message key="xmlui.Submission.submit.CompletedStep.submit_again">Enviar otro ítem</message>
 
@@ -2077,9 +2077,9 @@
 <message key="xmlui.statistics.visits.cities">Ciudades con más visualizaciones</message>
 <message key="xmlui.statistics.visits.bitstreams">Visitas al fichero</message>
 <message key="xmlui.statistics.Navigation.title">Estadísticas</message>
-<message key="xmlui.statistics.Navigation.usage.view">De uso</message>
+<message key="xmlui.statistics.Navigation.usage.view">De Uso</message>
 <message key="xmlui.statistics.Navigation.search.view">De Búsquedas</message>
-<message key="xmlui.statistics.Navigation.workflow.view">Del flujo de trabajo</message>
+<message key="xmlui.statistics.Navigation.workflow.view">Del Flujo de Trabajo</message>
 <message key="xmlui.statistics.trail">Estadísticas</message>
 <message key="xmlui.statistics.trail-search">Estadísticas de Búsquedas</message>
 <message key="xmlui.statistics.trail-workflow">Estadísticas del flujo de trabajo</message>
