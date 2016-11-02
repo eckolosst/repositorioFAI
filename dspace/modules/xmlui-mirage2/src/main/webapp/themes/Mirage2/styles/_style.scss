@@ -61,6 +61,7 @@ ul#menu li {
 
 /* Hace que la barra de navegación mantenga el fondo hasta el final de la página, como hace el main-container*/
 .sidebar-blanco{
+    border-top-left-radius: 20px;
     padding-bottom: 99999px;
     margin-bottom: -99979px;
 }
