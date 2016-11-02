@@ -121,23 +121,23 @@
                                             <div align="center"><!--div de logo de ayuda-->
                                                 <br/>						   
                                                 <a href="http://wikifai.fi.uncoma.edu.ar/mediawiki/index.php/P%C3%A1gina_principal" target="_blank"> 
-                                                    <img id="ayuda" src="{$theme-path}/images/ayuda.png"/>
+                                                    <img id="ayuda" src="{$theme-path}/images/help.png"/>
                                                 </a>
-                                            </div>
+                                            </div>		
                                             <div>
                                                 <div>
-                                                    <h2 class="ds-option-set-head h6">
+                                                    <h2 class="list-group-item active subtitulo-letra">
                                                         <i18n:text>xmlui.panelderecho.servicios</i18n:text>
                                                     </h2>
 
                                                     <div id="ds-feed-option" class="ds-option-set list-group">
-														<a class="list-group-item" href="/alerta"><i18n:text>xmlui.panelderecho.servicios.alertas</i18n:text></a>
+														<a class="list-group-item" href="alerta"><i18n:text>xmlui.panelderecho.servicios.alertas</i18n:text></a>
 														<a class="list-group-item" href="autoarchivo"><i18n:text>xmlui.panelderecho.servicios.sol_autoarchivo</i18n:text></a>
                                                         <a class="list-group-item" href="/"><i18n:text>xmlui.panelderecho.servicios.guia_autoarchivo</i18n:text></a>
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <h2 class="ds-option-set-head h6">
+                                                    <h2 class="list-group-item active subtitulo-letra">
                                                         <i18n:text>xmlui.panelderecho.informacion</i18n:text>
                                                     </h2>
                                                     <div id="ds-feed-option" class="ds-option-set list-group">
@@ -148,7 +148,7 @@
                                                 </div>
                                                 <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']) != 0">
                                                     <div>
-                                                        <h2 class="ds-option-set-head h6">
+                                                        <h2 class="list-group-item active subtitulo-letra">
                                                             <i18n:text>xmlui.feed.header</i18n:text>
                                                         </h2>
                                                         <div id="ds-feed-option" class="ds-option-set list-group">
@@ -158,10 +158,10 @@
                                                 </xsl:if>
                                                 <br/>
                                                 <div>
-                                                    <h2 class="ds-option-set-head h6">
+                                                    <h2 class="list-group-item active subtitulo-letra">
                                                         <i18n:text>xmlui.panelderecho.enlaces</i18n:text>
                                                     </h2>
-                                                    <div align="center">
+                                                    <div align="center" style="margin-top: 10px">
                                                         <a href="http://www.sherpa.ac.uk/romeo/index.php?" class="logo-enlaces" target="_blank">
                                                             <img id="ayuda" src="{$theme-path}/images/sherpa.png"/>
                                                         </a>
@@ -406,11 +406,9 @@
                             <span class="icon-bar"></span>
                         </button>
 
-                        <a href="{$context-path}/" class="navbar-brand sin-padding">
-			    
+                        <a href="{$context-path}/" class="navbar-brand sin-padding">			    
                             <img id="logo-header" class="hidden-xs" src="{$theme-path}/images/apple-touch-icon.png"/>	
-			    			    
-                        </a>
+			    		</a>
 	
 
                         <h1 id="titulo-header" class="navbar-text">RDI - UNCo</h1>	
