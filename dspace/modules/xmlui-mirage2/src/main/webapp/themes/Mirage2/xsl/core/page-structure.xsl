@@ -126,7 +126,7 @@
                                             </div>		
                                             <div>
                                                 <div>
-                                                    <h2 class="list-group-item active subtitulo-letra">
+                                                    <h2 class="ds-option-set-head h6">
                                                         <i18n:text>xmlui.panelderecho.servicios</i18n:text>
                                                     </h2>
 
@@ -137,7 +137,7 @@
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <h2 class="list-group-item active subtitulo-letra">
+                                                    <h2 class="ds-option-set-head h6">
                                                         <i18n:text>xmlui.panelderecho.informacion</i18n:text>
                                                     </h2>
                                                     <div id="ds-feed-option" class="ds-option-set list-group">
@@ -148,7 +148,7 @@
                                                 </div>
                                                 <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']) != 0">
                                                     <div>
-                                                        <h2 class="list-group-item active subtitulo-letra">
+                                                        <h2 class="ds-option-set-head h6">
                                                             <i18n:text>xmlui.feed.header</i18n:text>
                                                         </h2>
                                                         <div id="ds-feed-option" class="ds-option-set list-group">
@@ -156,9 +156,8 @@
                                                         </div>
                                                     </div>
                                                 </xsl:if>
-                                                <br/>
                                                 <div>
-                                                    <h2 class="list-group-item active subtitulo-letra">
+                                                    <h2 class="ds-option-set-head h6">
                                                         <i18n:text>xmlui.panelderecho.enlaces</i18n:text>
                                                     </h2>
                                                     <div align="center" style="margin-top: 10px">
@@ -406,14 +405,10 @@
                             <span class="icon-bar"></span>
                         </button>
 
-                        <a href="{$context-path}/" class="navbar-brand sin-padding">			    
-                            <img id="logo-header" class="hidden-xs" src="{$theme-path}/images/apple-touch-icon.png"/>	
-			    		</a>
-	
-
-                        <h1 id="titulo-header" class="navbar-text">RDI - UNCo</h1>	
-				
-
+                        <a href="{$context-path}/">			    
+                             <h1 id="titulo-header" class="navbar-text">RDI - UNCo</h1>	
+                        </a>   	
+                        
                         <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
                             <ul class="nav nav-pills pull-left ">
 

@@ -298,26 +298,29 @@
 	<xsl:template match="dri:slider">
 		<div>
 			<xsl:for-each select="dri:ul">
-				<div class="slider hidden-xs ">
-            		<ul>
-                		<xsl:for-each select="dri:img">
-                    		<li>
-                        		<img>
-				                    <xsl:attribute name="src">
-				                        <xsl:value-of select="concat($theme-path,'/images/', .)"/>
-				                    </xsl:attribute>
-                        		</img>
-                		</li>
-                		</xsl:for-each>
-            		</ul>
+			<div class="slider hidden-xs ">
+                            <ul>
+                                    <xsl:for-each select="dri:img">
+                                    <li>
+                                        <a>
+                                            <xsl:attribute name="href"><xsl:value-of select="@ruta"/></xsl:attribute>
+                                            <img>
+                                                <xsl:attribute name="src">
+                                                    <xsl:value-of select="concat($theme-path,'/images/', .)"/>
+                                                </xsl:attribute>
+                                            </img>
+                                        </a>
+                                    </li>
+                                    </xsl:for-each>
+                            </ul>
         		</div>
-				<div class="visible-xs ">
-            		<ul>                		
-                		<li>
-							<xsl:apply-templates select="dri:tipo"/>                  		                    
-            			</li>
-                		
-            		</ul>
+			<div class="visible-xs ">
+                            <ul>                		
+                                <li>
+                                    <xsl:apply-templates select="dri:tipo"/>                  		                    
+                                </li>
+
+                            </ul>
         		</div>
 			</xsl:for-each>
 		</div>
@@ -769,6 +772,9 @@
                         <xsl:text> page-header</xsl:text>
                     </xsl:if>
                     <xsl:if test="$is_first_head_on_page">
+                        <xsl:text> first-page-header</xsl:text>
+                    </xsl:if>
+					<xsl:if test="$class='ds-sublist-head'">
                         <xsl:text> first-page-header</xsl:text>
                     </xsl:if>
                 </xsl:with-param>

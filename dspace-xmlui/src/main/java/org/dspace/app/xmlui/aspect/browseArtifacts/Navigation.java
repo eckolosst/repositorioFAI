@@ -117,7 +117,7 @@ public class Navigation extends AbstractDSpaceTransformer implements CacheablePr
         options.addList("administrative");
 
 
-        //browse.setHead(T_head_browse);
+        browse.setHead(T_head_browse);
 
         List browseGlobal = browse.addList("global");
         List browseContext = browse.addList("context");

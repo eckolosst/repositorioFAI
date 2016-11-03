@@ -216,9 +216,9 @@
     </xsl:template>
 
     <xsl:template match="dri:options/dri:list/dri:head" priority="3">
-        <xsl:call-template name="renderHead">
-            <xsl:with-param name="class">ds-option-set-head</xsl:with-param>
-        </xsl:call-template>
+            <xsl:call-template name="renderHead">
+                <xsl:with-param name="class">ds-option-set-head</xsl:with-param>
+            </xsl:call-template>
     </xsl:template>
 
     <xsl:template match="dri:options/dri:list//dri:list/dri:head" priority="3">
