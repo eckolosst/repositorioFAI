@@ -669,7 +669,7 @@
 	<message key="xmlui.Submission.general.default.trail">Submission</message>
 
 	<!-- org.dspace.app.xmlui.submission.CollectiovViewer -->
-	<message key="xmlui.Submission.CollectionViewer.link1">Submit a new item to this collection</message>
+        <message key="xmlui.Submission.CollectionViewer.link1"><button>Submit a new item to this collection</button></message>
 
 	<!-- org.dspace.app.xmlui.submission.Navigation -->
 	<message key="xmlui.Submission.Navigation.submissions">Submissions</message>

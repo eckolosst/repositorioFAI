@@ -185,8 +185,7 @@
 		
     </xsl:template>
 
-	<xsl:template match="dri:list[@id='aspect.discovery.Navigation.list.discovery']" priority="3">
-		    
+    <xsl:template match="dri:list[@id='aspect.discovery.Navigation.list.discovery']" priority="3">		    
     </xsl:template>
 
     <xsl:template match="dri:options//dri:item">
