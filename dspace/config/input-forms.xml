@@ -55,6 +55,12 @@
 
     <form-definitions>
 
+        <!--REQUIERE EL AGREGADO DE:
+                1 METADATO NUEVO: unco
+                2 ELEMENTOS NUEVOS: subject, tesis
+                4 CALIFICADORES NUEVOS:
+                    subject.desc y subject.keyword
+                    tesis.grado y tesis.jurado-->
         <form name = "Tesis">
             <page number="1">
                 <field>
@@ -145,7 +151,8 @@
 			  Ej: Suárez, Luis CoDir</hint>
                     <required>Campo obligatorio</required>
                 </field>
-
+            </page>
+            <page number="2">
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>date</dc-element>
@@ -167,19 +174,6 @@
                     <hint>Fecha de presentación de la tesis.</hint> 
                     <required>Campo obligatorio</required>
                 </field>
-
-		<!--
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>identifier</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Tipo</label>
-                    <input-type value-pairs-name="tipos">dropdown</input-type>
-                    <hint>Naturaleza o genero del contenido de la tesis.</hint>
-                    <required>Campo Obligatorio</required>
-                </field>
-		-->
 
 		<field>
                     <dc-schema>unco</dc-schema>
@@ -239,7 +233,140 @@
             </page>
 
         </form>
-               
+
+        <!--REQUIERE EL AGREGADO DE:
+            1 METADATO NUEVO: unco
+            1 ELEMENTO NUEVO: informe
+            3 CALIFICADORES NUEVOS de informe: tipo,unidad y disciplina-->
+        <form name="informe">
+            <page number="1">
+                <field>
+                    <dc-schema>unco</dc-schema>
+                    <dc-element>informe</dc-element>
+                    <dc-qualifier>tipo</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Tipo de documento</label>
+                    <input-type value-pairs-name="tipos_informes">dropdown</input-type>
+                    <hint></hint>
+                    <required>Campo obligatorio</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Título del proyecto</label>
+                    <input-type>onebox</input-type>
+                    <hint>Nombre dado al item por el cual es formalmente conocido.</hint>
+                    <required>Campo obligatorio</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>issued</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Fecha de presentación</label>
+                    <input-type>date</input-type>
+                    <hint>Fecha de presentación del informe</hint>
+                    <required>Campo obligatorio</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>other</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Código de identificación</label>
+                    <input-type>onebox</input-type>
+                    <hint>Cadena de caracteres alfanumèrica que sirve para identificar el informe</hint>
+                    <required>Campo obligatorio</required>
+                </field>
+                <field>
+                    <dc-schema>unco</dc-schema>
+                    <dc-element>informe</dc-element>
+                    <dc-qualifier>unidad</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Unidad Ejecutora</label>
+                    <input-type>onebox</input-type>
+                    <hint></hint>
+                    <required>Campo obligatorio</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>other</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Director/Codirector</label>
+                    <input-type>twobox</input-type>
+                    <hint>Indique en este campo el nombre del director y/o codirector con su función correspondiente. 
+			  Ej: Suárez, Luis CoDir</hint>
+                    <required>Campo obligatorio</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>other</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Integrantes</label>
+                    <input-type>name</input-type>
+                    <hint>Responsables de el desarrollo del informe</hint>
+                    <required>Campo obligatorio</required>
+                </field>
+            </page>
+            <page number="2">
+                 <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>abstract</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Objetivos generales</label>
+                    <input-type>textarea</input-type>
+                    <hint></hint>
+                    <required>Campo obligatorio</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>abstract</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Sintesis del proyecto</label>
+                    <input-type>textarea</input-type>
+                    <hint></hint>
+                    <required></required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Disciplina/s</label>
+                    <input-type>onebox</input-type>
+                    <hint></hint>
+                    <required></required>
+                </field>
+                <field>
+                    <dc-schema>unco</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier>desc</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Descriptores</label>
+                    <input-type>onebox</input-type>
+                    <hint>Descriptores del contenido del informe.</hint>
+                    <required></required>
+                </field>
+
+		<field>
+                    <dc-schema>unco</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier>keyword</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Palabras claves</label>
+                    <input-type>onebox</input-type>
+                    <hint>Palabras claves del contenido del informe.</hint>
+                    <required>Campo obligatorio</required>
+                </field>
+            </page>
+        </form>
+        
         <form name="traditional">
             <page number="1">
                 <field>
@@ -405,24 +532,7 @@
                 </field>
             </page>
         </form>
-
-        <form name="one">
-            <page number="1">
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>contributor</dc-element>
-                    <dc-qualifier>author</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>One: Authors</label>
-                    <input-type>name</input-type>
-                    <hint>Enter the names of the authors of this item.</hint>
-                    <required></required>
-                </field>
-            </page>
-        </form>
     </form-definitions>
-
-
     <!-- form-value-pairs populate dropdown and qualdrop-value lists.          -->
     <!-- The form-value-pairs element holds child elements named 'value-pairs' -->
     <!-- A 'value-pairs' element has a value-pairs-name and a dc-term          -->
@@ -437,7 +547,7 @@
     <!-- stores the associated stored-values in the database.                  -->
 
     <form-value-pairs>
-        <value-pairs value-pairs-name="temas" dc-terms="types">
+        <value-pairs value-pairs-name="temas" dc-term="subject">
             <pair>
                 <displayed-value>Ciencia Política</displayed-value>
                 <stored-value>Ciencia Política</stored-value>
@@ -484,16 +594,16 @@
             </pair>                       
         </value-pairs>
         
-        <!--<value-pairs value-pairs-name="tipos" dc-terms="identifier">
+        <value-pairs value-pairs-name="tipos_informes" dc-term="identifier">
             <pair>
-                <displayed-value>Grado</displayed-value>
-                <stored-value>Grado</stored-value>
+                <displayed-value>Parcial/Avance</displayed-value>
+                <stored-value>parcial</stored-value>
             </pair>
             <pair>
-                <displayed-value>Postgrado</displayed-value>
-                <stored-value>Postgrado</stored-value>
+                <displayed-value>Final</displayed-value>
+                <stored-value>final</stored-value>
             </pair>
-        </value-pairs>-->
+        </value-pairs>
         
         <value-pairs value-pairs-name="common_identifiers" dc-term="identifier">
             <pair>

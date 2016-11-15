@@ -85,7 +85,7 @@
                             <xsl:apply-templates select="dri:body/*"/>
                         </xsl:when>
                         <xsl:otherwise>
-<br/>
+                            <br/>
                             <xsl:call-template name="buildHeader"/>
                             <br/>
 			   
@@ -111,8 +111,8 @@
                                         <!--div medio-->
 										
                                         <div class="col-xs-12 col-sm-12 col-md-8 main-content">
-											<xsl:call-template name="buildTrail"/>
-											<br/>
+                                            <xsl:call-template name="buildTrail"/>
+                                            <br/>
                                             <xsl:apply-templates select="*[not(self::dri:options)]"/>
                                         </div>
 
@@ -131,9 +131,15 @@
                                                     </h2>
 
                                                     <div id="ds-feed-option" class="ds-option-set list-group">
-														<a class="list-group-item" href="alerta"><i18n:text>xmlui.panelderecho.servicios.alertas</i18n:text></a>
-														<a class="list-group-item" href="autoarchivo"><i18n:text>xmlui.panelderecho.servicios.sol_autoarchivo</i18n:text></a>
-                                                        <a class="list-group-item" href="/"><i18n:text>xmlui.panelderecho.servicios.guia_autoarchivo</i18n:text></a>
+                                                        <a class="list-group-item" href="/alerta">
+                                                            <i18n:text>xmlui.panelderecho.servicios.alertas</i18n:text>
+                                                        </a>
+                                                        <a class="list-group-item" href="/autoarchivo">
+                                                            <i18n:text>xmlui.panelderecho.servicios.sol_autoarchivo</i18n:text>
+                                                        </a>
+                                                        <a class="list-group-item" href="/">
+                                                            <i18n:text>xmlui.panelderecho.servicios.guia_autoarchivo</i18n:text>
+                                                        </a>
                                                     </div>
                                                 </div>
                                                 <div>
@@ -141,9 +147,15 @@
                                                         <i18n:text>xmlui.panelderecho.informacion</i18n:text>
                                                     </h2>
                                                     <div id="ds-feed-option" class="ds-option-set list-group">
-                                                        <a class="list-group-item" href="#" onclick="var popupwin = window.open('../{$theme-path}recursos/cond_uso.html','dspacepopup','height=600,width=550,resizable,scrollbars');popupwin.focus();return"><i18n:text>xmlui.panelderecho.informacion.lic_uso</i18n:text></a>
-                                                        <a class="list-group-item" href="/contact"><i18n:text>xmlui.ArtifactBrowser.Contact.head</i18n:text></a>
-                                                        <a class="list-group-item" href="/feedback"><i18n:text>xmlui.ArtifactBrowser.Contact.feedback_link</i18n:text></a>
+                                                        <a class="list-group-item" href="#" onclick="var popupwin = window.open('../{$theme-path}recursos/cond_uso.html','dspacepopup','height=600,width=550,resizable,scrollbars');popupwin.focus();return">
+                                                            <i18n:text>xmlui.panelderecho.informacion.lic_uso</i18n:text>
+                                                        </a>
+                                                        <a class="list-group-item" href="/contact">
+                                                            <i18n:text>xmlui.ArtifactBrowser.Contact.head</i18n:text>
+                                                        </a>
+                                                        <a class="list-group-item" href="/feedback">
+                                                            <i18n:text>xmlui.ArtifactBrowser.Contact.feedback_link</i18n:text>
+                                                        </a>
                                                     </div>
                                                 </div>
                                                 <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']) != 0">
@@ -186,7 +198,7 @@
                                     <xsl:call-template name="buildFooter"/>
                                 </div>
                             </div>
-							<br/>
+                            <br/>
                         </xsl:otherwise>
                     </xsl:choose>
                     <!-- Javascript at the bottom for fast page loading -->
@@ -406,7 +418,7 @@
                         </button>
 
                         <a href="{$context-path}/">			    
-                             <h1 id="titulo-header" class="navbar-text">RDI - UNCo</h1>	
+                            <h1 id="titulo-header" class="navbar-text">RDI - UNCo</h1>	
                         </a>   	
                         
                         <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
@@ -450,7 +462,7 @@
                                                 <b class="visible-xs glyphicon glyphicon-user" aria-hidden="true"/>
                                             </button>
                                             <ul class="dropdown-menu pull-right" role="menu"
-                                            aria-labelledby="user-dropdown-toggle-xs" data-no-collapse="true">
+                                                aria-labelledby="user-dropdown-toggle-xs" data-no-collapse="true">
                                                 <li>
                                                     <a href="{/dri:document/dri:meta/dri:userMeta/
                             dri:metadata[@element='identifier' and @qualifier='url']}"> 
@@ -690,9 +702,9 @@
             <div about="{$handleUri}" class="row">
                 <div class="col-sm-3 col-xs-12">
                     <a rel="license"
-                   href="{$ccLicenseUri}"
-                   alt="{$ccLicenseName}"
-                   title="{$ccLicenseName}"
+                       href="{$ccLicenseUri}"
+                       alt="{$ccLicenseName}"
+                       title="{$ccLicenseName}"
                     >
                         <xsl:call-template name="cc-logo">
                             <xsl:with-param name="ccLicenseName" select="$ccLicenseName"/>
@@ -854,7 +866,7 @@
 
             <!-- Check for the custom pages -->
             <xsl:choose>
-				<xsl:when test="starts-with($request-uri, 'page/about')">
+                <xsl:when test="starts-with($request-uri, 'page/about')">
                     <div class="hero-unit">
                         <h1>
                             <i18n:text>xmlui.mirage2.page-structure.heroUnit.title</i18n:text>
@@ -864,9 +876,9 @@
                         </p>
                     </div>
                 </xsl:when>
-				<xsl:when test="$request-uri = ''">
-					<xsl:apply-templates />
-				</xsl:when>
+                <xsl:when test="$request-uri = ''">
+                    <xsl:apply-templates />
+                </xsl:when>
                 <!-- Otherwise use default handling of body -->
                 <xsl:otherwise>
                     <xsl:apply-templates />
