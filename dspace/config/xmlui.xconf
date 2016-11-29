@@ -90,8 +90,8 @@
         <!-- ========================
              Usage Statistics Engines
              ======================== -->
-        <!-- By default, DSpace uses a Statistics engine based on SOLR -->
-        <aspect name="Statistics" path="resource://aspects/Statistics/" />
+        <!-- By default, DSpace uses a Statistics engine based on SOLR 
+        <aspect name="Statistics" path="resource://aspects/Statistics/" />-->
 
         <!--
              If you prefer to use "Elastic Search" Statistics, you can uncomment the below
