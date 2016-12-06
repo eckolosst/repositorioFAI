@@ -16,9 +16,7 @@
     <form-map>
         <name-map collection-handle="default" form-name="traditional" />
         <name-map collection-handle="123456789/4" form-name="Tesis" />
-    	<name-map collection-handle="123456789/52" form-name="Tesis" />
-        <name-map collection-handle="123456789/53" form-name="Tesis" />
-        <name-map collection-handle="123456789/54" form-name="Tesis" />
+    	<name-map collection-handle="123456789/5" form-name="informe" />
         <name-map collection-handle="123456789/38" form-name="Tesis" />
         <name-map collection-handle="123456789/39" form-name="Tesis" />
         <name-map collection-handle="123456789/40" form-name="Tesis" />
@@ -33,6 +31,9 @@
         <name-map collection-handle="123456789/49" form-name="Tesis" />
         <name-map collection-handle="123456789/50" form-name="Tesis" />
         <name-map collection-handle="123456789/51" form-name="Tesis" />
+        <name-map collection-handle="123456789/52" form-name="Tesis" />
+        <name-map collection-handle="123456789/53" form-name="Tesis" />
+        <name-map collection-handle="123456789/54" form-name="Tesis" />
  
     </form-map>
 
@@ -63,6 +64,16 @@
                     tesis.grado y tesis.jurado-->
         <form name = "Tesis">
             <page number="1">
+				<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Tipo de Documento</label>
+                    <input-type value-pairs-name="tipos_doc">dropdown</input-type>
+                    <hint>Seleccione el tipo de contenido del ítem.</hint>
+                    <required></required>
+                </field>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>title</dc-element>
@@ -96,7 +107,7 @@
                     <required>Campo obligatorio</required>
                 </field>
 
-		<field>
+				<field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>subject</dc-element>
                     <dc-qualifier></dc-qualifier>
@@ -151,8 +162,7 @@
 			  Ej: Suárez, Luis CoDir</hint>
                     <required>Campo obligatorio</required>
                 </field>
-            </page>
-            <page number="2">
+
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>date</dc-element>
@@ -240,6 +250,16 @@
             3 CALIFICADORES NUEVOS de informe: tipo,unidad y disciplina-->
         <form name="informe">
             <page number="1">
+				<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Tipo de Documento</label>
+                    <input-type value-pairs-name="tipos_doc">dropdown</input-type>
+                    <hint>Seleccione el tipo de contenido del ítem.</hint>
+                    <required></required>
+                </field>
                 <field>
                     <dc-schema>unco</dc-schema>
                     <dc-element>informe</dc-element>
@@ -328,20 +348,20 @@
                     <dc-element>description</dc-element>
                     <dc-qualifier>abstract</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Sintesis del proyecto</label>
+                    <label>Abstract</label>
                     <input-type>textarea</input-type>
-                    <hint></hint>
+                    <hint>Breve síntesis del contenido del informe.</hint>
                     <required></required>
                 </field>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>subject</dc-element>
                     <dc-qualifier></dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Disciplina/s</label>
-                    <input-type>onebox</input-type>
-                    <hint></hint>
-                    <required></required>
+                    <repeatable>false</repeatable>
+                    <label>Disciplina</label>
+                    <input-type value-pairs-name="temas">dropdown</input-type>
+                    <hint>Palabras claves o frases que describen el tema de la tesis.</hint>
+                    <required>Campo obligatorio</required>
                 </field>
                 <field>
                     <dc-schema>unco</dc-schema>
@@ -354,7 +374,7 @@
                     <required></required>
                 </field>
 
-		<field>
+				<field>
                     <dc-schema>unco</dc-schema>
                     <dc-element>subject</dc-element>
                     <dc-qualifier>keyword</dc-qualifier>
@@ -642,6 +662,25 @@
                 <stored-value>- Codirector</stored-value>
             </pair>
 	</value-pairs>
+
+		<value-pairs value-pairs-name="tipos_doc" dc-term="type">
+			<pair>
+                <displayed-value>Tesis de Grado</displayed-value>
+                <stored-value>Tesis de Grado</stored-value>
+            </pair>	
+			<pair>
+                <displayed-value>Tesis de Postgrado</displayed-value>
+                <stored-value>Tesis de Postgrado</stored-value>
+            </pair>		
+			<pair>
+                <displayed-value>Informe de Avance/Parcial</displayed-value>
+                <stored-value>Informe de Avance/Parcial</stored-value>
+            </pair>
+			<pair>
+                <displayed-value>Informe Final</displayed-value>
+                <stored-value>Informe Final</stored-value>
+            </pair>
+		</value-pairs>		
 
         <value-pairs value-pairs-name="common_types" dc-term="type">
             <pair>

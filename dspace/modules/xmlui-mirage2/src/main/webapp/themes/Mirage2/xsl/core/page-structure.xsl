@@ -137,7 +137,7 @@
                                                         <a class="list-group-item" href="/autoarchivo">
                                                             <i18n:text>xmlui.panelderecho.servicios.sol_autoarchivo</i18n:text>
                                                         </a>
-                                                        <a class="list-group-item" href="/">
+                                                        <a class="list-group-item" href="">
                                                             <i18n:text>xmlui.panelderecho.servicios.guia_autoarchivo</i18n:text>
                                                         </a>
                                                     </div>
@@ -416,12 +416,12 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
+            	
+                        <a href="{$context-path}/">
+                            <img id="logo" src="{$theme-path}/images/logo.png" />
+                        </a>
 
-                        <a href="{$context-path}/">			    
-                            <h1 id="titulo-header" class="navbar-text">RDI - UNCo</h1>	
-                        </a>   	
-                        
-                        <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
+                        <div class="navbar-header pull-right visible-xs visible-sm hidden-md">
                             <ul class="nav nav-pills pull-left ">
 
                                 <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']) &gt; 1">
@@ -493,7 +493,7 @@
                         </div>
                     </div>
 
-                    <div class="navbar-header pull-right hidden-xs">
+                    <div class="navbar-header pull-right hidden-xs hidden-ms">
                         <ul class="nav navbar-nav pull-left">
                             <xsl:call-template name="languageSelection"/>
                         </ul>
@@ -507,8 +507,6 @@
                                                 <xsl:value-of select="/dri:document/dri:meta/dri:userMeta/
                             dri:metadata[@element='identifier' and @qualifier='firstName']"/>
                                                 <xsl:text> </xsl:text>
-                                                <xsl:value-of select="/dri:document/dri:meta/dri:userMeta/
-                            dri:metadata[@element='identifier' and @qualifier='lastName']"/>
                                                 &#160;
                                                 <b class="caret"/>
                                             </span>
@@ -547,9 +545,9 @@
                             <span class="sr-only">
                                 <i18n:text>xmlui.mirage2.page-structure.toggleNavigation</i18n:text>
                             </span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
+                            <span class="icon-bar negro"></span>
+                            <span class="icon-bar negro"></span>
+                            <span class="icon-bar negro"></span>
                         </button>
                     </div>
                 </div>
