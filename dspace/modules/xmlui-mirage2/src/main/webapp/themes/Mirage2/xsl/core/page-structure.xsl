@@ -117,7 +117,7 @@
                                         </div>
 
                                         <!--div derecho (nuevo)-->
-                                        <div id="ds-options2" class="col-xs-6 col-sm-3 col-md-2 sidebar-offcanvas sidebar-blanco hidden-xs">
+                                        <div id="ds-options2" class="col-xs-6 col-sm-3 col-md-2 sidebar-offcanvas sidebar-blanco hidden-xs hidden-sm">
                                             <div align="center"><!--div de logo de ayuda-->
                                                 <br/>						   
                                                 <a href="http://wikifai.fi.uncoma.edu.ar/mediawiki/index.php/P%C3%A1gina_principal" target="_blank"> 
@@ -137,7 +137,7 @@
                                                         <a class="list-group-item" href="/autoarchivo">
                                                             <i18n:text>xmlui.panelderecho.servicios.sol_autoarchivo</i18n:text>
                                                         </a>
-                                                        <a class="list-group-item" href="">
+                                                        <a class="list-group-item" href="/">
                                                             <i18n:text>xmlui.panelderecho.servicios.guia_autoarchivo</i18n:text>
                                                         </a>
                                                     </div>
