@@ -545,9 +545,9 @@
                             <span class="sr-only">
                                 <i18n:text>xmlui.mirage2.page-structure.toggleNavigation</i18n:text>
                             </span>
-                            <span class="icon-bar negro"></span>
-                            <span class="icon-bar negro"></span>
-                            <span class="icon-bar negro"></span>
+                            <span class="icon-bar" style="background-color: #000"></span>
+                            <span class="icon-bar" style="background-color: #000"></span>
+                            <span class="icon-bar" style="background-color: #000"></span>
                         </button>
                     </div>
                 </div>

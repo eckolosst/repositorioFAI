@@ -167,8 +167,8 @@ la clase slider es utilizada por un div que se crea mediante el elements.xsl
 }
 .degrade-banner{height:100px; background-size: 100% 100%; border-radius: 25px;} 
 @media (max-width: 767px) {.degrade-banner{background-color:#1E7777;height:100px; background-size: 100% 100%;} #logo{height: 88px; margin: 5px 10px 10px 28px;}}
-@media (min-width: 768px) and (max-width: 991px) {.degrade-banner{background-color:#1E7777;height:100px; background-size: 100% 100%; } #logo{height: 88px; margin: 5px 10px 10px 28px;}}
-@media (min-width: 992px) and (max-width: 1199px) {.degrade-banner{background-image:url(/themes/Mirage2/images/banner.png);height:100px; background-size: 100% 100%;} #logo{height: 88px; margin: 5px 10px 10px 28px;}}
+@media (min-width: 768px) and (max-width: 991px) {.degrade-banner{background-image:url(/themes/Mirage2/images/banner2.png);height:100px; background-size: 100% 100%; } #logo{height: 88px; margin: 5px 10px 10px 28px;}}
+@media (min-width: 992px) and (max-width: 1199px) {.degrade-banner{background-image:url(/themes/Mirage2/images/banner2.png);height:100px; background-size: 100% 100%;} #logo{height: 88px; margin: 5px 10px 10px 28px;}}
 @media (min-width: 1200px) {.degrade-banner{background-image:url(/themes/Mirage2/images/banner.png);height:150px; background-size: 100% 100%;} #logo{height: 130px; margin: 10px 10px 10px 28px;}}
 
 .negro{color: black !important}

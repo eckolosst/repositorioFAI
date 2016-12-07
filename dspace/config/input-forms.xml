@@ -64,7 +64,7 @@
                     tesis.grado y tesis.jurado-->
         <form name = "Tesis">
             <page number="1">
-				<field>
+		<field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>type</dc-element>
                     <dc-qualifier></dc-qualifier>
@@ -72,7 +72,7 @@
                     <label>Tipo de Documento</label>
                     <input-type value-pairs-name="tipos_doc">dropdown</input-type>
                     <hint>Seleccione el tipo de contenido del ítem.</hint>
-                    <required></required>
+                    <required>Campo obligatorio</required>
                 </field>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -250,24 +250,14 @@
             3 CALIFICADORES NUEVOS de informe: tipo,unidad y disciplina-->
         <form name="informe">
             <page number="1">
-				<field>
+		<field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>type</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Tipo de Documento</label>
                     <input-type value-pairs-name="tipos_doc">dropdown</input-type>
-                    <hint>Seleccione el tipo de contenido del ítem.</hint>
-                    <required></required>
-                </field>
-                <field>
-                    <dc-schema>unco</dc-schema>
-                    <dc-element>informe</dc-element>
-                    <dc-qualifier>tipo</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Tipo de documento</label>
-                    <input-type value-pairs-name="tipos_informes">dropdown</input-type>
-                    <hint></hint>
+                    <hint>Seleccione el tipo de contenido del ítem.</hint>                    
                     <required>Campo obligatorio</required>
                 </field>
                 <field>
@@ -313,7 +303,7 @@
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>contributor</dc-element>
-                    <dc-qualifier>other</dc-qualifier>
+                    <dc-qualifier>author</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Director/Codirector</label>
                     <input-type>twobox</input-type>
