@@ -15,28 +15,28 @@ inicio de la web, estas etiquetas son manipuladas en el elements.xsl-->
 <slider>
 <ul>
 <tipo nombre="Tesis: ">Descripción de los tipos de tesis</tipo>
-<img ruta="/xmlui/discover?filtertype_1=type&amp;filter_relational_operator_1=contains&amp;filter_1=Tesis&amp;submit_apply_filter=&amp;query=">tess.png</img>
-<img ruta="/xmlui/discover?filtertype_1=type&amp;filter_relational_operator_1=contains&amp;filter_1=Tesis&amp;submit_apply_filter=&amp;query=">tes-ap.png</img>
+<img ruta="/discover?filtertype_1=type&amp;filter_relational_operator_1=contains&amp;filter_1=Tesis&amp;submit_apply_filter=&amp;query=">tess.png</img>
+<img ruta="/discover?filtertype_1=type&amp;filter_relational_operator_1=contains&amp;filter_1=Tesis&amp;submit_apply_filter=&amp;query=">tes-ap.png</img>
 </ul>
 <ul>
 <tipo nombre="Informes: ">Descripción de los informes. PROXIMAMENTE</tipo>
-<img ruta="/xmlui/discover?filtertype_1=type&amp;filter_relational_operator_1=contains&amp;filter_1=Informe&amp;submit_apply_filter=&amp;query=">info.png</img>
-<img ruta="/xmlui/discover?filtertype_1=type&amp;filter_relational_operator_1=contains&amp;filter_1=Informe&amp;submit_apply_filter=&amp;query=">info-ap.png</img>
+<img ruta="/discover?filtertype_1=type&amp;filter_relational_operator_1=contains&amp;filter_1=Informe&amp;submit_apply_filter=&amp;query=">info.png</img>
+<img ruta="/discover?filtertype_1=type&amp;filter_relational_operator_1=contains&amp;filter_1=Informe&amp;submit_apply_filter=&amp;query=">info-ap.png</img>
 </ul>	
 <ul>
 <tipo nombre="Documentos Institucionales: ">Descripción de los tipos documentos institucionales. PROXIMAMENTE</tipo>
-<img ruta="/xmlui/discover?filtertype_1=type&amp;filter_relational_operator_1=contains&amp;filter_1=Documento+Institucional&amp;submit_apply_filter=&amp;query=">acad.png</img>
-<img ruta="/xmlui/discover?filtertype_1=type&amp;filter_relational_operator_1=contains&amp;filter_1=Documento+Institucional&amp;submit_apply_filter=&amp;query=">acad-ap.png</img>
+<img ruta="/discover?filtertype_1=type&amp;filter_relational_operator_1=contains&amp;filter_1=Documento+Institucional&amp;submit_apply_filter=&amp;query=">acad.png</img>
+<img ruta="/discover?filtertype_1=type&amp;filter_relational_operator_1=contains&amp;filter_1=Documento+Institucional&amp;submit_apply_filter=&amp;query=">acad-ap.png</img>
 </ul>
 <!--ul>
 <tipo nombre="Imágenes: ">Descripción de los tipos de imágenes. PROXIMAMENTE</tipo>
-<img ruta="/xmlui/discover?scope=%2F&amp;query=Imágenes&amp;submit=">imgss.png</img>
-<img ruta="/xmlui/discover?scope=%2F&amp;query=Imágenes&amp;submit=">img-ap.png</img>
+<img ruta="/discover?scope=%2F&amp;query=Imágenes&amp;submit=">imgss.png</img>
+<img ruta="/discover?scope=%2F&amp;query=Imágenes&amp;submit=">img-ap.png</img>
 </ul-->
 <ul>
 <tipo nombre="Papers: ">Descripción de los papers. PROXIMAMENTE</tipo>
-<img ruta="/xmlui/discover?filtertype_1=type&amp;filter_relational_operator_1=contains&amp;filter_1=Paper&amp;submit_apply_filter=&amp;query=">paper.png</img>
-<img ruta="/xmlui/discover?filtertype_1=type&amp;filter_relational_operator_1=contains&amp;filter_1=Paper&amp;submit_apply_filter=&amp;query=">paper-ap.png</img>
+<img ruta="/discover?filtertype_1=type&amp;filter_relational_operator_1=contains&amp;filter_1=Paper&amp;submit_apply_filter=&amp;query=">paper.png</img>
+<img ruta="/discover?filtertype_1=type&amp;filter_relational_operator_1=contains&amp;filter_1=Paper&amp;submit_apply_filter=&amp;query=">paper-ap.png</img>
 </ul>	
 
 </slider>
