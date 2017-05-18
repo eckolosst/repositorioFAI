@@ -2540,7 +2540,7 @@
 
     <message key="xmlui.panelderecho.enlaces">Links</message>
     
-    <message key="xmlui.solicitud-autoarchivo.intro">Mensaje de solicitud de auto archivo eqisde</message>
+    <message key="xmlui.solicitud-autoarchivo.intro">Please, complete the following form for autoarchive request.</message>
     <message key="xmlui.solicitud-autoarchivo.nombre">Your name and surname</message>
     <message key="xmlui.solicitud-autoarchivo.comunidad">Community</message>
     <message key="xmlui.solicitud-autoarchivo.comunidad_ayuda">You must enter the community which requires access</message>
