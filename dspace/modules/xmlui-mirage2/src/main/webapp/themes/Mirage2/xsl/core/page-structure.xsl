@@ -137,7 +137,7 @@
                                                         <a class="list-group-item" href="/autoarchivo">
                                                             <i18n:text>xmlui.panelderecho.servicios.sol_autoarchivo</i18n:text>
                                                         </a>
-                                                        <a class="list-group-item" href="/">
+                                                        <a class="list-group-item" href="#" onclick="var popupwin = window.open('../{$theme-path}recursos/guia_autoarchivo.html','dspacepopup','height=600,width=550,resizable,scrollbars');popupwin.focus();return">>
                                                             <i18n:text>xmlui.panelderecho.servicios.guia_autoarchivo</i18n:text>
                                                         </a>
                                                     </div>
